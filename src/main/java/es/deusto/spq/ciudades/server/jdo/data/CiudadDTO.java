@@ -1,15 +1,12 @@
 package es.deusto.spq.ciudades.server.jdo.data;
 
-import javax.jdo.annotations.PersistenceCapable;
-import javax.jdo.annotations.PrimaryKey;
+import java.io.Serializable;
 
-@PersistenceCapable(detachable = "true")
+public class CiudadDTO implements Serializable{
 
-public class Ciudad {
-	
-	@PrimaryKey
+	private static final long serialVersionUID = 1L;
+
 	private int idCiudad;
-	
 	private String nombreCiudad;
 	private String pais;
 	private int puntuacionTotal;
@@ -21,16 +18,14 @@ public class Ciudad {
 	
 	
 	/**
-	 * Constructor vacio
+	 * Constructor vacio para CiudadDTO
 	 */
-	public Ciudad() {
+	public CiudadDTO() {
 		
 	}
 	
-	
-	
 	/**
-	 * Constructor para la ciudad
+	 * Constructor para CiudadDTO
 	 * 
 	 * @param idCiudad
 	 * 				Identificador de la ciudad
@@ -51,7 +46,7 @@ public class Ciudad {
 	 * @param numVotantes
 	 * 				Numero total de visitantes de la ciudad
 	 */
-	public Ciudad(int idCiudad, String nombreCiudad, String pais, int puntuacionTotal, int puntuacionOcio,
+	public CiudadDTO(int idCiudad, String nombreCiudad, String pais, int puntuacionTotal, int puntuacionOcio,
 			int puntuacionGastronomia, int puntuacionCultura, int puntuacionTransporte, int numVotantes) {
 		super();
 		this.idCiudad = idCiudad;
@@ -65,8 +60,30 @@ public class Ciudad {
 		this.numVotantes = numVotantes;
 	}
 
-
-
+	
+	/**
+	 * 
+	 * Constructor para ciudadDTO
+	 * 
+	 * @param idCiudad
+	 * 				Identificador de la ciudad
+	 * @param nombreCiudad
+	 * 				Nombre de la ciudad
+	 * @param pais
+	 * 				Pais de la ciudad
+	 */
+	public CiudadDTO(int idCiudad, String nombreCiudad, String pais) {
+		super();
+		this.idCiudad = idCiudad;
+		this.nombreCiudad = nombreCiudad;
+		this.pais = pais;
+		this.puntuacionTotal=0;
+		this.puntuacionOcio=0;
+		this.puntuacionCultura=0;
+		this.puntuacionTransporte=0;
+		this.numVotantes=0;
+	}
+	
 	/**
 	 * Metodo para obtener el identificador de la ciudad
 	 * 
@@ -243,27 +260,6 @@ public class Ciudad {
 		this.numVotantes = numVotantes;
 	}
 	
-	/**
-	 * Metodo para copiar la ciudad a la base de datos
-	 * 
-	 * @param c
-	 *            Ciudad que queremos copiar
-	 */
-	public void copyCiudad(Ciudad c) {
-		this.idCiudad=c.getIdCiudad();
-		this.nombreCiudad=c.getNombreCiudad();
-		this.numVotantes=c.getNumVotantes();
-		this.pais=c.getPais();
-		this.puntuacionCultura=c.getPuntuacionCultura();
-		this.puntuacionGastronomia=c.getPuntuacionGastronomia();
-		this.puntuacionOcio=c.getPuntuacionOcio();
-		this.puntuacionTotal=c.getPuntuacionTotal();
-		this.puntuacionTransporte= c.getPuntuacionTransporte();
-	}
 	
 	
-	
-	
-	
-
 }

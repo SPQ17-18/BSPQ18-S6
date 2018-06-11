@@ -1,6 +1,11 @@
 package es.deusto.spq.ciudades.server.jdo.data;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.jdo.annotations.Join;
 import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
 
@@ -12,6 +17,11 @@ public class Usuario {
 	private String nombre;
 	private String apellido;
 	private String password;
+	
+	
+	@Persistent(defaultFetchGroup = "true", mappedBy = "usuario", dependentElement = "true")
+	@Join
+	private List<Ciudad> ciudadesVisitadas = new ArrayList<>();
 	
 	/**
 	 * Constructor vacio
@@ -75,26 +85,56 @@ public class Usuario {
 	}
 
 
+	/**
+	 * Metodo para establecer el nombre del usuario
+	 * 
+	 * @param nombre
+	 * 			Nombre del usuario
+	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 
 
+	/**
+	 * Metodo para obtener el apellido del usuario
+	 * 
+	 * 
+	 * @return Devuelve el apellido del usuario
+	 * 
+	 */
 	public String getApellido() {
 		return apellido;
 	}
 
 
+	/**
+	 * Metodo para establecer el apellido del usuario 
+	 * 
+	 * @param apellido
+	 * 				Apellido del usuario
+	 */
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
 
 
+	/**
+	 * Metodo para obtener la contraseña del usuario
+	 * 
+	 * @return Devuelve la contraseña del usuario
+	 */
 	public String getPassword() {
 		return password;
 	}
 
 
+	/**
+	 * Metodo para establecer la contraseña del usuario
+	 * 
+	 * @param password
+	 * 				Contraseña del usuario
+	 */
 	public void setPassword(String password) {
 		this.password = password;
 	}
