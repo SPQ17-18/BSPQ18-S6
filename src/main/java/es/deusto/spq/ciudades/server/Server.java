@@ -14,6 +14,12 @@ import es.deusto.spq.ciudades.server.remote.IRemoteFacade;
 
 public class Server extends UnicastRemoteObject implements IRemoteFacade {
 
+	//
+	protected Server() throws RemoteException {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	private static final long serialVersionUID = 1L;
 
 	private static final Logger logger = Logger.getLogger(Server.class);

@@ -4,19 +4,34 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
+
+import es.deusto.spq.ciudades.client.controller.CiudadesController;
+
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.util.logging.Logger;
 import java.awt.event.ActionEvent;
 
 public class VentanLogin extends JFrame {
+	
+	private CiudadesController controler;
+	
+
 	private JTextField textFieldUsuario;
 	private JTextField textFieldPassword;
+	
 	public VentanLogin() {
+		setBounds(500, 100, 365, 200);
+		
+		
+		setTitle("Login");
+		setResizable(false);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		getContentPane().setLayout(null);
 		
 		JLabel lblUsuario = new JLabel("Usuario:");
 		lblUsuario.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblUsuario.setBounds(29, 25, 53, 14);
+		lblUsuario.setBounds(29, 25, 53, 14);	
 		getContentPane().add(lblUsuario);
 		
 		JLabel lblContraseña = new JLabel("Password:");
@@ -37,6 +52,12 @@ public class VentanLogin extends JFrame {
 		JButton btnEntrar = new JButton("Entrar");
 		btnEntrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if (textFieldUsuario.getText()=="admin"&&textFieldPassword.getText()=="admin") {
+					//abrir  la ventana del administrados para introducir ciudades nuevas
+				}else {
+					//coger los Strings y comprobar BD, si no estas logg.message no se encuentra usuario.
+					
+				}
 			}
 		});
 		btnEntrar.setBounds(10, 126, 89, 23);
@@ -45,9 +66,15 @@ public class VentanLogin extends JFrame {
 		JButton btnRegistrarse = new JButton("Registrarse");
 		btnRegistrarse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				VentanaCrearPerfil registrarse = new VentanaCrearPerfil(controler);
+				registrarse.setVisible(true);
+				dispose();
 			}
 		});
 		btnRegistrarse.setBounds(259, 126, 89, 23);
 		getContentPane().add(btnRegistrarse);
 	}
+	public static void main(String[] args) {
+		VentanLogin a = new VentanLogin();
+		a.setVisible(true);	}
 }
