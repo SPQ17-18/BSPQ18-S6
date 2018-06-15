@@ -149,7 +149,7 @@ public class Server extends UnicastRemoteObject implements IRemoteFacade {
 		try {
 			Usuario u = dao.getUsuario(email);
 			if (u.getPassword().equals(password)) {
-				logger.info("Usuario con mail " + email + " se ha logeado correctamente");
+				logger.info("Usuario con email " + email + " se ha logeado correctamente");
 				return true;
 			} else {
 				logger.info("Password incorrecto");

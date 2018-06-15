@@ -1,6 +1,7 @@
 package es.deusto.spq.ciudades.server.jdo.data;
 
 import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
 @PersistenceCapable(detachable = "true")
@@ -19,6 +20,8 @@ public class Ciudad {
 	private int puntuacionTransporte;
 	private int numVotantes;
 	
+	@Persistent(defaultFetchGroup = "true")
+	private Usuario usuario;
 	
 	/**
 	 * Constructor vacio
@@ -241,6 +244,16 @@ public class Ciudad {
 	 */
 	public void setNumVotantes(int numVotantes) {
 		this.numVotantes = numVotantes;
+	}
+	
+	/**
+	 * Method para establecer un usuario
+	 * 
+	 * @param usuario
+	 *            Member who bought the ticket
+	 */
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 	
 	/**

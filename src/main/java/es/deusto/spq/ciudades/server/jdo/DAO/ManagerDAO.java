@@ -354,14 +354,14 @@ public class ManagerDAO implements IManagerDAO{
 	}
 	
 	/**
-	 * Method to manage a member in the DB
+	 * Metodo para gestionar un usuario en la base de datos
 	 * 
-	 * @param member
-	 *            Member to manage
+	 * @param usuario
+	 *            Usuario que vamos a gestionar
 	 * @throws Exception
-	 *             Throws an exception when an error occurs
+	 *             Lanza una excepcion en caso de que ocurra un error
 	 */
-	public void manageMember(Member member) throws Exception {
+	public void manageUsuario(Usuario usuario) throws Exception {
 
 		PersistenceManager pm = pmf.getPersistenceManager();
 
@@ -369,21 +369,20 @@ public class ManagerDAO implements IManagerDAO{
 
 		try {
 			tx.begin();
-			Query<?> query = pm
-					.newQuery("SELECT FROM " + Member.class.getName() + " WHERE  email== '" + member.getEmail() + "'");
+			Query<?> query = pm.newQuery("SELECT FROM " + Usuario.class.getName() + " WHERE  email== '" + usuario.getEmail() + "'");
 			query.setUnique(true);
-			Member result = (Member) query.execute();
-
-			result.setBirthday(member.getBirthday());
-			result.setName(member.getName());
-			result.setSurname(member.getSurname());
-			result.setPassword(member.getPassword());
-			result.setPoints(member.getPoints());
+			Usuario result = (Usuario) query.execute();
+			
+			result.setApellido(usuario.getApellido());
+			result.setEmail(usuario.getEmail());
+			result.setNombre(usuario.getNombre());
+			result.setPassword(usuario.getPassword());
+			//result.setCiudades(result.getCiudadesPuntuadas());
 
 			tx.commit();
 
 		} catch (Exception ex) {
-			logger.error("Error updating a member: " + ex.getMessage());
+			logger.error("Error al actualizar un usuario: " + ex.getMessage());
 			throw new Exception();
 		} finally {
 			if (tx != null && tx.isActive()) {
@@ -393,9 +392,5 @@ public class ManagerDAO implements IManagerDAO{
 		}
 
 	}
-
-	
-	
-
 
 }

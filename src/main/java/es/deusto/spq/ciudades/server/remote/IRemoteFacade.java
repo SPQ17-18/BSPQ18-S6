@@ -1,12 +1,13 @@
 package es.deusto.spq.ciudades.server.remote;
 
+import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 
 import es.deusto.spq.ciudades.server.jdo.data.CiudadDTO;
 import es.deusto.spq.ciudades.server.jdo.data.UsuarioDTO;
 
-public interface IRemoteFacade {
+public interface IRemoteFacade extends Remote{
 
 	public boolean insertCiudad (CiudadDTO ciudadDTO) throws RemoteException;
 	public ArrayList<CiudadDTO> getCiudades() throws RemoteException;
