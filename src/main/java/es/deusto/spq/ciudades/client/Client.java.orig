@@ -3,7 +3,10 @@ package es.deusto.spq.ciudades.client;
 import org.apache.log4j.Logger;
 
 import es.deusto.spq.ciudades.client.gui.VentanLogin;
+<<<<<<< HEAD
+=======
 
+>>>>>>> BaseDeDatos
 
 public class Client {
 
@@ -20,7 +23,11 @@ public class Client {
 			System.setSecurityManager(new SecurityManager());
 		}
 	
+<<<<<<< HEAD
 		final VentanLogin vInicio = new VentanLogin();
+=======
+		final VentanLogin vLogin = new VentanLogin();
+>>>>>>> BaseDeDatos
 		
 		
 	}
