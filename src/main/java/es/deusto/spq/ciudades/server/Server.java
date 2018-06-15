@@ -1,5 +1,6 @@
 package es.deusto.spq.ciudades.server;
 
+import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
@@ -223,17 +224,42 @@ public class Server extends UnicastRemoteObject implements IRemoteFacade {
 	 *            Data para borrar un usuario
 	 * @throws RemoteException
 	 *             Lanza una excepcion en caso de que ocurra un error
-	 * @result Devuelve true Returns true when the member is correctly deleted
+	 * @result Devuelve true cuando borra un usuario correctamente, false si no.
 	 */
-	public boolean deleteMember(MemberDTO memberDTO) throws RemoteException {
+	public boolean deleteUsuario(UsuarioDTO usuarioDTO) throws RemoteException {
 		try {
-			Member member = assembler.disassembleMember(memberDTO);
-			dao.deleteMember(member);
-			logger.info("Deleted the member with the email " + memberDTO.getEmail());
+			Usuario usuario = assembler.disassembleUsuario(usuarioDTO);
+			dao.deleteUsuario(usuario);
+			logger.info("Borra un usuario cuyo email es" + usuarioDTO.getEmail());
 			return true;
 		} catch (Exception e) {
-			logger.error("Error deleting the member");
+			logger.error("Error al borrar un usuario");
 			return false;
+		}
+	}
+	
+
+	public static void main(String[] args) {
+		if (args.length != 3) {
+			System.exit(0);
+		}
+
+		if (System.getSecurityManager() == null) {
+			System.setSecurityManager(new SecurityManager());
+		}
+
+		String name = "//" + args[0] + ":" + args[1] + "/" + args[2];
+
+		try {
+			IRemoteFacade server = new Server();
+			Naming.rebind(name, server);
+			logger.info("Server '" + name + "' active and waiting...");
+			java.io.InputStreamReader inputStreamReader = new java.io.InputStreamReader(System.in);
+			java.io.BufferedReader stdin = new java.io.BufferedReader(inputStreamReader);
+			@SuppressWarnings("unused")
+			String line = stdin.readLine();
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 }

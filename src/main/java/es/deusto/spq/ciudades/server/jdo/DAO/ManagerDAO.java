@@ -310,6 +310,89 @@ public class ManagerDAO implements IManagerDAO{
 
 		return usuarios;
 	}
+	
+	/**
+	 * Metodo para borrar un usuario de la base de datos
+	 * 
+	 * @param usuario
+	 *            Usuario para borrar
+	 * @throws Exception
+	 *             Lanza una excepcion en caso de que ocurra un error
+	 */
+	public void deleteUsuario(Usuario usuario) throws Exception {
+
+		PersistenceManager pm = pmf.getPersistenceManager();
+
+		Transaction tx = pm.currentTransaction();
+
+		try {
+			tx.begin();
+
+			Query<Usuario> query = pm.newQuery(Usuario.class, "email =='" + usuario.getEmail() + "'");
+
+			Collection<?> result = (Collection<?>) query.execute();
+
+			Usuario u = (Usuario) result.iterator().next();
+
+			query.close(result);
+
+			pm.deletePersistent(u);
+
+			tx.commit();
+		} catch (Exception ex) {
+			logger.error("Error al borrar un usuario: " + ex.getMessage());
+			throw new Exception();
+		} finally {
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+			if (pm != null && !pm.isClosed()) {
+				pm.close();
+			}
+		}
+
+	}
+	
+	/**
+	 * Method to manage a member in the DB
+	 * 
+	 * @param member
+	 *            Member to manage
+	 * @throws Exception
+	 *             Throws an exception when an error occurs
+	 */
+	public void manageMember(Member member) throws Exception {
+
+		PersistenceManager pm = pmf.getPersistenceManager();
+
+		Transaction tx = pm.currentTransaction();
+
+		try {
+			tx.begin();
+			Query<?> query = pm
+					.newQuery("SELECT FROM " + Member.class.getName() + " WHERE  email== '" + member.getEmail() + "'");
+			query.setUnique(true);
+			Member result = (Member) query.execute();
+
+			result.setBirthday(member.getBirthday());
+			result.setName(member.getName());
+			result.setSurname(member.getSurname());
+			result.setPassword(member.getPassword());
+			result.setPoints(member.getPoints());
+
+			tx.commit();
+
+		} catch (Exception ex) {
+			logger.error("Error updating a member: " + ex.getMessage());
+			throw new Exception();
+		} finally {
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+			pm.close();
+		}
+
+	}
 
 	
 	
