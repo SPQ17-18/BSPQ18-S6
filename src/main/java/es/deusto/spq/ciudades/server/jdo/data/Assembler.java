@@ -61,11 +61,11 @@ public class Assembler {
 	}
 	
 	/**
-	 * Metodo para transformar un UsuarioDTO a un usuario
+	 * Metodo para transformar UsuarioDTO a Usuario
 	 * 
 	 * @param usuarioDTO
 	 *            UsuarioDTO que queremos transformar
-	 * @return Devuelve el UsuarioDTO transformado a usuario
+	 * @return Devuelve los datos del UsuarioDTO transformado a Usuario 
 	 */
 	public Usuario disassembleUsuario(UsuarioDTO usuarioDTO) {
 		Usuario u= new Usuario();
@@ -75,6 +75,26 @@ public class Assembler {
 		u.setPassword(usuarioDTO.getPassword());
 		return u;
 	}
+	
+	/**
+	 * Metodo para transformar Usuarios a UsuarioDTOs
+	 * 
+	 * @param usuarios
+	 *            ArrayList de usuarios a transformar
+	 * @return Devuelve el ArrayList de usuarios transformados a un ArrayList de UsuarioDTOs
+	 *       
+	 */
+	public ArrayList<UsuarioDTO> assembleUsuario(ArrayList<Usuario> usuarios) {
+		ArrayList<UsuarioDTO> usuarioDTO = new ArrayList<UsuarioDTO>();
+		for (int i = 0; i < usuarios.size(); i++) {
+			UsuarioDTO uDTO = new UsuarioDTO(usuarios.get(i).getApellido(), usuarios.get(i).getEmail(), usuarios.get(i).getNombre(), usuarios.get(i).getPassword());
+			usuarioDTO.add(uDTO);
+		}
+		return usuarioDTO;
+	}
+
+	
+
 
 	
 }
