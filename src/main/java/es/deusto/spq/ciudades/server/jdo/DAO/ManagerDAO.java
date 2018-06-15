@@ -76,7 +76,7 @@ public class ManagerDAO implements IManagerDAO{
 		Transaction tx = pm.currentTransaction();
 		ArrayList<Ciudad> ciudades = new ArrayList<Ciudad>();
 
-		pm.getFetchPlan().setMaxFetchDepth(5);
+		pm.getFetchPlan().setMaxFetchDepth(6);
 
 		try {
 			tx.begin();
