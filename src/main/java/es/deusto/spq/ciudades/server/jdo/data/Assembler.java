@@ -1,5 +1,7 @@
 package es.deusto.spq.ciudades.server.jdo.data;
 
+import java.util.ArrayList;
+
 import es.deusto.spq.ciudades.server.jdo.DAO.ManagerDAO;
 
 /**
@@ -40,6 +42,38 @@ public class Assembler {
 		c.setPuntuacionTotal(ciudadDTO.getPuntuacionTotal());
 		c.setPuntuacionTransporte(ciudadDTO.getPuntuacionTransporte());
 		return c;
+	}
+	
+	/**
+	 * Metodo para transformar Ciudad a CiudadDTO 
+	 * 
+	 * @param ciudades
+	 *            ArrayList de ciudades que queremos transformar a un Arraylist de CiudadDTOs
+	 * @return Devuelve un ArrayList de ciudades transformadas en un ArrayList de CiudadDTOs
+	 */
+	public ArrayList<CiudadDTO> assembleCiudad(ArrayList<Ciudad> ciudades) {
+		ArrayList<CiudadDTO> ciudadDTO = new ArrayList<CiudadDTO>();
+		for (int i = 0; i < ciudades.size(); i++) {
+			CiudadDTO cDTO = new CiudadDTO(ciudades.get(i).getIdCiudad(), ciudades.get(i).getNombreCiudad(), ciudades.get(i).getPais(), ciudades.get(i).getPuntuacionTotal(), ciudades.get(i).getPuntuacionOcio(), ciudades.get(i).getPuntuacionGastronomia(), ciudades.get(i).getPuntuacionCultura(), ciudades.get(i).getPuntuacionTransporte(), ciudades.get(i).getNumVotantes());
+			ciudadDTO.add(cDTO);
+		}
+		return ciudadDTO;
+	}
+	
+	/**
+	 * Metodo para transformar un UsuarioDTO a un usuario
+	 * 
+	 * @param usuarioDTO
+	 *            UsuarioDTO que queremos transformar
+	 * @return Devuelve el UsuarioDTO transformado a usuario
+	 */
+	public Usuario disassembleUsuario(UsuarioDTO usuarioDTO) {
+		Usuario u= new Usuario();
+		u.setApellido(usuarioDTO.getApellido());
+		u.setEmail(usuarioDTO.getEmail());
+		u.setNombre(usuarioDTO.getNombre());
+		u.setPassword(usuarioDTO.getPassword());
+		return u;
 	}
 
 	

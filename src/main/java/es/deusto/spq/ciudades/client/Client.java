@@ -1,7 +1,9 @@
 package es.deusto.spq.ciudades.client;
 
 import org.apache.log4j.Logger;
-import es.deusto.spq.ciudades.client.gui.VentanaInicioSesion;
+
+import es.deusto.spq.ciudades.client.gui.VentanLogin;
+
 
 public class Client {
 
@@ -18,7 +20,7 @@ public class Client {
 			System.setSecurityManager(new SecurityManager());
 		}
 	
-		final VentanaInicioSesion vInicio = new VentanaInicioSesion();
+		final VentanLogin vLogin = new VentanLogin();
 		
 		
 	}
