@@ -21,6 +21,7 @@ public class Client {
 		}
 	
 		final VentanLogin vInicio = new VentanLogin();
+		vInicio.setVisible(true);
 		
 		
 	}

@@ -247,7 +247,7 @@ public class Ciudad {
 	}
 	
 	/**
-	 * Method para establecer un usuario
+	 * Metodo para establecer un usuario
 	 * 
 	 * @param usuario
 	 *            Member who bought the ticket

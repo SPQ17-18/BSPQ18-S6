@@ -17,4 +17,5 @@ public interface IManagerDAO {
 	public ArrayList<Usuario> getUsuarios();
 	public void deleteUsuario(Usuario usuario) throws Exception;
 	public void manageUsuario(Usuario usuario) throws Exception;
+		
 }

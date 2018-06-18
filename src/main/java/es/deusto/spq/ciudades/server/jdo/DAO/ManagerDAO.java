@@ -37,7 +37,7 @@ public class ManagerDAO implements IManagerDAO{
 	 *             Lanza una excepcion cuando ocurre un error
 	 */
 	public void storeCiudad(Ciudad ciudad) throws Exception {
-		logger.info("Guardan una ciudad cuyo nombre es " + ciudad.getNombreCiudad());
+		logger.info("Guardando una ciudad cuyo nombre es " + ciudad.getNombreCiudad());
 		this.storeObject(ciudad);
 	}
 	
@@ -268,7 +268,7 @@ public class ManagerDAO implements IManagerDAO{
 	 *             Lanza una excepcion en caso de que ocurra un error
 	 */
 	public void storeUsuario(Usuario usuario) throws Exception {
-		logger.info("* Guardando al usuario cuyo mail es: " + usuario.getEmail());
+		logger.info("* Guardando al usuario cuyo email es: " + usuario.getEmail());
 		this.storeObject(usuario);
 	}
 	
@@ -391,6 +391,50 @@ public class ManagerDAO implements IManagerDAO{
 			pm.close();
 		}
 
+	}
+	
+	public static void main(String[] args) {
+		IManagerDAO dao = new ManagerDAO();
+
+		if (args.length != 3) {
+			logger.error("Atencion: faltan argumentos");
+			System.exit(0);
+		}
+
+		if (System.getSecurityManager() == null) {
+			System.setSecurityManager(new SecurityManager());
+		}
+		
+		//Un usuario no puede aniadir ciudades, solo votar
+		Usuario u1 = new Usuario("cristian@opendeusto.es", "Cristian", "Perez", "1234");
+		Usuario u2 = new Usuario("jesus@opendeusto.es", "Jesus", "de la Pisa", "qwerty");
+		
+		//El admin no puede votar ciudades solo aniadir
+		Usuario u3 = new Usuario("admin@opendeusto.es", "admin", "", "admin");
+		
+		Ciudad c1= new Ciudad(1, "Madrid", "Espania", 8, 8, 7, 7, 9, 1);
+		Ciudad c2= new Ciudad(2, "Paris", "Francia", 9, 9, 8, 8, 8, 2);
+
+		ArrayList<Ciudad> cu1= new ArrayList<Ciudad>();
+		cu1.add(c1); //El usuario 1 ha puntuado la ciudad 1
+		
+		ArrayList<Ciudad> cu2= new ArrayList<Ciudad>();
+		cu2.add(c1);
+		cu2.add(c2);
+		
+		try {
+			dao.storeUsuario(u1);
+			dao.storeUsuario(u2);
+			dao.storeUsuario(u3);
+			
+			dao.storeCiudad(c1);
+			dao.storeCiudad(c2);
+
+		} catch (Exception e) {
+
+		}
+		logger.info("Base de datos rellena con exito");
+		
 	}
 
 }
