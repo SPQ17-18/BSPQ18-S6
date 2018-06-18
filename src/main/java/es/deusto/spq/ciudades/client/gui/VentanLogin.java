@@ -9,7 +9,6 @@ import es.deusto.spq.ciudades.client.controller.CiudadesController;
 
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
-import java.util.logging.Logger;
 import java.awt.event.ActionEvent;
 
 public class VentanLogin extends JFrame {
