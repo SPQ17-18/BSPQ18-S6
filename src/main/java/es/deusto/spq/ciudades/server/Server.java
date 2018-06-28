@@ -164,6 +164,7 @@ public class Server extends UnicastRemoteObject implements IRemoteFacade {
 		}
 	}
 	
+	
 	/**
 	 * Metodo para registrar un usuario
 	 * 
@@ -185,6 +186,7 @@ public class Server extends UnicastRemoteObject implements IRemoteFacade {
 		}
 	}
 	
+	
 	/**
 	 * Metodo para obtener los usuarios
 	 * 
@@ -197,6 +199,9 @@ public class Server extends UnicastRemoteObject implements IRemoteFacade {
 		logger.info("El cliente ha preguntado por los usuarios");
 		return assembler.assembleUsuario(usuarios);
 	}
+
+	
+
 	
 	/**
 	 * Metodo para actualizar un usuario 
@@ -241,6 +246,19 @@ public class Server extends UnicastRemoteObject implements IRemoteFacade {
 	}
 	
 
+		/**
+		 * Metodo que se encarga de llamar al metodo devuelveUsuario de usuarioDAO, pasandole un email de usuario y devuelve el usuario completo.
+		 *
+		 * @param email - String
+		 * @return Usuario - Devuelve un usuario
+		 * @throws RemoteException expulsa una excepcion
+		 */
+		public Usuario devolverUsuario(String email) throws RemoteException {
+			return dao.getUsuario(email);
+		}
+
+	
+
 	public static void main(String[] args) {
 		if (args.length != 3) {
 			System.exit(0);
@@ -264,4 +282,14 @@ public class Server extends UnicastRemoteObject implements IRemoteFacade {
 			e.printStackTrace();
 		}
 	}
+
+	@Override
+	public Usuario getUsuario(String email) throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+
 }

@@ -1,7 +1,8 @@
 package es.deusto.spq.ciudades.server.jdo.data;
 
+import java.io.Serializable;
 
-public class UsuarioDTO {
+public class UsuarioDTO implements Serializable{
 
 	private String email;
 	private String nombre;

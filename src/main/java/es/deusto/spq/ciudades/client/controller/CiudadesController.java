@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 
 import es.deusto.spq.ciudades.client.remote.CiudadesServiceLocator;
 import es.deusto.spq.ciudades.server.jdo.data.CiudadDTO;
+import es.deusto.spq.ciudades.server.jdo.data.Usuario;
 import es.deusto.spq.ciudades.server.jdo.data.UsuarioDTO;
 
 public class CiudadesController {
@@ -111,6 +112,19 @@ public class CiudadesController {
 	}
 	
 	/**
+	 * Metodo DevolverUsuario del controlador, que se encarga de llamar al metodo de
+	 * devuelveUsuario (pasandole un email)
+	 * 
+	 * @param email - String
+	 * @return Usuario - Devuelve un usuario
+	 * @throws RemoteException lanza excepcion
+	 */
+	public Usuario DevolverUsuario(String email)throws RemoteException {
+		return csl.getService().devolverUsuario(email);
+	}
+
+	
+	/**
 	 * Registra un usuario.
 	 * @param usuarioDTO Data Container.
 	 * @return Devuelve true si registra correctamente al usuario, false si no.
@@ -138,6 +152,8 @@ public class CiudadesController {
 		}
 		return usuarios;
 	}
+	
+
 	
 	/**
 	 * Actualizar un usuario

@@ -2,7 +2,9 @@ package es.deusto.spq.ciudades.client.gui;
 
 import javax.swing.JFrame;
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.GridLayout;
+import java.awt.Rectangle;
 import java.awt.FlowLayout;
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -34,4 +36,13 @@ public class VentanaRankingCiudades extends JFrame {
 		getContentPane().add(btnVolver);
 	}
 
+	/**
+	 * Centrar la Ventana
+	 */
+	public void centreWindow() {
+		Dimension dim = getToolkit().getScreenSize();
+		Rectangle abounds = getBounds();
+		setLocation((dim.width - abounds.width) / 2, (dim.height - abounds.height) / 2);
+	}
+	
 }

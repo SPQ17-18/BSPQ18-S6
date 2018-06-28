@@ -112,7 +112,7 @@ public class ManagerDAO implements IManagerDAO{
 	 *             Lanza una excepcion cuando ocurre un error
 	 */
 
-	public void updateCiudad(Ciudad ciudad) throws Exception {
+/*	public void updateCiudad(Ciudad ciudad) throws Exception {
 
 		PersistenceManager pm = pmf.getPersistenceManager();
 
@@ -149,6 +149,28 @@ public class ManagerDAO implements IManagerDAO{
 			}
 			pm.close();
 		}
+	}*/
+	
+	
+	@Override
+	public void updateCiudad(Ciudad c) {
+		PersistenceManager pm = pmf.getPersistenceManager();
+	    Transaction tx = pm.currentTransaction();
+	    
+	    try {
+	    	tx.begin();
+	    	pm.makePersistent(c);
+	    	tx.commit();
+	     } catch (Exception ex) {
+		   	System.out.println("Error actualizando una ciudad: " + ex.getMessage());
+	     } finally {
+		   	if (tx != null && tx.isActive()) {
+		   		tx.rollback();
+		   	}
+				
+	   		pm.close();
+	     }
+
 	}
 	
 	/**
@@ -429,6 +451,7 @@ public class ManagerDAO implements IManagerDAO{
 			
 			dao.storeCiudad(c1);
 			dao.storeCiudad(c2);
+	
 
 		} catch (Exception e) {
 

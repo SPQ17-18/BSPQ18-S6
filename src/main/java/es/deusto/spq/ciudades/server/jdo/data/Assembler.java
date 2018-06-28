@@ -94,6 +94,22 @@ public class Assembler {
 	}
 
 	
+	/**
+	 * Metodo para transformar Usuario a UsuarioDTO
+	 * 
+	 * @param usuario
+	 *            usuario a transformar
+	 * @return Devuelve un usuario transformados a un UsuarioDTO
+	 *       
+	 */
+	public UsuarioDTO assembleUnUsuario(Usuario usuario) {
+		UsuarioDTO usuarioDTO = new UsuarioDTO();
+		
+			UsuarioDTO uDTO = new UsuarioDTO(usuario.getApellido(), usuario.getEmail(), usuario.getNombre(), usuario.getPassword());
+			
+			
+		return usuarioDTO;
+	}
 
 
 	

@@ -11,8 +11,8 @@ public class Client {
 	
 	public static void main(String[] args) {
 		
-		if(args.length !=3) {
-			logger.error("Use: java [policy] [codebase] Client.Client [host] [port] [server]");
+		if(args.length !=5) {
+			logger.error("Use: java [policy] [codebase] Client.Client [host] [port] [server] [language] [country]");
 			System.exit(0);
 		}
 		
@@ -20,7 +20,8 @@ public class Client {
 			System.setSecurityManager(new SecurityManager());
 		}
 	
-		final VentanLogin vInicio = new VentanLogin();
+		final VentanLogin vInicio = new VentanLogin(args);
+		vInicio.centreWindow();
 		vInicio.setVisible(true);
 		
 		
