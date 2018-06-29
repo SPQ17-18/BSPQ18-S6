@@ -2,10 +2,24 @@ package es.deusto.spq.ciudades.client.gui;
 
 import javax.swing.JFrame;
 import javax.swing.JTextField;
+
+import org.apache.log4j.Logger;
+
+import es.deusto.spq.ciudades.client.controller.CiudadesController;
+
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.sound.midi.ControllerEventListener;
 import javax.swing.JButton;
 
+
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
 public class VentanaPuntuarCiudad extends JFrame{
+
+	private static final long serialVersionUID = 1L;
+	
 	private JTextField txtPuntuacionCultura;
 	private JTextField txtPuntuacionGastronomia;
 	private JTextField txtPuntuacionOcio;
@@ -21,9 +35,11 @@ public class VentanaPuntuarCiudad extends JFrame{
 	private JButton btnVolverPerfilUsuario;
 	private JLabel lblCiudad;
 	
+	final static Logger logger = Logger.getLogger(VentanaPuntuarCiudad.class);
 	
-	public VentanaPuntuarCiudad() {
+	public VentanaPuntuarCiudad(CiudadesController controller) {
 		getContentPane().setLayout(null);
+		setTitle("PUNTUAR CIUDAD");
 		
 		txtPuntuacionCultura = new JTextField();
 		txtPuntuacionCultura.setBounds(244, 88, 116, 22);
@@ -71,6 +87,23 @@ public class VentanaPuntuarCiudad extends JFrame{
 		getContentPane().add(lblPuntuacionTotal);
 		
 		btnPuntuar = new JButton("Puntuar");
+		btnPuntuar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				if(Integer.parseInt(txtPuntuacionCultura.getText()) >10 || Integer.parseInt(txtPuntuacionGastronomia.getText()) >10 || Integer.parseInt(txtPuntuacionOcio.getText()) >10 || Integer.parseInt(txtPuntuacionTransporte.getText()) >10 || Integer.parseInt(txtPuntuacionTotal.getText()) >10) {
+
+				logger.error("La puntuacion no puede ser mayor que 10 en cualquiera de los campos");
+				JOptionPane.showInputDialog(ERROR, "La puntuacion no puede ser mayor que 10 en cualquiera de los campos");
+
+			}else {
+				logger.info("Su puntuacion se ha registrado con exito");
+			}
+			
+			
+			
+			
+			}
+		});
 		btnPuntuar.setBounds(254, 295, 106, 25);
 		getContentPane().add(btnPuntuar);
 		

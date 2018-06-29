@@ -71,6 +71,8 @@ public class VentanaPerfilUsuario extends JFrame {
 		scrollPane = new JScrollPane();
 		JTableCiudadesUsuario = new JTable();
 
+		
+		
 		lblCiudadesPuntuadas.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblCiudadesPuntuadas.setBounds(230, 9, 72, 17);
 		btnVerCiudades.setBounds(12, 373, 240, 25);
