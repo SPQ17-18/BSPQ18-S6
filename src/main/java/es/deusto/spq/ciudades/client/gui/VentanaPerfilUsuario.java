@@ -13,6 +13,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import javax.swing.event.TableModelEvent;
+import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
@@ -71,7 +73,14 @@ public class VentanaPerfilUsuario extends JFrame {
 		scrollPane = new JScrollPane();
 		JTableCiudadesUsuario = new JTable();
 
-		
+		TableModelListener escuchador = new TableModelListener() {
+			
+			@Override
+			public void tableChanged(TableModelEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		};
 		
 		lblCiudadesPuntuadas.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblCiudadesPuntuadas.setBounds(230, 9, 72, 17);
