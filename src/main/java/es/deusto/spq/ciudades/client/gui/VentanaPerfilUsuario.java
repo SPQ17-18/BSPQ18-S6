@@ -1,56 +1,171 @@
 package es.deusto.spq.ciudades.client.gui;
 
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ResourceBundle;
+
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import java.awt.Font;
-import javax.swing.JTable;
+import javax.swing.JPanel;
 import javax.swing.JScrollPane;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+
+import org.apache.log4j.Logger;
+
+import es.deusto.spq.ciudades.client.controller.CiudadesController;
+import es.deusto.spq.ciudades.server.jdo.data.CiudadDTO;
+import es.deusto.spq.ciudades.server.jdo.data.Usuario;
 
 public class VentanaPerfilUsuario extends JFrame {
-	private JTable JTableCiudadesUsuario;
-	public VentanaPerfilUsuario() {
-		getContentPane().setLayout(null);
-		
-		JLabel lblNombreUsuario = new JLabel("Usuario");
-		lblNombreUsuario.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblNombreUsuario.setBounds(39, 25, 53, 14);
-		getContentPane().add(lblNombreUsuario);
-		
-		JTableCiudadesUsuario = new JTable();
-		JTableCiudadesUsuario.setBounds(37, 68, 357, 100);
-		getContentPane().add(JTableCiudadesUsuario);
-		
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	static Logger logger = Logger.getLogger(VentanaPerfilUsuario.class.getName());
+
+	private JTable JTableCiudadesUsuario;
+
+	private JButton btnVerCiudades;
+
+	private ResourceBundle resourceBundle;
+	private CiudadesController controller;
+	private Usuario userLogeado;
+
+	private JLabel lblCiudadesPuntuadas;
+	private JButton btnVolver;
+	private JButton btnRanking;
+	private JPanel contentPane;
+	private JScrollPane scrollPane;
+
+	private DefaultTableModel tableModel;
+
+	/**
+	 * Constructor:
+	 * 
+	 * @param controller
+	 * @param resourceBundle
+	 * @param userLogeado
+	 */
+	public VentanaPerfilUsuario(final CiudadesController controller, final ResourceBundle resourceBundle,
+			Usuario userLogeado) {
+
+		this.resourceBundle = resourceBundle;
+		this.controller = controller;
+		this.userLogeado = userLogeado;
+
+		logger.info(resourceBundle.getString("userProfile"));
+
+		contentPane = new JPanel();
+		lblCiudadesPuntuadas = new JLabel(resourceBundle.getString("punctuatedCities"));
+		btnVerCiudades = new JButton("Ver Ciudades");
+		btnVolver = new JButton("Volver a inicio");
+		btnRanking = new JButton("Ver ranking ciudades");
+		scrollPane = new JScrollPane();
+		JTableCiudadesUsuario = new JTable();
+
+		//JTableCiudadesUsuario.addAncestorListener();
 		
-		JButton btnPuntuar = new JButton("Puntuar");
-		btnPuntuar.addActionListener(new ActionListener() {
+		lblCiudadesPuntuadas.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblCiudadesPuntuadas.setBounds(230, 9, 72, 17);
+		btnVerCiudades.setBounds(12, 373, 240, 25);
+		btnVolver.setBounds(295, 373, 240, 25);
+		btnRanking.setBounds(586, 373, 246, 25);
+		scrollPane.setBounds(12, 39, 820, 321);
+
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		setResizable(false);
+		setLocationRelativeTo(null);
+		setSize(850, 500);
+		setTitle("Ventana Perfil del Usuario");
+		setContentPane(contentPane);
+
+		contentPane.setLayout(null);
+		contentPane.add(lblCiudadesPuntuadas);
+		contentPane.add(scrollPane);
+		contentPane.add(btnVerCiudades);
+		contentPane.add(btnVolver);
+		contentPane.add(btnRanking);
+
+		scrollPane.setViewportView(JTableCiudadesUsuario);
+
+		btnVerCiudades.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				mostrarCiudadesEnTabla();
 			}
 		});
-		
-		JScrollPane scrollPaneTabla = new JScrollPane();
-		scrollPaneTabla.setBounds(0, 0, 2, 2);
-		getContentPane().add(scrollPaneTabla);
-		btnPuntuar.setBounds(335, 227, 89, 23);
-		getContentPane().add(btnPuntuar);
-		
-		JButton btnVolver = new JButton("Volver");
+
 		btnVolver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				VentanLogin vLogin = new VentanLogin(controller, resourceBundle);
+				vLogin.setVisible(true);
+				dispose();
 			}
 		});
-		btnVolver.setBounds(10, 227, 89, 23);
-		getContentPane().add(btnVolver);
-		
-		JButton btnRanking = new JButton("Ver ranking ciudades");
+
 		btnRanking.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				mostrarCiudadesOrdenasPorPuntuacionTotal();
 			}
 		});
-		btnRanking.setBounds(194, 227, 131, 23);
-		getContentPane().add(btnRanking);
+	}
+
+	private void mostrarCiudadesEnTabla() {
+		// Inicializamos modelo:
+		tableModel = new DefaultTableModel();
+
+		// Añadimos los nombres de las columnas a la tabla:
+		tableModel.addColumn("Nombre Ciudad");
+		tableModel.addColumn("Puntuacion total de ciudad");
+
+		List<CiudadDTO> arrayCiudadesDTO = new ArrayList<CiudadDTO>();
+		arrayCiudadesDTO = controller.getAllCiudades();
+
+		for (int i = 0; i < arrayCiudadesDTO.size(); i++) {
+			tableModel.addRow(new Object[] { arrayCiudadesDTO.get(i).getNombreCiudad(),
+					arrayCiudadesDTO.get(i).getPuntuacionTotal() });
+		}
+
+		// Finalmente:
+		// Introducimos el modelo en la tabla:
+		JTableCiudadesUsuario.setModel(tableModel);
+	}
+
+	private void mostrarCiudadesOrdenasPorPuntuacionTotal() {
+		// Inicializamos modelo:
+		tableModel = new DefaultTableModel();
+
+		// Añadimos los nombres de las columnas a la tabla:
+		tableModel.addColumn("Nombre Ciudad");
+		tableModel.addColumn("Pais de la ciudad");
+		tableModel.addColumn("Puntuacion total de ciudad");
+
+		List<CiudadDTO> arrayCiudadesDTO = new ArrayList<CiudadDTO>();
+		arrayCiudadesDTO = controller.getAllCiudades();
+
+		List<CiudadDTO> arrayCiudadesDTOFinal = new ArrayList<CiudadDTO>();
+		for (int i = 10; i >= 1; i--) {
+			for (CiudadDTO ciudad : arrayCiudadesDTO) {
+				if (ciudad.getPuntuacionTotal() == i) {
+					arrayCiudadesDTOFinal.add(ciudad);
+				}
+			}
+		}
+
+		for (int i = 0; i < arrayCiudadesDTOFinal.size(); i++) {
+			tableModel.addRow(new Object[] { arrayCiudadesDTOFinal.get(i).getNombreCiudad(),
+					arrayCiudadesDTOFinal.get(i).getPais(), arrayCiudadesDTOFinal.get(i).getPuntuacionTotal() });
+		}
+
+		// Finalmente:
+		// Introducimos el modelo en la tabla:
+		JTableCiudadesUsuario.setModel(tableModel);
 	}
 }

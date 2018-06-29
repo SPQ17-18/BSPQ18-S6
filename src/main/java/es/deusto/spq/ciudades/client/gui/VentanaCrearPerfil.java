@@ -12,6 +12,9 @@ import es.deusto.spq.ciudades.server.jdo.data.UsuarioDTO;
 
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.util.ResourceBundle;
+import java.awt.Dimension;
+import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
 
 public class VentanaCrearPerfil extends JFrame {
@@ -21,10 +24,13 @@ public class VentanaCrearPerfil extends JFrame {
 	private JButton btnAceptar;
 	private JButton btnVolver;
 	
-	private CiudadesController controler;
+	private CiudadesController controller;
 	private JTextField textFieldRepPass;
 	private JLabel lblCorreo;
 	private JTextField textCorreo;
+	
+	private ResourceBundle resourceBundle;
+
 	
 	final static Logger logger = Logger.getLogger(VentanaCrearPerfil.class);
 
@@ -32,27 +38,32 @@ public class VentanaCrearPerfil extends JFrame {
 	/**Clase En la que un nuevo usuaro se registra en la aplicacion
 	 * @param controler
 	 */
-	public VentanaCrearPerfil(CiudadesController controler) {
+	public VentanaCrearPerfil(final CiudadesController controller, final ResourceBundle resourceBundle) {
 		
-		this.controler = controler;
+		this.resourceBundle= resourceBundle;
+		this.controller = controller;
+		
+		logger.info(resourceBundle.getString("register"));
+		setTitle(resourceBundle.getString("register"));
 		
 		setBounds(50, 50, 356, 246);
+		
 		getContentPane().setLayout(null);
 		
-		JLabel lblNombre = new JLabel("Introduzca nombre:");
+		JLabel lblNombre = new JLabel(resourceBundle.getString("name"));
 		lblNombre.setBounds(59, 31, 101, 14);
 		getContentPane().add(lblNombre);
 		
-		JLabel lblApellido = new JLabel("Introduzca apelido:");
+		JLabel lblApellido = new JLabel(resourceBundle.getString("surname"));
 		lblApellido.setBounds(59, 56, 101, 14);
 		getContentPane().add(lblApellido);
 		
 		//no pongo la enie por posibles conflictos
-		JLabel lblContraseña = new JLabel("Introduzca Password:");
+		JLabel lblContraseña = new JLabel(resourceBundle.getString("password"));
 		lblContraseña.setBounds(59, 106, 121, 14);
 		getContentPane().add(lblContraseña);
 		
-		JLabel lblcomprobarPass = new JLabel("Repita password:");
+		JLabel lblcomprobarPass = new JLabel(resourceBundle.getString("repeatPassword"));
 		lblcomprobarPass.setBounds(59, 131, 101, 14);
 		getContentPane().add(lblcomprobarPass);
 		
@@ -67,7 +78,7 @@ public class VentanaCrearPerfil extends JFrame {
 		textApellido.setColumns(10);
 		
 		textPass = new JTextField();
-		textPass.setBounds(190, 103, 86, 20);
+		textPass.setBounds(190, 103, 85, 20);
 		getContentPane().add(textPass);
 		textPass.setColumns(10);
 		
@@ -76,7 +87,7 @@ public class VentanaCrearPerfil extends JFrame {
 		getContentPane().add(textFieldRepPass);
 		textFieldRepPass.setColumns(10);
 		
-		lblCorreo = new JLabel("Introduzca correo:");
+		lblCorreo = new JLabel(resourceBundle.getString("email"));
 		lblCorreo.setBounds(59, 81, 101, 14);
 		getContentPane().add(lblCorreo);
 		
@@ -85,15 +96,15 @@ public class VentanaCrearPerfil extends JFrame {
 		getContentPane().add(textCorreo);
 		textCorreo.setColumns(10);
 		
-		btnAceptar = new JButton("Aceptar");
+		btnAceptar = new JButton(resourceBundle.getString("register"));
 		btnAceptar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String nombre = textNombre.getText();
 				String contrasenia = textPass.getText();
 				String apellido = textApellido.getText();
 				String contrasenia2 = textFieldRepPass.getText();
-				//si los campos estan vacios lanzar mensaje erro, existen campos vacios
-				if (nombre.equals("")||contrasenia.equals("")||apellido.equals("")) {
+				//si los campos estan vacios lanzar mensaje error, existen campos vacios
+				if (nombre.equals("")||contrasenia.equals("")||apellido.equals("")  ) {
 					JOptionPane.showMessageDialog(btnAceptar, "falta algun campo por rellenar");
 				}else {
 					if (contrasenia.equals(contrasenia2)) {
@@ -106,7 +117,7 @@ public class VentanaCrearPerfil extends JFrame {
 							userIntro.setPassword(textPass.getText());
 							
 							
-							if (VentanaCrearPerfil.this.controler.registerUsuario(userIntro)) {
+							if (VentanaCrearPerfil.this.controller.registerUsuario(userIntro)) {
 								logger.info("Registrado correctamente");
 							}
 							//userIntro.setApellido(apellido);
@@ -121,23 +132,29 @@ public class VentanaCrearPerfil extends JFrame {
 				}
 			}
 		});
-		btnAceptar.setBounds(241, 173, 89, 23);
+		btnAceptar.setBounds(212, 173, 114, 23);
 		getContentPane().add(btnAceptar);
 		
-		btnVolver = new JButton("Volver");
+		btnVolver = new JButton(resourceBundle.getString("back"));
 		btnVolver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				VentanLogin volverAtras = new VentanLogin();
+				VentanLogin volverAtras = new VentanLogin(controller, resourceBundle);
 				volverAtras.setVisible(true);
 				dispose();
 			}
 		});
-		btnVolver.setBounds(10, 173, 89, 23);
+		btnVolver.setBounds(10, 173, 114, 23);
 		getContentPane().add(btnVolver);
-		
-
-		
-
 
 	}
+	
+	/**
+	 * Centrar la Ventana
+	 */
+	public void centreWindow() {
+		Dimension dim = getToolkit().getScreenSize();
+		Rectangle abounds = getBounds();
+		setLocation((dim.width - abounds.width) / 2, (dim.height - abounds.height) / 2);
+	}
+
 }

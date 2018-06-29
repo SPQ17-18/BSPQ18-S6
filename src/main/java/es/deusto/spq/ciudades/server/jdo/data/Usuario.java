@@ -1,5 +1,6 @@
 package es.deusto.spq.ciudades.server.jdo.data;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,40 +9,41 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
+@PersistenceCapable(detachable = "true")
+public class Usuario implements Serializable {
 
-@PersistenceCapable(detachable="true")
-public class Usuario {
-	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@PrimaryKey
 	private String email;
 	private String nombre;
 	private String apellido;
 	private String password;
-	
-	
+
 	@Persistent(defaultFetchGroup = "true", mappedBy = "usuario", dependentElement = "true")
 	@Join
 	private List<Ciudad> ciudadesVisitadas = new ArrayList<>();
-	
+
 	/**
 	 * Constructor vacio
 	 */
 	public Usuario() {
-		
+
 	}
 
-	
 	/**
 	 * Constructor para el usuario
 	 * 
 	 * @param email
-	 * 				Email del usuario 
+	 *            Email del usuario
 	 * @param nombre
-	 * 				Nombre del usuario
+	 *            Nombre del usuario
 	 * @param apellido
-	 * 				Apellido del usuario
+	 *            Apellido del usuario
 	 * @param password
-	 * 				Contrasenia del usuario
+	 *            Contrasenia del usuario
 	 */
 	public Usuario(String email, String nombre, String apellido, String password) {
 		super();
@@ -51,8 +53,6 @@ public class Usuario {
 		this.password = password;
 	}
 
-
-	
 	/**
 	 * Metodo para obtener el email del usuario
 	 * 
@@ -62,21 +62,19 @@ public class Usuario {
 		return email;
 	}
 
-
 	/**
 	 * Metodo para establecer el mail del usuario
 	 * 
 	 * @param email
-	 * 			Email del usuario
+	 *            Email del usuario
 	 * 
 	 */
 	public void setEmail(String email) {
 		this.email = email;
 	}
 
-
 	/**
-	 * Metodo para obtener el nombre del usuario 
+	 * Metodo para obtener el nombre del usuario
 	 * 
 	 * @return Devuelve el nombre del usuario
 	 */
@@ -84,17 +82,15 @@ public class Usuario {
 		return nombre;
 	}
 
-
 	/**
 	 * Metodo para establecer el nombre del usuario
 	 * 
 	 * @param nombre
-	 * 			Nombre del usuario
+	 *            Nombre del usuario
 	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-
 
 	/**
 	 * Metodo para obtener el apellido del usuario
@@ -107,17 +103,15 @@ public class Usuario {
 		return apellido;
 	}
 
-
 	/**
-	 * Metodo para establecer el apellido del usuario 
+	 * Metodo para establecer el apellido del usuario
 	 * 
 	 * @param apellido
-	 * 				Apellido del usuario
+	 *            Apellido del usuario
 	 */
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
-
 
 	/**
 	 * Metodo para obtener la contraseña del usuario
@@ -128,17 +122,16 @@ public class Usuario {
 		return password;
 	}
 
-
 	/**
 	 * Metodo para establecer la contraseña del usuario
 	 * 
 	 * @param password
-	 * 				Contraseña del usuario
+	 *            Contraseña del usuario
 	 */
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
+
 	/**
 	 * Metodo para obtener las ciudades que ha puntuado/visitado un usuario
 	 * 
@@ -147,7 +140,7 @@ public class Usuario {
 	public List<Ciudad> getCiudadesPuntuadas() {
 		return ciudadesVisitadas;
 	}
-	
+
 	/**
 	 * Metodo para establecer las ciudades puntuadas de un usuario
 	 * 
@@ -157,8 +150,7 @@ public class Usuario {
 	public void setCiudades(List<Ciudad> ciudades) {
 		this.ciudadesVisitadas = ciudades;
 	}
-	
-	
+
 	/**
 	 * Metodo para añadir una ciudad a un usuario
 	 * 
@@ -169,7 +161,7 @@ public class Usuario {
 		ciudadesVisitadas.add(c);
 		c.setUsuario(this);
 	}
-	
+
 	/**
 	 * Metodo para copiar un usuario de la base de datos
 	 * 
@@ -177,15 +169,14 @@ public class Usuario {
 	 *            Usuario del cual copiamos sus datos
 	 */
 	public void copyUsuario(Usuario u) {
-		this.apellido=u.getApellido();
-		this.email=u.getEmail();
-		this.nombre=u.getNombre();
-		this.password=u.getPassword();
-		for(int i=0; i<u.getCiudadesPuntuadas().size();i++) {
+		this.apellido = u.getApellido();
+		this.email = u.getEmail();
+		this.nombre = u.getNombre();
+		this.password = u.getPassword();
+		for (int i = 0; i < u.getCiudadesPuntuadas().size(); i++) {
 			this.ciudadesVisitadas.add(new Ciudad());
 			this.ciudadesVisitadas.get(i).copyCiudad(u.getCiudadesPuntuadas().get(i));
 		}
 	}
-
 
 }
