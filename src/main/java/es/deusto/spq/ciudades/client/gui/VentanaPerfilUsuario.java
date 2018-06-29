@@ -13,6 +13,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import javax.swing.event.TableModelEvent;
+import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
@@ -46,6 +48,7 @@ public class VentanaPerfilUsuario extends JFrame {
 	private JScrollPane scrollPane;
 
 	private DefaultTableModel tableModel;
+	private JButton btnNewButton;
 
 	/**
 	 * Constructor:
@@ -71,7 +74,24 @@ public class VentanaPerfilUsuario extends JFrame {
 		scrollPane = new JScrollPane();
 		JTableCiudadesUsuario = new JTable();
 
-		//JTableCiudadesUsuario.addAncestorListener();
+/*		//Aniadir que en la tabla se pueda seleccionar una fila 
+		TableModelListener escuchador= new TableModelListener() {
+			
+			@Override
+			public void tableChanged(TableModelEvent e) {
+				// TODO Auto-generated method stub
+				int fila = JTableCiudadesUsuario.getSelectedRow();
+				System.out.println("Fila seleccionada");
+				logger.info("Se ha seleccionado una fila"+fila);
+				
+				
+					VentanaPuntuarCiudad vPuntuarCiudad = new VentanaPuntuarCiudad(controller);
+					vPuntuarCiudad.setVisible(true);
+					dispose();
+				
+
+			}
+		};*/
 		
 		lblCiudadesPuntuadas.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblCiudadesPuntuadas.setBounds(230, 9, 72, 17);
@@ -95,6 +115,17 @@ public class VentanaPerfilUsuario extends JFrame {
 		contentPane.add(btnRanking);
 
 		scrollPane.setViewportView(JTableCiudadesUsuario);
+		
+		btnNewButton = new JButton("Puntuar Ciudad");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				//VentanaPuntuarCiudad vPuntuar = new VentanaPuntuarCiudad();
+				
+			}
+		});
+		btnNewButton.setBounds(295, 411, 240, 25);
+		contentPane.add(btnNewButton);
 
 		btnVerCiudades.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {

@@ -150,6 +150,7 @@ public class Collector extends UnicastRemoteObject implements IRemoteFacade {
 	 */
 	public boolean loginUsuario(String email, String password) throws RemoteException {
 		try {
+			System.out.println("Usuario llega ");
 			Usuario u = dao.getUsuario(email);
 			if (u.getPassword().equals(password)) {
 				logger.info("Usuario con email " + email + " se ha logeado correctamente");
@@ -175,11 +176,11 @@ public class Collector extends UnicastRemoteObject implements IRemoteFacade {
 	 * @result Devuelve true cuando el usuario se registra correctamentewhen the
 	 *         employee is correctly registered
 	 */
-	public boolean registerUsuario(UsuarioDTO usuarioDTO) throws RemoteException {
+	public boolean registerUsuario(Usuario usuario) throws RemoteException {
 		try {
-			Usuario usuario = assembler.disassembleUsuario(usuarioDTO);
+			//Usuario usuario = assembler.disassembleUsuario(usuarioDTO);
 			dao.storeUsuario(usuario);
-			logger.info("Inserta un usuario a la base de datos llamado" + usuarioDTO.getNombre());
+			logger.info("Inserta un usuario a la base de datos llamado" + usuario.getNombre());
 			return true;
 		} catch (Exception e) {
 			logger.error("Clave primaria duplicada: El usuario ya existe");

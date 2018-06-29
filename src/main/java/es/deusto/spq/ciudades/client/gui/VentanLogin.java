@@ -183,9 +183,10 @@ public class VentanLogin extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 
 				VentanaCrearPerfil registrarse = new VentanaCrearPerfil(controller, resourceBundle);
-				uDTO = assembler.assembleUnUsuario(userLogeado);
-				controller.registerUsuario(uDTO);
-				registrarse.centreWindow();
+				//uDTO = assembler.assembleUnUsuario(userLogeado);
+				//Usuario uNuevo= new Usuario(text, nombre, apellido, password)
+				//controller.registerUsuario(uDTO);
+				//registrarse.centreWindow();
 				registrarse.setVisible(true);
 				dispose();
 			}

@@ -17,7 +17,7 @@ public interface IRemoteFacade extends Remote{
 	public int getCiudadPoints (int idCiudad) throws RemoteException;
 	public boolean loginUsuario(String email, String password) throws RemoteException;
 	public Usuario devolverUsuario(String email) throws RemoteException;
-	public boolean registerUsuario (UsuarioDTO usuarioDTO) throws RemoteException;
+	public boolean registerUsuario (Usuario usuario) throws RemoteException;
 	public ArrayList<UsuarioDTO> getUsuarios() throws RemoteException;
 	public boolean updateUsuario (UsuarioDTO usuarioDTO) throws RemoteException;
 	public boolean deleteUsuario (UsuarioDTO usuarioDTO) throws RemoteException;

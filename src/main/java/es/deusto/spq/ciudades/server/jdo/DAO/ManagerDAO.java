@@ -439,19 +439,15 @@ public class ManagerDAO implements IManagerDAO {
 
 		Ciudad c1 = new Ciudad(1, "Madrid", "Espania", 8, 8, 7, 7, 9, 1);
 		Ciudad c2 = new Ciudad(2, "Paris", "Francia", 9, 9, 8, 8, 8, 2);
-		Ciudad c3 = new Ciudad(3, "Barcelona", "Espania", 7, 8, 7, 7, 9, 1);
-		Ciudad c4 = new Ciudad(4, "Amsterdam", "Paises Bajos", 10, 9, 10, 8, 10, 1);
-		Ciudad c5 = new Ciudad(5, "Monaco", "Francia", 6, 9, 5, 8, 8, 1);
 
 		ArrayList<Ciudad> cu1 = new ArrayList<Ciudad>();
 		cu1.add(c1); // El usuario 1 ha puntuado la ciudad 1
-		cu1.add(c5);
+
 
 		ArrayList<Ciudad> cu2 = new ArrayList<Ciudad>();
 		cu2.add(c1);
 		cu2.add(c2);
-		cu2.add(c3);
-		cu2.add(c4);
+
 
 		try {
 			dao.storeUsuario(u1);
@@ -460,9 +456,7 @@ public class ManagerDAO implements IManagerDAO {
 
 			dao.storeCiudad(c1);
 			dao.storeCiudad(c2);
-			dao.storeCiudad(c3);
-			dao.storeCiudad(c4);
-			dao.storeCiudad(c5);
+
 
 		} catch (Exception e) {
 

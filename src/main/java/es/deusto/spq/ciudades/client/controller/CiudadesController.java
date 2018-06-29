@@ -116,6 +116,7 @@ public class CiudadesController {
 	public boolean identifyUsuario(String email, String password) {
 		boolean login = false;
 		try {
+			
 			login = csl.loginUsuario(email, password);
 		} catch (RemoteException e) {
 			logger.error("Error al identificar un usuario.");
@@ -144,10 +145,10 @@ public class CiudadesController {
 	 *            Data Container.
 	 * @return Devuelve true si registra correctamente al usuario, false si no.
 	 */
-	public boolean registerUsuario(UsuarioDTO usuarioDTO) {
+	public boolean registerUsuario(Usuario usuario) {
 		boolean registered = false;
 		try {
-			registered = csl.registerUsuario(usuarioDTO);
+			registered = csl.registerUsuario(usuario);
 		} catch (RemoteException e) {
 			logger.error("Error al registrar un usuario.");
 		}

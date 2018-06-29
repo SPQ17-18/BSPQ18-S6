@@ -8,6 +8,7 @@ import javax.swing.JTextField;
 import org.apache.log4j.Logger;
 
 import es.deusto.spq.ciudades.client.controller.CiudadesController;
+import es.deusto.spq.ciudades.server.jdo.data.Usuario;
 import es.deusto.spq.ciudades.server.jdo.data.UsuarioDTO;
 
 import javax.swing.JButton;
@@ -46,53 +47,54 @@ public class VentanaCrearPerfil extends JFrame {
 		logger.info(resourceBundle.getString("register"));
 		setTitle(resourceBundle.getString("register"));
 		
-		setBounds(50, 50, 356, 246);
+		setBounds(50, 50, 441, 339);
+		setLocationRelativeTo(null);
 		
 		getContentPane().setLayout(null);
 		
 		JLabel lblNombre = new JLabel(resourceBundle.getString("name"));
-		lblNombre.setBounds(59, 31, 101, 14);
+		lblNombre.setBounds(53, 48, 170, 14);
 		getContentPane().add(lblNombre);
 		
 		JLabel lblApellido = new JLabel(resourceBundle.getString("surname"));
-		lblApellido.setBounds(59, 56, 101, 14);
+		lblApellido.setBounds(53, 81, 155, 14);
 		getContentPane().add(lblApellido);
 		
 		//no pongo la enie por posibles conflictos
 		JLabel lblContraseña = new JLabel(resourceBundle.getString("password"));
-		lblContraseña.setBounds(59, 106, 121, 14);
+		lblContraseña.setBounds(53, 147, 145, 14);
 		getContentPane().add(lblContraseña);
 		
 		JLabel lblcomprobarPass = new JLabel(resourceBundle.getString("repeatPassword"));
-		lblcomprobarPass.setBounds(59, 131, 101, 14);
+		lblcomprobarPass.setBounds(53, 186, 184, 14);
 		getContentPane().add(lblcomprobarPass);
 		
 		textNombre = new JTextField();
-		textNombre.setBounds(189, 28, 86, 20);
+		textNombre.setBounds(235, 45, 86, 20);
 		getContentPane().add(textNombre);
 		textNombre.setColumns(10);
 		
 		textApellido = new JTextField();
-		textApellido.setBounds(189, 53, 86, 20);
+		textApellido.setBounds(235, 78, 86, 20);
 		getContentPane().add(textApellido);
 		textApellido.setColumns(10);
 		
 		textPass = new JTextField();
-		textPass.setBounds(190, 103, 85, 20);
+		textPass.setBounds(235, 144, 85, 20);
 		getContentPane().add(textPass);
 		textPass.setColumns(10);
 		
 		textFieldRepPass = new JTextField();
-		textFieldRepPass.setBounds(189, 128, 86, 20);
+		textFieldRepPass.setBounds(235, 183, 86, 20);
 		getContentPane().add(textFieldRepPass);
 		textFieldRepPass.setColumns(10);
 		
 		lblCorreo = new JLabel(resourceBundle.getString("email"));
-		lblCorreo.setBounds(59, 81, 101, 14);
+		lblCorreo.setBounds(53, 120, 132, 14);
 		getContentPane().add(lblCorreo);
 		
 		textCorreo = new JTextField();
-		textCorreo.setBounds(189, 78, 86, 20);
+		textCorreo.setBounds(234, 111, 86, 20);
 		getContentPane().add(textCorreo);
 		textCorreo.setColumns(10);
 		
@@ -110,21 +112,25 @@ public class VentanaCrearPerfil extends JFrame {
 					if (contrasenia.equals(contrasenia2)) {
 						try {
 							// usuario dto = nuevo ususario DTO
-							UsuarioDTO userIntro = new UsuarioDTO();
-							userIntro.setApellido(textApellido.getText());
-							userIntro.setNombre(textNombre.getText());
-							userIntro.setEmail(textCorreo.getText());
-							userIntro.setPassword(textPass.getText());
+							Usuario userNuevo = new Usuario();
+							userNuevo.setApellido(textApellido.getText());
+							userNuevo.setNombre(textNombre.getText());
+							userNuevo.setEmail(textCorreo.getText());
+							userNuevo.setPassword(textPass.getText());
 							
 							
-							if (VentanaCrearPerfil.this.controller.registerUsuario(userIntro)) {
+							if (VentanaCrearPerfil.this.controller.registerUsuario(userNuevo)) {
 								logger.info("Registrado correctamente");
 							}
+							
+							dispose();
+							VentanLogin vLogin= new VentanLogin(controller, resourceBundle);
+							vLogin.setVisible(true);
 							//userIntro.setApellido(apellido);
 							// meter los parametros al usuario
 							//metodo de introducir usuario a la BD con el controler 
 						} catch (Exception e2) {
-							
+							logger.error("El usuario que ha introducido no se ha podido registrar correctamente");
 						}
 						
 						
@@ -132,7 +138,7 @@ public class VentanaCrearPerfil extends JFrame {
 				}
 			}
 		});
-		btnAceptar.setBounds(212, 173, 114, 23);
+		btnAceptar.setBounds(238, 256, 114, 23);
 		getContentPane().add(btnAceptar);
 		
 		btnVolver = new JButton(resourceBundle.getString("back"));
@@ -143,7 +149,7 @@ public class VentanaCrearPerfil extends JFrame {
 				dispose();
 			}
 		});
-		btnVolver.setBounds(10, 173, 114, 23);
+		btnVolver.setBounds(71, 256, 114, 23);
 		getContentPane().add(btnVolver);
 
 	}
