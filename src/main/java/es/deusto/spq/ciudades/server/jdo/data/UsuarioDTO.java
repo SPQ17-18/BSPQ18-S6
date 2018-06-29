@@ -2,8 +2,12 @@ package es.deusto.spq.ciudades.server.jdo.data;
 
 import java.io.Serializable;
 
-public class UsuarioDTO implements Serializable{
+public class UsuarioDTO implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String email;
 	private String nombre;
 	private String apellido;
@@ -13,21 +17,20 @@ public class UsuarioDTO implements Serializable{
 	 * Constructor vacio
 	 */
 	public UsuarioDTO() {
-		
+
 	}
 
-	
 	/**
 	 * Constructor para el usuarioDTO
 	 * 
 	 * @param email
-	 * 				Email del usuarioDTO 
+	 *            Email del usuarioDTO
 	 * @param nombre
-	 * 				Nombre del usuarioDTO
+	 *            Nombre del usuarioDTO
 	 * @param apellido
-	 * 				Apellido del usuarioDTO
+	 *            Apellido del usuarioDTO
 	 * @param password
-	 * 				Contrasenia del usuarioDTO
+	 *            Contrasenia del usuarioDTO
 	 */
 	public UsuarioDTO(String email, String nombre, String apellido, String password) {
 		super();
@@ -37,8 +40,6 @@ public class UsuarioDTO implements Serializable{
 		this.password = password;
 	}
 
-
-	
 	/**
 	 * Metodo para obtener el email del usuarioDTO
 	 * 
@@ -48,21 +49,19 @@ public class UsuarioDTO implements Serializable{
 		return email;
 	}
 
-
 	/**
 	 * Metodo para establecer el mail del usuarioDTO
 	 * 
 	 * @param email
-	 * 			Email del usuarioDTO
+	 *            Email del usuarioDTO
 	 * 
 	 */
 	public void setEmail(String email) {
 		this.email = email;
 	}
 
-
 	/**
-	 * Metodo para obtener el nombre del usuarioDTO 
+	 * Metodo para obtener el nombre del usuarioDTO
 	 * 
 	 * @return Devuelve el nombre del usuarioDTO
 	 */
@@ -70,17 +69,15 @@ public class UsuarioDTO implements Serializable{
 		return nombre;
 	}
 
-
 	/**
 	 * Metodo para establecer el nombre del usuarioDTO
 	 * 
 	 * @param nombre
-	 * 			Nombre del usuarioDTO
+	 *            Nombre del usuarioDTO
 	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-
 
 	/**
 	 * Metodo para obtener el apellido del usuarioDTO
@@ -93,17 +90,15 @@ public class UsuarioDTO implements Serializable{
 		return apellido;
 	}
 
-
 	/**
-	 * Metodo para establecer el apellido del usuarioDTO 
+	 * Metodo para establecer el apellido del usuarioDTO
 	 * 
 	 * @param apellido
-	 * 				Apellido del usuarioDTO
+	 *            Apellido del usuarioDTO
 	 */
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
-
 
 	/**
 	 * Metodo para obtener la contraseña del usuarioDTO
@@ -114,18 +109,14 @@ public class UsuarioDTO implements Serializable{
 		return password;
 	}
 
-
 	/**
 	 * Metodo para establecer la contraseña del usuarioDTO
 	 * 
 	 * @param password
-	 * 				Contraseña del usuarioDTO
+	 *            Contraseña del usuarioDTO
 	 */
 	public void setPassword(String password) {
 		this.password = password;
 	}
 
-	
-	
-	
 }
