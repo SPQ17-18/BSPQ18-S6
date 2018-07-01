@@ -42,7 +42,7 @@ public class VentanaPerfilUsuario extends JFrame {
 	private CiudadesController controller;
 	private Usuario userLogeado;
 
-	private JLabel lblCiudadesPuntuadas;
+	private JLabel lblCiudades;
 	private JButton btnVolver;
 	private JButton btnRanking;
 	private JPanel contentPane;
@@ -68,16 +68,16 @@ public class VentanaPerfilUsuario extends JFrame {
 		logger.info(resourceBundle.getString("userProfile"));
 
 		contentPane = new JPanel();
-		lblCiudadesPuntuadas = new JLabel(resourceBundle.getString("punctuatedCities"));
-		btnVerCiudades = new JButton("Ver Ciudades");
-		btnVolver = new JButton("Volver a inicio");
-		btnRanking = new JButton("Ver ranking ciudades");
+		lblCiudades = new JLabel(resourceBundle.getString("cityList"));
+		btnVerCiudades = new JButton(resourceBundle.getString("cityList"));
+		btnVolver = new JButton(resourceBundle.getString("goToLoginWindow"));
+		btnRanking = new JButton(resourceBundle.getString("rankingCities"));
 		scrollPane = new JScrollPane();
 		JTableCiudadesUsuario = new JTable();
-		btnPuntuarCiudad = new JButton("Puntuar Ciudad");
+		btnPuntuarCiudad = new JButton(resourceBundle.getString("punctuateCity"));
 
-		lblCiudadesPuntuadas.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblCiudadesPuntuadas.setBounds(230, 9, 72, 17);
+		lblCiudades.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblCiudades.setBounds(23, 13, 113, 17);
 		btnVerCiudades.setBounds(12, 373, 240, 25);
 		btnVolver.setBounds(295, 373, 240, 25);
 		btnRanking.setBounds(586, 373, 246, 25);
@@ -87,11 +87,11 @@ public class VentanaPerfilUsuario extends JFrame {
 		setResizable(false);
 		setLocationRelativeTo(null);
 		setSize(850, 500);
-		setTitle("Ventana Perfil del Usuario");
+		setTitle(resourceBundle.getString("userProfile"));
 		setContentPane(contentPane);
 
 		contentPane.setLayout(null);
-		contentPane.add(lblCiudadesPuntuadas);
+		contentPane.add(lblCiudades);
 		contentPane.add(scrollPane);
 		contentPane.add(btnVerCiudades);
 		contentPane.add(btnVolver);
@@ -138,8 +138,8 @@ public class VentanaPerfilUsuario extends JFrame {
 		tableModel = new DefaultTableModel();
 
 		// Añadimos los nombres de las columnas a la tabla:
-		tableModel.addColumn("Nombre Ciudad");
-		tableModel.addColumn("Puntuacion total de ciudad");
+		tableModel.addColumn(resourceBundle.getString("cityName"));
+		tableModel.addColumn(resourceBundle.getString("totalPunctuation"));
 
 		arrayCiudadesDTO = new ArrayList<CiudadDTO>();
 		arrayCiudadesDTO = controller.getAllCiudades();
@@ -159,9 +159,9 @@ public class VentanaPerfilUsuario extends JFrame {
 		tableModel = new DefaultTableModel();
 
 		// Añadimos los nombres de las columnas a la tabla:
-		tableModel.addColumn("Nombre Ciudad");
-		tableModel.addColumn("Pais de la ciudad");
-		tableModel.addColumn("Puntuacion total de ciudad");
+		tableModel.addColumn(resourceBundle.getString("cityName"));
+		tableModel.addColumn(resourceBundle.getString("cityCountry"));
+		tableModel.addColumn(resourceBundle.getString("totalPunctuation"));
 
 		arrayCiudadesDTO = new ArrayList<CiudadDTO>();
 		arrayCiudadesDTO = controller.getAllCiudades();

@@ -53,16 +53,16 @@ public class VentanaCrearPerfil extends JFrame {
 		getContentPane().setLayout(null);
 		
 		JLabel lblNombre = new JLabel(resourceBundle.getString("name"));
-		lblNombre.setBounds(53, 48, 170, 14);
+		lblNombre.setBounds(53, 48, 190, 14);
 		getContentPane().add(lblNombre);
 		
 		JLabel lblApellido = new JLabel(resourceBundle.getString("surname"));
-		lblApellido.setBounds(53, 81, 155, 14);
+		lblApellido.setBounds(53, 81, 190, 14);
 		getContentPane().add(lblApellido);
 		
 		//no pongo la enie por posibles conflictos
 		JLabel lblContraseña = new JLabel(resourceBundle.getString("password"));
-		lblContraseña.setBounds(53, 147, 145, 14);
+		lblContraseña.setBounds(53, 147, 190, 14);
 		getContentPane().add(lblContraseña);
 		
 		JLabel lblcomprobarPass = new JLabel(resourceBundle.getString("repeatPassword"));
@@ -70,31 +70,31 @@ public class VentanaCrearPerfil extends JFrame {
 		getContentPane().add(lblcomprobarPass);
 		
 		textNombre = new JTextField();
-		textNombre.setBounds(235, 45, 86, 20);
+		textNombre.setBounds(254, 45, 86, 20);
 		getContentPane().add(textNombre);
 		textNombre.setColumns(10);
 		
 		textApellido = new JTextField();
-		textApellido.setBounds(235, 78, 86, 20);
+		textApellido.setBounds(254, 78, 86, 20);
 		getContentPane().add(textApellido);
 		textApellido.setColumns(10);
 		
 		textPass = new JTextField();
-		textPass.setBounds(235, 144, 85, 20);
+		textPass.setBounds(255, 144, 85, 20);
 		getContentPane().add(textPass);
 		textPass.setColumns(10);
 		
 		textFieldRepPass = new JTextField();
-		textFieldRepPass.setBounds(235, 183, 86, 20);
+		textFieldRepPass.setBounds(254, 183, 86, 20);
 		getContentPane().add(textFieldRepPass);
 		textFieldRepPass.setColumns(10);
 		
 		lblCorreo = new JLabel(resourceBundle.getString("email"));
-		lblCorreo.setBounds(53, 120, 132, 14);
+		lblCorreo.setBounds(53, 120, 190, 14);
 		getContentPane().add(lblCorreo);
 		
 		textCorreo = new JTextField();
-		textCorreo.setBounds(234, 111, 86, 20);
+		textCorreo.setBounds(254, 111, 86, 20);
 		getContentPane().add(textCorreo);
 		textCorreo.setColumns(10);
 		
@@ -107,7 +107,7 @@ public class VentanaCrearPerfil extends JFrame {
 				String contrasenia2 = textFieldRepPass.getText();
 				//si los campos estan vacios lanzar mensaje error, existen campos vacios
 				if (nombre.equals("")||contrasenia.equals("")||apellido.equals("")  ) {
-					JOptionPane.showMessageDialog(btnAceptar, "falta algun campo por rellenar");
+					JOptionPane.showMessageDialog(btnAceptar, resourceBundle.getString("emptyFields"));
 				}else {
 					if (contrasenia.equals(contrasenia2)) {
 						try {
@@ -119,10 +119,10 @@ public class VentanaCrearPerfil extends JFrame {
 							userNuevo.setPassword(textPass.getText());
 							
 							
-							if (VentanaCrearPerfil.this.controller.registerUsuario(userNuevo)) {
+/*							if (VentanaCrearPerfil.this.controller.registerUsuario(userNuevo)) {
 								logger.info("Registrado correctamente");
-							}
-							
+							}*/
+							JOptionPane.showMessageDialog(btnAceptar, resourceBundle.getString("userRegistered"));
 							dispose();
 							VentanLogin vLogin= new VentanLogin(controller, resourceBundle);
 							vLogin.setVisible(true);
@@ -130,7 +130,7 @@ public class VentanaCrearPerfil extends JFrame {
 							// meter los parametros al usuario
 							//metodo de introducir usuario a la BD con el controler 
 						} catch (Exception e2) {
-							logger.error("El usuario que ha introducido no se ha podido registrar correctamente");
+							logger.error(resourceBundle.getString("noUserRegistered"));
 						}
 						
 						

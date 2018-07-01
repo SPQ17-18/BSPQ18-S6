@@ -15,10 +15,10 @@ public class CiudadesController {
 
 	final static Logger logger = Logger.getLogger(CiudadesController.class);
 
-	private IRemoteFacade csl;
+	private IRemoteFacade iRF;
 
 	public CiudadesController(IRemoteFacade collector) throws RemoteException {
-		this.csl = collector;
+		this.iRF = collector;
 	}
 
 	/**
@@ -31,7 +31,7 @@ public class CiudadesController {
 	public boolean insertCiudad(CiudadDTO ciudadDTO) {
 		boolean ciudad = false;
 		try {
-			ciudad = csl.insertCiudad(ciudadDTO);
+			ciudad = iRF.insertCiudad(ciudadDTO);
 		} catch (Exception e) {
 			logger.error("Error insertando una nueva ciudad.");
 		}
@@ -46,7 +46,7 @@ public class CiudadesController {
 	public List<CiudadDTO> getAllCiudades() {
 		List<CiudadDTO> ciudades = null;
 		try {
-			ciudades = csl.getCiudades();
+			ciudades = iRF.getCiudades();
 		} catch (RemoteException e) {
 			logger.error("Error al obtener las ciudades del servidor.");
 		}
@@ -63,7 +63,7 @@ public class CiudadesController {
 	public boolean updateCiudad(CiudadDTO ciudadDTO) {
 		boolean updated = false;
 		try {
-			updated = csl.updateCiudad(ciudadDTO);
+			updated = iRF.updateCiudad(ciudadDTO);
 		} catch (RemoteException e) {
 			logger.error("Error actualizando una ciudad.");
 		}
@@ -80,7 +80,7 @@ public class CiudadesController {
 	public boolean deleteCiudad(int idCiudad) {
 		boolean deleted = false;
 		try {
-			deleted = csl.deleteCiudad(idCiudad);
+			deleted = iRF.deleteCiudad(idCiudad);
 		} catch (RemoteException e) {
 			logger.error("Error al borrar una ciudad.");
 		}
@@ -97,7 +97,7 @@ public class CiudadesController {
 	public int getCiudadPoints(int idCiudad) {
 		int points = -1;
 		try {
-			points = csl.getCiudadPoints(idCiudad);
+			points = iRF.getCiudadPoints(idCiudad);
 		} catch (RemoteException e) {
 			logger.error("Error al obtener los puntos de una ciudad.");
 		}
@@ -118,7 +118,7 @@ public class CiudadesController {
 		boolean login = false;
 		try {
 
-			login = csl.loginUsuario(email, password);
+			login = iRF.loginUsuario(email, password);
 		} catch (RemoteException e) {
 			logger.error("Error al identificar un usuario.");
 		}
@@ -136,7 +136,7 @@ public class CiudadesController {
 	 *             lanza excepcion
 	 */
 	public Usuario DevolverUsuario(String email) throws RemoteException {
-		return csl.devolverUsuario(email);
+		return iRF.devolverUsuario(email);
 	}
 
 	/**
@@ -149,7 +149,7 @@ public class CiudadesController {
 	public boolean registerUsuario(Usuario usuario) {
 		boolean registered = false;
 		try {
-			registered = csl.registerUsuario(usuario);
+			registered = iRF.registerUsuario(usuario);
 		} catch (RemoteException e) {
 			logger.error("Error al registrar un usuario.");
 		}
@@ -164,7 +164,7 @@ public class CiudadesController {
 	public List<UsuarioDTO> getAllUsuarios() {
 		List<UsuarioDTO> usuarios = null;
 		try {
-			usuarios = csl.getUsuarios();
+			usuarios = iRF.getUsuarios();
 		} catch (RemoteException e) {
 			logger.error("Error al obtener los usuarios del servidor.");
 		}
@@ -181,7 +181,7 @@ public class CiudadesController {
 	public boolean updateUsuario(UsuarioDTO usuarioDTO) {
 		boolean updated = false;
 		try {
-			updated = csl.updateUsuario(usuarioDTO);
+			updated = iRF.updateUsuario(usuarioDTO);
 		} catch (RemoteException e) {
 			logger.error("Error al actualizar un usuario.");
 		}
@@ -198,7 +198,7 @@ public class CiudadesController {
 	public boolean deleteUsuario(UsuarioDTO usuarioDTO) {
 		boolean deleted = false;
 		try {
-			deleted = csl.deleteUsuario(usuarioDTO);
+			deleted = iRF.deleteUsuario(usuarioDTO);
 		} catch (RemoteException e) {
 			logger.error("Error al borrar un usuario.");
 		}
@@ -208,7 +208,7 @@ public class CiudadesController {
 	public boolean puntuarCiudadUsuario(Ciudad ciudad, Usuario usuario) {
 		boolean dev = false;
 		try {
-			dev = csl.puntuarCiudadUsuario(ciudad, usuario);
+			dev = iRF.puntuarCiudadUsuario(ciudad, usuario);
 		} catch (RemoteException e) {
 			logger.error("Error al guradar puntuación de una ciudad!.");
 		}

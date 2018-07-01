@@ -11,6 +11,7 @@ import java.util.ResourceBundle;
 
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -40,19 +41,15 @@ public class VentanLogin extends JFrame {
 
 	private JTextField textFieldEmail;
 	private JTextField textFieldPassword;
-	private ButtonGroup opcionesIdioma;
-
-	public String idiomaApp = "en";
-
-	private JRadioButton opcionIngles;
-	JRadioButton opcionCast;
-
-	protected ResourceBundle resourceBundle = ResourceBundle.getBundle("lang/messages", Locale.forLanguageTag("en"));
-
-	private String language = "en";
-	private String country = "US";
-	// protected ResourceBundle resourceBundle;
-
+	
+	public VentanLogin vLogin;
+	
+	private JComboBox idioma;
+	private String[] ListIdiomas = {"Espanol", "English"};
+	public String language="es";
+	public String country= "ES";
+	public ResourceBundle resourceBundle = ResourceBundle.getBundle("lang/messages", Locale.forLanguageTag("es"));
+	
 	/**
 	 * Clase constructora
 	 * 
@@ -62,7 +59,7 @@ public class VentanLogin extends JFrame {
 	public VentanLogin(String[] args, IRemoteFacade collector) {
 		try {
 			controller = new CiudadesController(collector);
-			// userLogeado= controller.DevolverUsuario(textFieldEmail.getText().trim());
+
 
 		} catch (RemoteException e) {
 			logger.error("Remote exception: " + e.getMessage());
@@ -70,11 +67,8 @@ public class VentanLogin extends JFrame {
 		}
 		language = new String(args[3]);
 		country = new String(args[4]);
-		Locale currentLocale = new Locale(language, country);
-		// resourceBundle = ResourceBundle.getBundle("lang/messages", currentLocale);
 
-		// resourceBundle = ResourceBundle.getBundle("lang/messages",
-		// Locale.forLanguageTag(language));
+		resourceBundle = ResourceBundle.getBundle("lang/messages",	Locale.forLanguageTag("ES"));
 		iniciarComponentes();
 	}
 
@@ -95,7 +89,7 @@ public class VentanLogin extends JFrame {
 
 	public void iniciarComponentes() {
 
-		logger.info("VentanaLogin");
+		logger.info(resourceBundle.getString("login"));
 
 		setBounds(500, 100, 365, 250);
 		setLocationRelativeTo(null);
@@ -124,6 +118,10 @@ public class VentanLogin extends JFrame {
 		textFieldPassword.setBounds(187, 57, 125, 20);
 		getContentPane().add(textFieldPassword);
 		textFieldPassword.setColumns(10);
+		
+		idioma = new JComboBox(ListIdiomas);
+		idioma.setBounds(99, 164, 150, 20);
+		getContentPane().add(idioma);
 
 		JButton btnEntrar = new JButton(resourceBundle.getString("signIn"));
 		btnEntrar.addActionListener(new ActionListener() {
@@ -163,13 +161,7 @@ public class VentanLogin extends JFrame {
 					JOptionPane.showMessageDialog(VentanLogin.this, resourceBundle.getString("wrongSignIn"),
 							resourceBundle.getString("badCredentials"), JOptionPane.INFORMATION_MESSAGE);
 					logger.info(resourceBundle.getString("wrongUsernamePassword") + ": "
-							+ textFieldEmail.getText().trim() + " " + textFieldPassword.getText().trim());
-
-				}
-
-				// Comprobamos si el usuario es el ADMIN
-				if (textFieldEmail.getText().trim().equals("admin")
-						&& textFieldPassword.getText().trim().equals("admin")) {
+							+ textFieldEmail.getText() + " " + textFieldPassword.getText());
 
 				}
 
@@ -183,57 +175,50 @@ public class VentanLogin extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 
 				VentanaCrearPerfil registrarse = new VentanaCrearPerfil(controller, resourceBundle);
-				// uDTO = assembler.assembleUnUsuario(userLogeado);
-				// Usuario uNuevo= new Usuario(text, nombre, apellido, password)
-				// controller.registerUsuario(uDTO);
-				// registrarse.centreWindow();
 				registrarse.setVisible(true);
 				dispose();
 			}
 		});
 		btnRegistrarse.setBounds(198, 90, 114, 23);
 		getContentPane().add(btnRegistrarse);
+		
+		JButton btnTraducir = new JButton(resourceBundle.getString("translate"));
+		btnTraducir.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				if(idioma.getSelectedItem().toString().equals("Espanol")) {
+					language="es";
+					country= "ES";
+					resourceBundle = ResourceBundle.getBundle("lang/messages", Locale.forLanguageTag("ES"));
+					dispose();
+					VentanLogin vLogin = new VentanLogin(controller, resourceBundle);
+					vLogin.setVisible(true);
+					logger.info(language);
+					
+				
+					
+				}else if(idioma.getSelectedItem().toString().equals("English")) {
+					language="en";
+					country="US";
+					resourceBundle = ResourceBundle.getBundle("lang/messages", Locale.US);
+					dispose();
+					VentanLogin vLogin = new VentanLogin(controller, resourceBundle);
+					vLogin.setVisible(true);
+					logger.info(language);
 
-		JLabel lblIdioma = new JLabel(resourceBundle.getString("selectLanguage"));
-		lblIdioma.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblIdioma.setBounds(29, 133, 114, 14);
-		getContentPane().add(lblIdioma);
-
-		opcionCast = new JRadioButton(resourceBundle.getString("spanish"));
-		opcionCast.setBounds(156, 129, 127, 25);
-		getContentPane().add(opcionCast);
-
-		opcionCast.addMouseListener(new MouseAdapter() {
-
-			@Override
-			public void mouseClicked(MouseEvent arg0) {
-
-				idiomaApp = "es";
-				resourceBundle = ResourceBundle.getBundle("lang/messages", Locale.forLanguageTag("es"));
-
+				} else {
+					JOptionPane.showMessageDialog(null,resourceBundle.getString("error_msg"));
+					logger.error("No se ha podido traducir");
+				}
+				
+				
 			}
+			
+			});
+		btnTraducir.setBounds(81, 126, 189, 25);
+		getContentPane().add(btnTraducir);
 
-		});
-
-		opcionIngles = new JRadioButton(resourceBundle.getString("english"));
-		opcionIngles.setBounds(156, 159, 127, 25);
-		getContentPane().add(opcionIngles);
-
-		opcionIngles.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent arg0) {
-
-				idiomaApp = "en";
-				resourceBundle = ResourceBundle.getBundle("lang/messages", Locale.forLanguageTag("en"));
-
-			}
-		});
-
-		opcionesIdioma = new ButtonGroup();
-		opcionesIdioma.add(opcionCast);
-		opcionesIdioma.add(opcionIngles);
-
-	}
+		}
 
 	/**
 	 * Metodo que limpia los campos de la ventana login.
@@ -242,5 +227,8 @@ public class VentanLogin extends JFrame {
 		textFieldEmail.setText("");
 		textFieldPassword.setText("");
 	}
+	
 
+
+		
 }
