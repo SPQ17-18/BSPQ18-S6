@@ -13,6 +13,7 @@ import javax.jdo.Transaction;
 import org.apache.log4j.Logger;
 
 import es.deusto.spq.ciudades.server.jdo.data.Ciudad;
+import es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario;
 import es.deusto.spq.ciudades.server.jdo.data.Usuario;
 
 public class ManagerDAO implements IManagerDAO {
@@ -68,6 +69,51 @@ public class ManagerDAO implements IManagerDAO {
 		}
 	}
 
+	public void puntuarCiudadUsuario(Ciudad ciudad, Usuario usuario) {
+
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx = pm.currentTransaction();
+
+		try {
+			tx.begin();
+
+			Ciudad ciudadBuena = null;
+			Usuario usuarioBueno = null;
+
+			Query<Ciudad> q = pm.newQuery("SELECT FROM " + Ciudad.class.getName());
+			List<Ciudad> resultCiudades = (List<Ciudad>) q.execute();
+
+			Query<Usuario> q2 = pm.newQuery("SELECT FROM " + Usuario.class.getName());
+			List<Usuario> resultUsuarios = (List<Usuario>) q2.execute();
+
+			for (Ciudad c : resultCiudades) {
+				if (c.getNombreCiudad().equals(ciudad.getNombreCiudad())) {
+					ciudadBuena = c;
+				}
+			}
+
+			for (Usuario u : resultUsuarios) {
+				if (u.getEmail().equals(usuario.getEmail())) {
+					usuarioBueno = u;
+				}
+			}
+
+			// Creamos el objeto bueno a guardar:
+			// Objeto a guardar en la base de datos:
+			CiudadUsuario ciudadUsuario = new CiudadUsuario(ciudadBuena, usuarioBueno);
+			pm.makePersistent(ciudadUsuario);
+
+			tx.commit();
+		} catch (Exception ex) {
+			logger.error("Error intentado obtener las ciudades");
+		} finally {
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+			pm.close();
+		}
+	}
+
 	/**
 	 * Metodo para obtener las ciudades de la base de datos
 	 */
@@ -110,39 +156,6 @@ public class ManagerDAO implements IManagerDAO {
 	 *            Ciudad a actualizar
 	 * @throws Exception
 	 *             Lanza una excepcion cuando ocurre un error
-	 */
-
-	/*
-	 * public void updateCiudad(Ciudad ciudad) throws Exception {
-	 * 
-	 * PersistenceManager pm = pmf.getPersistenceManager();
-	 * 
-	 * Transaction tx = pm.currentTransaction();
-	 * 
-	 * pm.getFetchPlan().setMaxFetchDepth(4);
-	 * 
-	 * try { tx.begin();
-	 * 
-	 * Query<?> query = pm.newQuery("SELECT FROM " + Ciudad.class.getName() +
-	 * " WHERE  idCiudad== '" + ciudad.getIdCiudad() + "'"); query.setUnique(true);
-	 * Ciudad result = (Ciudad) query.execute();
-	 * 
-	 * result.setIdCiudad(ciudad.getIdCiudad());
-	 * result.setNombreCiudad(ciudad.getNombreCiudad());
-	 * result.setNumVotantes(ciudad.getNumVotantes());
-	 * result.setPais(ciudad.getPais());
-	 * result.setPuntuacionCultura(ciudad.getPuntuacionCultura());
-	 * result.setPuntuacionGastronomia(ciudad.getPuntuacionGastronomia());
-	 * result.setPuntuacionOcio(ciudad.getPuntuacionOcio());
-	 * result.setPuntuacionTotal(ciudad.getPuntuacionTotal());
-	 * result.setPuntuacionTransporte(ciudad.getPuntuacionTransporte());
-	 * 
-	 * tx.commit();
-	 * 
-	 * } catch (Exception ex) { ex.printStackTrace();
-	 * logger.error("Error actualizando una ciudad: " + ex.getMessage()); throw new
-	 * Exception(); } finally { if (tx != null && tx.isActive()) { tx.rollback(); }
-	 * pm.close(); } }
 	 */
 
 	@Override
@@ -247,12 +260,11 @@ public class ManagerDAO implements IManagerDAO {
 	 *            Email del usuario
 	 * @return Devuelve un usuario de la base de datos
 	 */
-	public Usuario getUsuario(String email) {
+	public String getUsuario(String email) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 
 		Transaction tx = pm.currentTransaction();
-
-		Usuario result = null;
+		String dev = "";
 
 		try {
 			tx.begin();
@@ -263,7 +275,7 @@ public class ManagerDAO implements IManagerDAO {
 
 			for (Usuario u : usuarios) {
 				if (u.getEmail().equals(email)) {
-					result = u;
+					dev = u.getPassword();
 				}
 			}
 
@@ -280,7 +292,7 @@ public class ManagerDAO implements IManagerDAO {
 			pm.close();
 		}
 
-		return result;
+		return dev;
 	}
 
 	/**
@@ -430,32 +442,118 @@ public class ManagerDAO implements IManagerDAO {
 			System.setSecurityManager(new SecurityManager());
 		}
 
-		// Un usuario no puede aniadir ciudades, solo votar
 		Usuario u1 = new Usuario("cristian@opendeusto.es", "Cristian", "Perez", "1234");
 		Usuario u2 = new Usuario("jesus@opendeusto.es", "Jesus", "de la Pisa", "qwerty");
+		Usuario u4 = new Usuario("jon@opendeusto.es", "Jon", "Alonso", "2222");
+		Usuario u5 = new Usuario("xabi@opendeusto.es", "Xabier", "Santos", "22aa");
+		Usuario u6 = new Usuario("mar@opendeusto.es", "Mar", "Abando", "44bb");
+		Usuario u7 = new Usuario("luis@opendeusto.es", "Luis", "Arribas", "cc33");
+		Usuario u8 = new Usuario("javi@opendeusto.es", "Javier", "Lorenzo", "wwcc");
+		Usuario u9 = new Usuario("pablo@opendeusto.es", "Pablo", "Diez", "2233");
+		Usuario u10 = new Usuario("laura@opendeusto.es", "Laura", "Moreno", "lm93");
+		Usuario u11 = new Usuario("martina@opendeusto.es", "Martina", "Echaniz", "me23");
+		Usuario u12 = new Usuario("unai@opendeusto.es", "Unai", "Vitxo", "uve2");
+		Usuario u13 = new Usuario("oscar@opendeusto.es", "Oscar", "Rodriguez", "or22");
+		Usuario u14 = new Usuario("andoni@opendeusto.es", "Andoni", "Vicentiz", "av11");
+		Usuario u15 = new Usuario("jonh@opendeusto.es", "Jon", "Hernandez", "jhrb");
+		Usuario u16 = new Usuario("paula@opendeusto.es", "Paula", "Aspiunza", "pa35");
+		Usuario u17 = new Usuario("belen@opendeusto.es", "Belen", "Abando", "ba23");
+		Usuario u18 = new Usuario("patricia@opendeusto.es", "Patricia", "Ballano", "pbb1");
+		Usuario u19 = new Usuario("sara@opendeusto.es", "Sara", "Arroyo", "samt");
+		Usuario u20 = new Usuario("lucia@opendeusto.es", "Lucia", "Garay", "lg96");
+		
+	
+		Usuario u3 = new Usuario("admin@opendeusto.es", "admin", "fasdfasd", "admin");
 
-		// El admin no puede votar ciudades solo aniadir
-		Usuario u3 = new Usuario("admin@opendeusto.es", "admin", "", "admin");
+		Ciudad c1 = new Ciudad("Madrid", "Espania", 0, 0, 0, 0, 0, 0);
+		Ciudad c2 = new Ciudad("Paris", "Francia", 0, 0, 0, 0, 0, 0);
+		Ciudad c3 = new Ciudad("Monaco", "Monaco", 0, 0, 0, 0, 0, 0);
+		Ciudad c4= new Ciudad("Barcelona", "Espania", 0, 0, 0, 0, 0, 0);
+		Ciudad c5 = new Ciudad("Bilbao", "Espania", 0, 0, 0, 0, 0, 0);
+		Ciudad c6 = new Ciudad("Lugo", "Espania", 0, 0, 0, 0, 0, 0);
+		Ciudad c7 = new Ciudad("Valencia", "Espania", 0, 0, 0, 0, 0, 0);
+		Ciudad c8 = new Ciudad("Londres", "Reino Unido", 0, 0, 0, 0, 0, 0);
+		Ciudad c9 = new Ciudad("Roma", "Italia", 0, 0, 0, 0, 0, 0);
+		Ciudad c10= new Ciudad("Lisboa", "Portugal", 0, 0, 0, 0, 0, 0);
+		Ciudad c11= new Ciudad("Venecia", "Italia", 0, 0, 0, 0, 0, 0);
+		Ciudad c12= new Ciudad("Budapest", "Hungria", 0, 0, 0, 0, 0, 0);
+		Ciudad c13= new Ciudad("Praga", "Republica Checa", 0, 0, 0, 0, 0, 0);
+		Ciudad c14= new Ciudad("Atenas", "Grecia", 0, 0, 0, 0, 0, 0);
+		Ciudad c15= new Ciudad("Estambul", "Turquia", 0, 0, 0, 0, 0, 0);
+		Ciudad c16= new Ciudad("Viena", "Austria", 0, 0, 0, 0, 0, 0);
+		Ciudad c17= new Ciudad("Salzburgo", "Austria", 0, 0, 0, 0, 0, 0);
+		Ciudad c18= new Ciudad("Florencia", "Italia", 0, 0, 0, 0, 0, 0);
+		Ciudad c19= new Ciudad("Cracovia", "Polonia", 0, 0, 0, 0, 0, 0);
+		Ciudad c20= new Ciudad("Estocolmo", "Suecia", 0, 0, 0, 0, 0, 0);
+		Ciudad c21= new Ciudad("Copenhague", "Dinamarca", 0, 0, 0, 0, 0, 0);
+		Ciudad c22= new Ciudad("Oporto", "Portugal", 0, 0, 0, 0, 0, 0);
+		Ciudad c23= new Ciudad("San Petersburgo", "Rusia", 0, 0, 0, 0, 0, 0);
+		Ciudad c24= new Ciudad("Granada", "Espania", 0, 0, 0, 0, 0, 0);
+		Ciudad c25= new Ciudad("Sevilla", "Espania", 0, 0, 0, 0, 0, 0);
+		Ciudad c26= new Ciudad("Moscu", "Rusia", 0, 0, 0, 0, 0, 0);
+		Ciudad c27= new Ciudad("Montecarlo", "Monaco", 0, 0, 0, 0, 0, 0);
+		Ciudad c28= new Ciudad("Amberes", "Belgica", 0, 0, 0, 0, 0, 0);
 
-		Ciudad c1 = new Ciudad(1, "Madrid", "Espania", 8, 8, 7, 7, 9, 1);
-		Ciudad c2 = new Ciudad(2, "Paris", "Francia", 9, 9, 8, 8, 8, 2);
-
+		
 		ArrayList<Ciudad> cu1 = new ArrayList<Ciudad>();
 		cu1.add(c1); // El usuario 1 ha puntuado la ciudad 1
-
 
 		ArrayList<Ciudad> cu2 = new ArrayList<Ciudad>();
 		cu2.add(c1);
 		cu2.add(c2);
 
-
 		try {
 			dao.storeUsuario(u1);
 			dao.storeUsuario(u2);
 			dao.storeUsuario(u3);
-
+			dao.storeUsuario(u4);
+			dao.storeUsuario(u5);
+			dao.storeUsuario(u6);
+			dao.storeUsuario(u7);
+			dao.storeUsuario(u8);
+			dao.storeUsuario(u9);
+			dao.storeUsuario(u10);
+			dao.storeUsuario(u11);
+			dao.storeUsuario(u12);
+			dao.storeUsuario(u13);
+			dao.storeUsuario(u14);
+			dao.storeUsuario(u15);
+			dao.storeUsuario(u16);
+			dao.storeUsuario(u17);
+			dao.storeUsuario(u18);
+			dao.storeUsuario(u19);
+			dao.storeUsuario(u20);
+			
+			
 			dao.storeCiudad(c1);
 			dao.storeCiudad(c2);
+			dao.storeCiudad(c3);
+			dao.storeCiudad(c4);
+			dao.storeCiudad(c5);
+			dao.storeCiudad(c6);
+			dao.storeCiudad(c7);
+			dao.storeCiudad(c8);
+			dao.storeCiudad(c9);
+			dao.storeCiudad(c10);
+			dao.storeCiudad(c11);
+			dao.storeCiudad(c12);
+			dao.storeCiudad(c13);
+			dao.storeCiudad(c14);
+			dao.storeCiudad(c15);
+			dao.storeCiudad(c16);
+			dao.storeCiudad(c17);
+			dao.storeCiudad(c18);
+			dao.storeCiudad(c19);
+			dao.storeCiudad(c20);
+			dao.storeCiudad(c21);
+			dao.storeCiudad(c22);
+			dao.storeCiudad(c23);
+			dao.storeCiudad(c24);
+			dao.storeCiudad(c25);
+			dao.storeCiudad(c26);
+			dao.storeCiudad(c27);
+			dao.storeCiudad(c28);
+
 
 
 		} catch (Exception e) {

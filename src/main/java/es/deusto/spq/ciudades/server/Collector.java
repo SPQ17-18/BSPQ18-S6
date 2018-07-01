@@ -39,6 +39,16 @@ public class Collector extends UnicastRemoteObject implements IRemoteFacade {
 		assembler = new Assembler();
 	}
 
+	public boolean puntuarCiudadUsuario(Ciudad ciudad, Usuario usuario) {
+		try {
+			dao.puntuarCiudadUsuario(ciudad, usuario);
+			logger.info("Ciudad puntuad: " + ciudad.getNombreCiudad());
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
+	}
+
 	/**
 	 * Metodo para insertar una ciudad
 	 * 
@@ -151,8 +161,8 @@ public class Collector extends UnicastRemoteObject implements IRemoteFacade {
 	public boolean loginUsuario(String email, String password) throws RemoteException {
 		try {
 			System.out.println("Usuario llega ");
-			Usuario u = dao.getUsuario(email);
-			if (u.getPassword().equals(password)) {
+			String pass = dao.getUsuario(email);
+			if (pass.equals(password)) {
 				logger.info("Usuario con email " + email + " se ha logeado correctamente");
 				return true;
 			} else {
@@ -161,7 +171,7 @@ public class Collector extends UnicastRemoteObject implements IRemoteFacade {
 			}
 
 		} catch (Exception e) {
-			logger.error("Usuario con email " + email + "no existe");
+			logger.error("Usuario con email " + email + " no existe");
 			return false;
 		}
 	}
@@ -178,7 +188,7 @@ public class Collector extends UnicastRemoteObject implements IRemoteFacade {
 	 */
 	public boolean registerUsuario(Usuario usuario) throws RemoteException {
 		try {
-			//Usuario usuario = assembler.disassembleUsuario(usuarioDTO);
+			// Usuario usuario = assembler.disassembleUsuario(usuarioDTO);
 			dao.storeUsuario(usuario);
 			logger.info("Inserta un usuario a la base de datos llamado" + usuario.getNombre());
 			return true;
@@ -254,7 +264,9 @@ public class Collector extends UnicastRemoteObject implements IRemoteFacade {
 	 *             expulsa una excepcion
 	 */
 	public Usuario devolverUsuario(String email) throws RemoteException {
-		return dao.getUsuario(email);
+		Usuario user = null;
+		//return dao.getUsuario(email);
+		return user;
 	}
 
 	@Override

@@ -4,6 +4,7 @@ import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 
+import es.deusto.spq.ciudades.server.jdo.data.Ciudad;
 import es.deusto.spq.ciudades.server.jdo.data.CiudadDTO;
 import es.deusto.spq.ciudades.server.jdo.data.Usuario;
 import es.deusto.spq.ciudades.server.jdo.data.UsuarioDTO;
@@ -22,6 +23,7 @@ public interface IRemoteFacade extends Remote{
 	public boolean updateUsuario (UsuarioDTO usuarioDTO) throws RemoteException;
 	public boolean deleteUsuario (UsuarioDTO usuarioDTO) throws RemoteException;
 	public Usuario getUsuario(String email) throws RemoteException;
+	public boolean puntuarCiudadUsuario(Ciudad ciudad, Usuario usuario) throws RemoteException;
 	
 	
 }

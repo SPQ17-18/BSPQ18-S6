@@ -1,30 +1,20 @@
 package es.deusto.spq.ciudades.server.jdo.data;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
-import javax.jdo.annotations.Join;
 import javax.jdo.annotations.PersistenceCapable;
-import javax.jdo.annotations.Persistent;
-import javax.jdo.annotations.PrimaryKey;
 
-@PersistenceCapable(detachable = "true")
+@PersistenceCapable
 public class Usuario implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	@PrimaryKey
 	private String email;
 	private String nombre;
 	private String apellido;
 	private String password;
-
-	@Persistent(defaultFetchGroup = "true", mappedBy = "usuario", dependentElement = "true")
-	@Join
-	private List<Ciudad> ciudadesVisitadas = new ArrayList<>();
 
 	/**
 	 * Constructor vacio
@@ -133,36 +123,6 @@ public class Usuario implements Serializable {
 	}
 
 	/**
-	 * Metodo para obtener las ciudades que ha puntuado/visitado un usuario
-	 * 
-	 * @return Devuelve la lista de ciudades que ha puntuado un usuario
-	 */
-	public List<Ciudad> getCiudadesPuntuadas() {
-		return ciudadesVisitadas;
-	}
-
-	/**
-	 * Metodo para establecer las ciudades puntuadas de un usuario
-	 * 
-	 * @param ciudades
-	 *            Ciudades que han sido puntuadas por un usuario
-	 */
-	public void setCiudades(List<Ciudad> ciudades) {
-		this.ciudadesVisitadas = ciudades;
-	}
-
-	/**
-	 * Metodo para añadir una ciudad a un usuario
-	 * 
-	 * @param c
-	 *            Ciudad que queremos añadir
-	 */
-	public void addCiudad(Ciudad c) {
-		ciudadesVisitadas.add(c);
-		c.setUsuario(this);
-	}
-
-	/**
 	 * Metodo para copiar un usuario de la base de datos
 	 * 
 	 * @param u
@@ -173,10 +133,6 @@ public class Usuario implements Serializable {
 		this.email = u.getEmail();
 		this.nombre = u.getNombre();
 		this.password = u.getPassword();
-		for (int i = 0; i < u.getCiudadesPuntuadas().size(); i++) {
-			this.ciudadesVisitadas.add(new Ciudad());
-			this.ciudadesVisitadas.get(i).copyCiudad(u.getCiudadesPuntuadas().get(i));
-		}
 	}
 
 }

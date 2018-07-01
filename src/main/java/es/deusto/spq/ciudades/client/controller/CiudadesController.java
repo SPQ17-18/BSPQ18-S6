@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
+import es.deusto.spq.ciudades.server.jdo.data.Ciudad;
 import es.deusto.spq.ciudades.server.jdo.data.CiudadDTO;
 import es.deusto.spq.ciudades.server.jdo.data.Usuario;
 import es.deusto.spq.ciudades.server.jdo.data.UsuarioDTO;
@@ -116,7 +117,7 @@ public class CiudadesController {
 	public boolean identifyUsuario(String email, String password) {
 		boolean login = false;
 		try {
-			
+
 			login = csl.loginUsuario(email, password);
 		} catch (RemoteException e) {
 			logger.error("Error al identificar un usuario.");
@@ -202,6 +203,16 @@ public class CiudadesController {
 			logger.error("Error al borrar un usuario.");
 		}
 		return deleted;
+	}
+
+	public boolean puntuarCiudadUsuario(Ciudad ciudad, Usuario usuario) {
+		boolean dev = false;
+		try {
+			dev = csl.puntuarCiudadUsuario(ciudad, usuario);
+		} catch (RemoteException e) {
+			logger.error("Error al guradar puntuación de una ciudad!.");
+		}
+		return dev;
 	}
 
 }

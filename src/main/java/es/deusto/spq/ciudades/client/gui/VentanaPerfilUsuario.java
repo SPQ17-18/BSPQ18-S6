@@ -21,6 +21,7 @@ import javax.swing.table.TableModel;
 import org.apache.log4j.Logger;
 
 import es.deusto.spq.ciudades.client.controller.CiudadesController;
+import es.deusto.spq.ciudades.server.jdo.data.Ciudad;
 import es.deusto.spq.ciudades.server.jdo.data.CiudadDTO;
 import es.deusto.spq.ciudades.server.jdo.data.Usuario;
 
@@ -48,7 +49,7 @@ public class VentanaPerfilUsuario extends JFrame {
 	private JScrollPane scrollPane;
 
 	private DefaultTableModel tableModel;
-	private JButton btnNewButton;
+	private JButton btnPuntuarCiudad;
 
 	/**
 	 * Constructor:
@@ -58,7 +59,7 @@ public class VentanaPerfilUsuario extends JFrame {
 	 * @param userLogeado
 	 */
 	public VentanaPerfilUsuario(final CiudadesController controller, final ResourceBundle resourceBundle,
-			Usuario userLogeado) {
+			final Usuario userLogeado) {
 
 		this.resourceBundle = resourceBundle;
 		this.controller = controller;
@@ -73,26 +74,8 @@ public class VentanaPerfilUsuario extends JFrame {
 		btnRanking = new JButton("Ver ranking ciudades");
 		scrollPane = new JScrollPane();
 		JTableCiudadesUsuario = new JTable();
+		btnPuntuarCiudad = new JButton("Puntuar Ciudad");
 
-/*		//Aniadir que en la tabla se pueda seleccionar una fila 
-		TableModelListener escuchador= new TableModelListener() {
-			
-			@Override
-			public void tableChanged(TableModelEvent e) {
-				// TODO Auto-generated method stub
-				int fila = JTableCiudadesUsuario.getSelectedRow();
-				System.out.println("Fila seleccionada");
-				logger.info("Se ha seleccionado una fila"+fila);
-				
-				
-					VentanaPuntuarCiudad vPuntuarCiudad = new VentanaPuntuarCiudad(controller);
-					vPuntuarCiudad.setVisible(true);
-					dispose();
-				
-
-			}
-		};*/
-		
 		lblCiudadesPuntuadas.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblCiudadesPuntuadas.setBounds(230, 9, 72, 17);
 		btnVerCiudades.setBounds(12, 373, 240, 25);
@@ -115,17 +98,17 @@ public class VentanaPerfilUsuario extends JFrame {
 		contentPane.add(btnRanking);
 
 		scrollPane.setViewportView(JTableCiudadesUsuario);
-		
-		btnNewButton = new JButton("Puntuar Ciudad");
-		btnNewButton.addActionListener(new ActionListener() {
+
+		btnPuntuarCiudad.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				//VentanaPuntuarCiudad vPuntuar = new VentanaPuntuarCiudad();
-				
+				dispose();
+				VentanaPuntuarCiudad vPuntuar = new VentanaPuntuarCiudad(controller, resourceBundle, userLogeado,
+						getCiudadSeleccionadaEnTabla());
+				vPuntuar.setVisible(true);
 			}
 		});
-		btnNewButton.setBounds(295, 411, 240, 25);
-		contentPane.add(btnNewButton);
+		btnPuntuarCiudad.setBounds(295, 411, 240, 25);
+		contentPane.add(btnPuntuarCiudad);
 
 		btnVerCiudades.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -148,6 +131,8 @@ public class VentanaPerfilUsuario extends JFrame {
 		});
 	}
 
+	List<CiudadDTO> arrayCiudadesDTO;
+
 	private void mostrarCiudadesEnTabla() {
 		// Inicializamos modelo:
 		tableModel = new DefaultTableModel();
@@ -156,7 +141,7 @@ public class VentanaPerfilUsuario extends JFrame {
 		tableModel.addColumn("Nombre Ciudad");
 		tableModel.addColumn("Puntuacion total de ciudad");
 
-		List<CiudadDTO> arrayCiudadesDTO = new ArrayList<CiudadDTO>();
+		arrayCiudadesDTO = new ArrayList<CiudadDTO>();
 		arrayCiudadesDTO = controller.getAllCiudades();
 
 		for (int i = 0; i < arrayCiudadesDTO.size(); i++) {
@@ -178,7 +163,7 @@ public class VentanaPerfilUsuario extends JFrame {
 		tableModel.addColumn("Pais de la ciudad");
 		tableModel.addColumn("Puntuacion total de ciudad");
 
-		List<CiudadDTO> arrayCiudadesDTO = new ArrayList<CiudadDTO>();
+		arrayCiudadesDTO = new ArrayList<CiudadDTO>();
 		arrayCiudadesDTO = controller.getAllCiudades();
 
 		List<CiudadDTO> arrayCiudadesDTOFinal = new ArrayList<CiudadDTO>();
@@ -198,5 +183,20 @@ public class VentanaPerfilUsuario extends JFrame {
 		// Finalmente:
 		// Introducimos el modelo en la tabla:
 		JTableCiudadesUsuario.setModel(tableModel);
+	}
+
+	private CiudadDTO getCiudadSeleccionadaEnTabla() {
+		CiudadDTO ciudad = null;
+
+		for (int i = 0; i < tableModel.getRowCount(); i++) {
+			if (JTableCiudadesUsuario.getSelectedRow() == i) {
+				for (CiudadDTO c : arrayCiudadesDTO) {
+					if (c.getNombreCiudad().equals(JTableCiudadesUsuario.getValueAt(i, 0))) {
+						ciudad = c;
+					}
+				}
+			}
+		}
+		return ciudad;
 	}
 }

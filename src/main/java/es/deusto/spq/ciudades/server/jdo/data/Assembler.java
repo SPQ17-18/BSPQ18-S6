@@ -31,7 +31,6 @@ public class Assembler {
 	 */
 	public Ciudad disassembleCiudad(CiudadDTO ciudadDTO) {
 		Ciudad c = new Ciudad();
-		c.setIdCiudad(ciudadDTO.getIdCiudad());
 		c.setNombreCiudad(ciudadDTO.getNombreCiudad());
 		c.setNumVotantes(ciudadDTO.getNumVotantes());
 		c.setPais(ciudadDTO.getPais());
@@ -54,7 +53,7 @@ public class Assembler {
 	public ArrayList<CiudadDTO> assembleCiudad(ArrayList<Ciudad> ciudades) {
 		ArrayList<CiudadDTO> ciudadDTO = new ArrayList<CiudadDTO>();
 		for (int i = 0; i < ciudades.size(); i++) {
-			CiudadDTO cDTO = new CiudadDTO(ciudades.get(i).getIdCiudad(), ciudades.get(i).getNombreCiudad(), ciudades.get(i).getPais(), ciudades.get(i).getPuntuacionTotal(), ciudades.get(i).getPuntuacionOcio(), ciudades.get(i).getPuntuacionGastronomia(), ciudades.get(i).getPuntuacionCultura(), ciudades.get(i).getPuntuacionTransporte(), ciudades.get(i).getNumVotantes());
+			CiudadDTO cDTO = new CiudadDTO(ciudades.get(i).getNombreCiudad(), ciudades.get(i).getPais(), ciudades.get(i).getPuntuacionTotal(), ciudades.get(i).getPuntuacionOcio(), ciudades.get(i).getPuntuacionGastronomia(), ciudades.get(i).getPuntuacionCultura(), ciudades.get(i).getPuntuacionTransporte(), ciudades.get(i).getNumVotantes());
 			ciudadDTO.add(cDTO);
 		}
 		return ciudadDTO;

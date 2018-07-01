@@ -131,14 +131,14 @@ public class VentanLogin extends JFrame {
 				logger.info("Boton aceptar login");
 
 				// Comprobacion campos vacios
-				if (textFieldEmail.getText().trim().equals("") || textFieldPassword.getText().trim().equals("")) {
+				if (textFieldEmail.getText().equals("") || textFieldPassword.getText().equals("")) {
 					JOptionPane.showMessageDialog(null, resourceBundle.getString("emptyFields"),
 							"ERROR! Existen campos vacios", JOptionPane.ERROR_MESSAGE);
 					limpiarCampos();
 				}
 				// Comprobamos si el usuario esta en la bd
-				else if (controller.identifyUsuario(textFieldEmail.getText().trim(),
-						textFieldPassword.getText().trim())) {
+				else if (controller.identifyUsuario(textFieldEmail.getText(),
+						String.valueOf(textFieldPassword.getText()))) {
 					JOptionPane.showMessageDialog(VentanLogin.this,
 							resourceBundle.getString("greetings") + " " + textFieldEmail.getText().trim() + "! "
 									+ resourceBundle.getString("welcomeMessage") + " ",
@@ -183,10 +183,10 @@ public class VentanLogin extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 
 				VentanaCrearPerfil registrarse = new VentanaCrearPerfil(controller, resourceBundle);
-				//uDTO = assembler.assembleUnUsuario(userLogeado);
-				//Usuario uNuevo= new Usuario(text, nombre, apellido, password)
-				//controller.registerUsuario(uDTO);
-				//registrarse.centreWindow();
+				// uDTO = assembler.assembleUnUsuario(userLogeado);
+				// Usuario uNuevo= new Usuario(text, nombre, apellido, password)
+				// controller.registerUsuario(uDTO);
+				// registrarse.centreWindow();
 				registrarse.setVisible(true);
 				dispose();
 			}

@@ -18,6 +18,8 @@ public interface IManagerDAO {
 	public ArrayList<Usuario> getUsuarios();
 	public void deleteUsuario(Usuario usuario) throws Exception;
 	public void manageUsuario(Usuario usuario) throws Exception;
-	public Usuario getUsuario(String email);
+	public String getUsuario(String email);
+	
+	public void puntuarCiudadUsuario(Ciudad ciudad, Usuario usuario) throws Exception;
 		
 }
