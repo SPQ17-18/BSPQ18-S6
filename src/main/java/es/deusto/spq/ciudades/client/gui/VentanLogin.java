@@ -3,19 +3,15 @@ package es.deusto.spq.ciudades.client.gui;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import java.rmi.RemoteException;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
 import org.apache.log4j.Logger;
@@ -28,9 +24,12 @@ import es.deusto.spq.ciudades.server.remote.IRemoteFacade;
 
 public class VentanLogin extends JFrame {
 
-	final static Logger logger = Logger.getLogger(VentanLogin.class);
-
+	/**
+	 * 
+	 */
 	private static final long serialVersionUID = 1L;
+
+	final static Logger logger = Logger.getLogger(VentanLogin.class);
 
 	private CiudadesController controller;
 
@@ -41,15 +40,15 @@ public class VentanLogin extends JFrame {
 
 	private JTextField textFieldEmail;
 	private JTextField textFieldPassword;
-	
+
 	public VentanLogin vLogin;
-	
+
 	private JComboBox idioma;
-	private String[] ListIdiomas = {"Espanol", "English"};
-	public String language="es";
-	public String country= "ES";
+	private String[] ListIdiomas = { "Espanol", "English" };
+	public String language = "es";
+	public String country = "ES";
 	public ResourceBundle resourceBundle = ResourceBundle.getBundle("lang/messages", Locale.forLanguageTag("es"));
-	
+
 	/**
 	 * Clase constructora
 	 * 
@@ -60,7 +59,6 @@ public class VentanLogin extends JFrame {
 		try {
 			controller = new CiudadesController(collector);
 
-
 		} catch (RemoteException e) {
 			logger.error("Remote exception: " + e.getMessage());
 			e.printStackTrace();
@@ -68,7 +66,7 @@ public class VentanLogin extends JFrame {
 		language = new String(args[3]);
 		country = new String(args[4]);
 
-		resourceBundle = ResourceBundle.getBundle("lang/messages",	Locale.forLanguageTag("ES"));
+		resourceBundle = ResourceBundle.getBundle("lang/messages", Locale.forLanguageTag("ES"));
 		iniciarComponentes();
 	}
 
@@ -118,7 +116,7 @@ public class VentanLogin extends JFrame {
 		textFieldPassword.setBounds(187, 57, 125, 20);
 		getContentPane().add(textFieldPassword);
 		textFieldPassword.setColumns(10);
-		
+
 		idioma = new JComboBox(ListIdiomas);
 		idioma.setBounds(99, 164, 150, 20);
 		getContentPane().add(idioma);
@@ -144,24 +142,23 @@ public class VentanLogin extends JFrame {
 					logger.info(resourceBundle.getString("successfullyLoggedUser"));
 
 					try {
-						userLogeado = controller.DevolverUsuario(textFieldEmail.getText());
-						if (userLogeado != null) {
+						Usuario user = controller.DevolverUsuario(textFieldEmail.getText());
+						if (user != null) {
 							logger.info("DevolverUsuario correcto!");
+							System.out.println(user.getEmail() + " VentanaLogin");
+							VentanaPerfilUsuario vpUsuario = new VentanaPerfilUsuario(controller, resourceBundle, user);
+							vpUsuario.setVisible(true);
+							dispose();
 						}
 					} catch (RemoteException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
 					}
-
-					VentanaPerfilUsuario vpUsuario = new VentanaPerfilUsuario(controller, resourceBundle, userLogeado);
-					vpUsuario.setVisible(true);
-					dispose();
-
 				} else {
 					JOptionPane.showMessageDialog(VentanLogin.this, resourceBundle.getString("wrongSignIn"),
 							resourceBundle.getString("badCredentials"), JOptionPane.INFORMATION_MESSAGE);
-					logger.info(resourceBundle.getString("wrongUsernamePassword") + ": "
-							+ textFieldEmail.getText() + " " + textFieldPassword.getText());
+					logger.info(resourceBundle.getString("wrongUsernamePassword") + ": " + textFieldEmail.getText()
+							+ " " + textFieldPassword.getText());
 
 				}
 
@@ -181,25 +178,23 @@ public class VentanLogin extends JFrame {
 		});
 		btnRegistrarse.setBounds(198, 90, 114, 23);
 		getContentPane().add(btnRegistrarse);
-		
+
 		JButton btnTraducir = new JButton(resourceBundle.getString("translate"));
 		btnTraducir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				if(idioma.getSelectedItem().toString().equals("Espanol")) {
-					language="es";
-					country= "ES";
+
+				if (idioma.getSelectedItem().toString().equals("Espanol")) {
+					language = "es";
+					country = "ES";
 					resourceBundle = ResourceBundle.getBundle("lang/messages", Locale.forLanguageTag("ES"));
 					dispose();
 					VentanLogin vLogin = new VentanLogin(controller, resourceBundle);
 					vLogin.setVisible(true);
 					logger.info(language);
-					
-				
-					
-				}else if(idioma.getSelectedItem().toString().equals("English")) {
-					language="en";
-					country="US";
+
+				} else if (idioma.getSelectedItem().toString().equals("English")) {
+					language = "en";
+					country = "US";
 					resourceBundle = ResourceBundle.getBundle("lang/messages", Locale.US);
 					dispose();
 					VentanLogin vLogin = new VentanLogin(controller, resourceBundle);
@@ -207,18 +202,17 @@ public class VentanLogin extends JFrame {
 					logger.info(language);
 
 				} else {
-					JOptionPane.showMessageDialog(null,resourceBundle.getString("error_msg"));
+					JOptionPane.showMessageDialog(null, resourceBundle.getString("error_msg"));
 					logger.error("No se ha podido traducir");
 				}
-				
-				
+
 			}
-			
-			});
+
+		});
 		btnTraducir.setBounds(81, 126, 189, 25);
 		getContentPane().add(btnTraducir);
 
-		}
+	}
 
 	/**
 	 * Metodo que limpia los campos de la ventana login.
@@ -227,8 +221,5 @@ public class VentanLogin extends JFrame {
 		textFieldEmail.setText("");
 		textFieldPassword.setText("");
 	}
-	
 
-
-		
 }

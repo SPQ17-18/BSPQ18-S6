@@ -2648,3 +2648,694 @@
 2018-07-01 21:21:06 INFO  Server:193 - Inserta un usuario a la base de datos llamadonull
 2018-07-01 21:21:06 INFO  VentanaCrearPerfil:123 - Registrado correctamente
 2018-07-01 21:21:06 INFO  VentanLogin:92 - Login
+2018-07-02 00:10:05 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 00:10:06 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 00:10:06 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 00:10:06 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 00:10:06 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 00:10:06 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 00:10:06 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 00:10:06 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 3 clases. Tiempos : input=224 ms, enhance=104 ms, total=328 ms. Compruebe el LOG para los detalles
+2018-07-02 12:16:52 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 12:16:53 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 12:16:53 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 12:16:53 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 12:16:53 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 12:16:53 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 12:16:53 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 12:16:53 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 3 clases. Tiempos : input=223 ms, enhance=92 ms, total=315 ms. Compruebe el LOG para los detalles
+2018-07-02 12:17:10 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:17:10 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:17:10 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:17:12 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:17:12 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:17:12 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:17:25 INFO  VentanLogin:92 - Inicio
+2018-07-02 12:17:35 INFO  VentanLogin:129 - Boton aceptar login
+2018-07-02 12:17:36 INFO  Server:167 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 12:17:37 INFO  VentanLogin:144 - Exito identificando al usuario
+2018-07-02 12:17:37 INFO  VentanaPerfilUsuario:68 - Perfil del usuario
+2018-07-02 12:17:39 INFO  Server:83 - El cliente pregunta por las ciudades
+2018-07-02 12:17:47 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:17:47 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:17:47 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:17:49 ERROR ManagerDAO:113 - Error intentado obtener las ciudades
+2018-07-02 12:17:49 INFO  Server:46 - Ciudad puntuad: Madrid
+2018-07-02 12:17:49 INFO  VentanaPuntuarCiudad:129 - Su puntuacion se ha registrado con exito
+2018-07-02 12:17:58 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:17:58 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:17:58 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:17:59 ERROR ManagerDAO:113 - Error intentado obtener las ciudades
+2018-07-02 12:17:59 INFO  Server:46 - Ciudad puntuad: Madrid
+2018-07-02 12:17:59 INFO  VentanaPuntuarCiudad:129 - Su puntuacion se ha registrado con exito
+2018-07-02 12:18:41 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:18:41 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:18:41 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:18:42 ERROR ManagerDAO:113 - Error intentado obtener las ciudades
+2018-07-02 12:18:42 INFO  Server:46 - Ciudad puntuad: Madrid
+2018-07-02 12:18:42 INFO  VentanaPuntuarCiudad:129 - Su puntuacion se ha registrado con exito
+2018-07-02 12:19:33 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:19:33 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:19:33 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:19:34 ERROR ManagerDAO:113 - Error intentado obtener las ciudades
+2018-07-02 12:19:34 INFO  Server:46 - Ciudad puntuad: Madrid
+2018-07-02 12:19:34 INFO  VentanaPuntuarCiudad:129 - Su puntuacion se ha registrado con exito
+2018-07-02 12:19:38 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:19:38 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:19:38 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:19:39 ERROR ManagerDAO:113 - Error intentado obtener las ciudades
+2018-07-02 12:19:39 INFO  Server:46 - Ciudad puntuad: Madrid
+2018-07-02 12:19:39 INFO  VentanaPuntuarCiudad:129 - Su puntuacion se ha registrado con exito
+2018-07-02 12:22:06 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 12:22:07 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 12:22:07 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 12:22:07 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 12:22:07 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 12:22:07 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 12:22:07 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 12:22:07 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 3 clases. Tiempos : input=252 ms, enhance=131 ms, total=383 ms. Compruebe el LOG para los detalles
+2018-07-02 12:22:25 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:22:25 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:22:25 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:22:27 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:22:27 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:22:27 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:23:10 INFO  VentanLogin:92 - Inicio
+2018-07-02 12:23:19 INFO  VentanLogin:129 - Boton aceptar login
+2018-07-02 12:23:19 INFO  Server:167 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 12:23:22 INFO  VentanLogin:144 - Exito identificando al usuario
+2018-07-02 12:23:22 INFO  VentanaPerfilUsuario:68 - Perfil del usuario
+2018-07-02 12:23:25 INFO  Server:83 - El cliente pregunta por las ciudades
+2018-07-02 12:23:33 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:23:33 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:23:33 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:23:35 INFO  ManagerDAO:335 - Obtenidos todos los usuarios.
+2018-07-02 12:23:35 ERROR ManagerDAO:113 - Error intentado obtener las ciudades
+2018-07-02 12:23:35 INFO  Server:46 - Ciudad puntuad: Madrid
+2018-07-02 12:23:35 INFO  VentanaPuntuarCiudad:129 - Su puntuacion se ha registrado con exito
+2018-07-02 12:26:59 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 12:26:59 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 12:26:59 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 12:26:59 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 12:26:59 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 12:26:59 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 12:26:59 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 12:26:59 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 3 clases. Tiempos : input=229 ms, enhance=122 ms, total=351 ms. Compruebe el LOG para los detalles
+2018-07-02 12:27:15 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:27:15 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:27:15 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:27:17 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:27:17 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:27:17 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:27:34 INFO  VentanLogin:92 - Inicio
+2018-07-02 12:27:45 INFO  VentanLogin:129 - Boton aceptar login
+2018-07-02 12:27:46 INFO  Server:170 - Password incorrecto
+2018-07-02 12:27:47 INFO  VentanLogin:163 - Contraseña erronea o usuario erroneo: admin@opendeusto,es admin
+2018-07-02 12:27:51 INFO  VentanLogin:129 - Boton aceptar login
+2018-07-02 12:27:51 INFO  Server:167 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 12:27:52 INFO  VentanLogin:144 - Exito identificando al usuario
+2018-07-02 12:27:52 INFO  VentanaPerfilUsuario:68 - Perfil del usuario
+2018-07-02 12:27:55 INFO  Server:83 - El cliente pregunta por las ciudades
+2018-07-02 12:28:00 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:28:00 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:28:00 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:28:03 INFO  ManagerDAO:332 - Obtenidos todos los usuarios.
+2018-07-02 12:28:03 ERROR ManagerDAO:113 - Error intentado obtener las ciudades
+2018-07-02 12:28:03 INFO  Server:46 - Ciudad puntuad: Madrid
+2018-07-02 12:28:03 INFO  VentanaPuntuarCiudad:129 - Su puntuacion se ha registrado con exito
+2018-07-02 12:28:20 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:28:20 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:28:20 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:28:21 INFO  ManagerDAO:332 - Obtenidos todos los usuarios.
+2018-07-02 12:28:21 ERROR ManagerDAO:113 - Error intentado obtener las ciudades
+2018-07-02 12:28:21 INFO  Server:46 - Ciudad puntuad: Madrid
+2018-07-02 12:28:21 INFO  VentanaPuntuarCiudad:129 - Su puntuacion se ha registrado con exito
+2018-07-02 12:28:26 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:28:26 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:28:26 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:28:27 INFO  ManagerDAO:332 - Obtenidos todos los usuarios.
+2018-07-02 12:28:27 ERROR ManagerDAO:113 - Error intentado obtener las ciudades
+2018-07-02 12:28:27 INFO  Server:46 - Ciudad puntuad: Madrid
+2018-07-02 12:28:27 INFO  VentanaPuntuarCiudad:129 - Su puntuacion se ha registrado con exito
+2018-07-02 12:28:44 INFO  VentanaPerfilUsuario:68 - Perfil del usuario
+2018-07-02 12:28:46 INFO  Server:83 - El cliente pregunta por las ciudades
+2018-07-02 12:28:55 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:28:55 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:28:55 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:28:56 INFO  ManagerDAO:332 - Obtenidos todos los usuarios.
+2018-07-02 12:28:56 ERROR ManagerDAO:113 - Error intentado obtener las ciudades
+2018-07-02 12:28:56 INFO  Server:46 - Ciudad puntuad: Barcelona
+2018-07-02 12:28:56 INFO  VentanaPuntuarCiudad:129 - Su puntuacion se ha registrado con exito
+2018-07-02 12:29:01 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:29:01 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:29:01 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:29:01 INFO  ManagerDAO:332 - Obtenidos todos los usuarios.
+2018-07-02 12:29:01 ERROR ManagerDAO:113 - Error intentado obtener las ciudades
+2018-07-02 12:29:01 INFO  Server:46 - Ciudad puntuad: Barcelona
+2018-07-02 12:29:01 INFO  VentanaPuntuarCiudad:129 - Su puntuacion se ha registrado con exito
+2018-07-02 12:34:02 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 12:34:02 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 12:34:02 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 12:34:02 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 12:34:02 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 12:34:03 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 12:34:03 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 12:34:03 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 3 clases. Tiempos : input=290 ms, enhance=131 ms, total=421 ms. Compruebe el LOG para los detalles
+2018-07-02 12:34:41 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:34:41 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:34:41 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:34:43 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:34:43 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:34:43 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:35:04 INFO  VentanLogin:92 - Inicio
+2018-07-02 12:35:13 INFO  VentanLogin:129 - Boton aceptar login
+2018-07-02 12:35:14 INFO  Server:167 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 12:35:16 INFO  VentanLogin:144 - Exito identificando al usuario
+2018-07-02 12:35:16 INFO  VentanaPerfilUsuario:68 - Perfil del usuario
+2018-07-02 12:35:19 INFO  Server:83 - El cliente pregunta por las ciudades
+2018-07-02 12:35:39 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:35:39 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:35:39 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:35:41 ERROR ManagerDAO:117 - Error intentado obtener las ciudades
+2018-07-02 12:35:41 INFO  Server:46 - Ciudad puntuad: Valencia
+2018-07-02 12:35:41 INFO  VentanaPuntuarCiudad:129 - Su puntuacion se ha registrado con exito
+2018-07-02 12:37:12 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:37:12 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:37:12 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:37:13 ERROR ManagerDAO:117 - Error intentado obtener las ciudades
+2018-07-02 12:37:13 INFO  Server:46 - Ciudad puntuad: Valencia
+2018-07-02 12:37:13 INFO  VentanaPuntuarCiudad:129 - Su puntuacion se ha registrado con exito
+2018-07-02 12:40:02 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 12:40:02 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 12:40:02 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 12:40:02 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 12:40:02 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 12:40:02 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 12:40:02 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 12:40:02 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 3 clases. Tiempos : input=224 ms, enhance=132 ms, total=356 ms. Compruebe el LOG para los detalles
+2018-07-02 12:40:21 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:40:21 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:40:21 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:40:23 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:40:23 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:40:23 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:40:42 INFO  VentanLogin:92 - Inicio
+2018-07-02 12:40:50 INFO  VentanLogin:129 - Boton aceptar login
+2018-07-02 12:40:51 INFO  Server:167 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 12:40:52 INFO  VentanLogin:144 - Exito identificando al usuario
+2018-07-02 12:40:52 INFO  VentanaPerfilUsuario:68 - Perfil del usuario
+2018-07-02 12:40:58 INFO  Server:83 - El cliente pregunta por las ciudades
+2018-07-02 12:41:04 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:41:04 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:41:04 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:41:06 ERROR ManagerDAO:120 - Error intentado obtener las ciudades
+2018-07-02 12:41:06 INFO  Server:46 - Ciudad puntuad: Roma
+2018-07-02 12:41:06 INFO  VentanaPuntuarCiudad:129 - Su puntuacion se ha registrado con exito
+2018-07-02 12:46:08 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 12:46:08 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 12:46:08 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 12:46:08 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 12:46:08 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 12:46:08 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 12:46:08 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 12:46:08 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 3 clases. Tiempos : input=272 ms, enhance=87 ms, total=359 ms. Compruebe el LOG para los detalles
+2018-07-02 12:46:27 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:46:27 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:46:27 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:46:29 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:46:29 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:46:29 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:46:42 INFO  VentanLogin:92 - Inicio
+2018-07-02 12:46:55 INFO  VentanLogin:129 - Boton aceptar login
+2018-07-02 12:46:56 INFO  Server:167 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 12:46:57 INFO  VentanLogin:144 - Exito identificando al usuario
+2018-07-02 12:46:57 INFO  VentanaPerfilUsuario:68 - Perfil del usuario
+2018-07-02 12:46:59 INFO  Server:83 - El cliente pregunta por las ciudades
+2018-07-02 12:47:06 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:47:06 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:47:06 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:51:32 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 12:51:33 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 12:51:33 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 12:51:33 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 12:51:33 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 12:51:33 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 12:51:33 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 12:51:33 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 3 clases. Tiempos : input=285 ms, enhance=181 ms, total=466 ms. Compruebe el LOG para los detalles
+2018-07-02 12:51:54 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:51:54 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:51:54 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:51:56 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:51:56 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:51:56 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:52:21 INFO  VentanLogin:92 - Inicio
+2018-07-02 12:52:30 INFO  VentanLogin:129 - Boton aceptar login
+2018-07-02 12:52:30 INFO  Server:167 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 12:52:31 INFO  VentanLogin:144 - Exito identificando al usuario
+2018-07-02 12:52:31 INFO  VentanaPerfilUsuario:68 - Perfil del usuario
+2018-07-02 12:52:33 INFO  Server:83 - El cliente pregunta por las ciudades
+2018-07-02 12:52:39 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:52:39 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:52:39 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:55:39 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 12:55:40 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 12:55:40 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 12:55:40 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 12:55:40 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 12:55:40 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 12:55:40 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 12:55:40 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 3 clases. Tiempos : input=261 ms, enhance=86 ms, total=347 ms. Compruebe el LOG para los detalles
+2018-07-02 12:56:00 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:56:00 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:56:00 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:56:03 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 12:56:03 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 12:56:03 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 12:56:16 INFO  VentanLogin:92 - Inicio
+2018-07-02 12:56:24 INFO  VentanLogin:129 - Boton aceptar login
+2018-07-02 12:56:25 INFO  Server:167 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 12:56:26 INFO  VentanLogin:144 - Exito identificando al usuario
+2018-07-02 12:56:57 INFO  VentanLogin:129 - Boton aceptar login
+2018-07-02 12:56:57 INFO  Server:167 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 12:56:59 INFO  VentanLogin:144 - Exito identificando al usuario
+2018-07-02 13:12:51 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 13:12:52 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 13:12:52 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 13:12:52 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 13:12:52 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 13:12:52 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 13:12:52 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 13:12:52 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 3 clases. Tiempos : input=248 ms, enhance=91 ms, total=339 ms. Compruebe el LOG para los detalles
+2018-07-02 13:13:10 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 13:13:10 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 13:13:10 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 13:13:12 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 13:13:12 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 13:13:12 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 13:13:36 INFO  VentanLogin:92 - Inicio
+2018-07-02 13:13:44 INFO  VentanLogin:129 - Boton aceptar login
+2018-07-02 13:13:45 INFO  Server:167 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 13:13:50 INFO  VentanLogin:144 - Exito identificando al usuario
+2018-07-02 13:13:50 INFO  VentanLogin:149 - DevolverUsuario correcto!
+2018-07-02 13:13:50 INFO  VentanaPerfilUsuario:70 - Perfil del usuario
+2018-07-02 13:14:07 INFO  Server:83 - El cliente pregunta por las ciudades
+2018-07-02 13:14:13 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 13:14:13 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 13:14:13 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 13:14:15 ERROR ManagerDAO:119 - Error intentado obtener las ciudades
+2018-07-02 13:14:15 INFO  Server:46 - Ciudad puntuad: Barcelona
+2018-07-02 13:14:15 INFO  VentanaPuntuarCiudad:133 - Su puntuacion se ha registrado con exito
+2018-07-02 13:16:22 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 13:16:23 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 13:16:23 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 13:16:23 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 13:16:23 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 13:16:23 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 13:16:23 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 13:16:23 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 3 clases. Tiempos : input=264 ms, enhance=95 ms, total=359 ms. Compruebe el LOG para los detalles
+2018-07-02 13:16:43 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 13:16:43 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 13:16:43 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 13:16:45 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 13:16:45 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 13:16:45 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 13:17:10 INFO  VentanLogin:92 - Inicio
+2018-07-02 13:17:23 INFO  VentanLogin:129 - Boton aceptar login
+2018-07-02 13:17:24 INFO  Server:166 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 13:17:33 INFO  VentanLogin:144 - Exito identificando al usuario
+2018-07-02 13:17:33 INFO  VentanLogin:149 - DevolverUsuario correcto!
+2018-07-02 13:17:33 INFO  VentanaPerfilUsuario:70 - Perfil del usuario
+2018-07-02 13:19:05 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 13:19:05 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 13:19:05 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 13:19:05 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 13:19:05 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 13:19:05 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 13:19:05 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 13:19:05 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 3 clases. Tiempos : input=290 ms, enhance=110 ms, total=400 ms. Compruebe el LOG para los detalles
+2018-07-02 13:19:21 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 13:19:21 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 13:19:21 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 13:19:24 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 13:19:24 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 13:19:24 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 13:19:36 INFO  VentanLogin:91 - Inicio
+2018-07-02 13:19:49 INFO  VentanLogin:128 - Boton aceptar login
+2018-07-02 13:19:50 INFO  Server:166 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 13:19:51 INFO  VentanLogin:143 - Exito identificando al usuario
+2018-07-02 13:19:51 INFO  VentanLogin:148 - DevolverUsuario correcto!
+2018-07-02 13:19:51 INFO  VentanaPerfilUsuario:70 - Perfil del usuario
+2018-07-02 13:20:01 INFO  Server:82 - El cliente pregunta por las ciudades
+2018-07-02 13:20:03 INFO  VentanLogin:91 - Inicio
+2018-07-02 13:21:20 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 13:21:20 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 13:21:20 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 13:21:20 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 13:21:20 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 13:21:20 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 13:21:20 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 13:21:20 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 3 clases. Tiempos : input=250 ms, enhance=102 ms, total=352 ms. Compruebe el LOG para los detalles
+2018-07-02 13:21:36 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 13:21:36 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 13:21:36 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 13:21:37 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 13:21:37 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 13:21:37 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 13:21:52 INFO  VentanLogin:91 - Inicio
+2018-07-02 13:22:01 INFO  VentanLogin:128 - Boton aceptar login
+2018-07-02 13:22:02 INFO  Server:166 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 13:22:03 INFO  VentanLogin:143 - Exito identificando al usuario
+2018-07-02 13:22:03 INFO  VentanLogin:148 - DevolverUsuario correcto!
+2018-07-02 13:22:03 INFO  VentanaPerfilUsuario:70 - Perfil del usuario
+2018-07-02 13:25:58 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 13:25:59 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 13:25:59 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 13:25:59 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 13:25:59 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 13:25:59 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 13:25:59 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 13:25:59 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 3 clases. Tiempos : input=268 ms, enhance=101 ms, total=369 ms. Compruebe el LOG para los detalles
+2018-07-02 13:26:13 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 13:26:13 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 13:26:13 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 13:26:15 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 13:26:15 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 13:26:15 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 13:26:26 INFO  VentanLogin:91 - Inicio
+2018-07-02 13:26:36 INFO  VentanLogin:128 - Boton aceptar login
+2018-07-02 13:26:36 INFO  Server:166 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 13:26:39 INFO  VentanLogin:143 - Exito identificando al usuario
+2018-07-02 13:26:39 INFO  VentanLogin:148 - DevolverUsuario correcto!
+2018-07-02 13:26:39 INFO  VentanaPerfilUsuario:70 - Perfil del usuario
+2018-07-02 13:41:55 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 13:41:56 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 13:41:56 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 13:41:56 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 13:41:56 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 13:41:56 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 13:41:56 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 13:41:56 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 3 clases. Tiempos : input=256 ms, enhance=98 ms, total=354 ms. Compruebe el LOG para los detalles
+2018-07-02 13:42:15 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 13:42:15 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 13:42:15 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 13:42:17 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 13:42:17 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 13:42:17 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 13:42:30 INFO  VentanLogin:90 - Inicio
+2018-07-02 13:42:45 INFO  VentanLogin:127 - Boton aceptar login
+2018-07-02 13:42:46 INFO  Server:166 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 13:42:48 INFO  VentanLogin:142 - Exito identificando al usuario
+2018-07-02 13:42:48 INFO  VentanLogin:147 - DevolverUsuario correcto!
+2018-07-02 13:42:48 INFO  VentanaPerfilUsuario:70 - Perfil del usuario
+2018-07-02 13:45:42 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 13:45:42 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 13:45:42 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 13:45:42 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 13:45:42 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 13:45:42 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 13:45:42 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 13:45:42 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 3 clases. Tiempos : input=253 ms, enhance=99 ms, total=352 ms. Compruebe el LOG para los detalles
+2018-07-02 13:46:01 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 13:46:01 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 13:46:01 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 13:46:03 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 13:46:03 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 13:46:03 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 13:46:12 INFO  VentanLogin:90 - Inicio
+2018-07-02 13:46:21 INFO  VentanLogin:127 - Boton aceptar login
+2018-07-02 13:46:22 INFO  Server:166 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 13:46:23 INFO  VentanLogin:142 - Exito identificando al usuario
+2018-07-02 13:46:23 INFO  VentanLogin:147 - DevolverUsuario correcto!
+2018-07-02 13:46:23 INFO  VentanaPerfilUsuario:70 - Perfil del usuario
+2018-07-02 13:46:28 INFO  Server:82 - El cliente pregunta por las ciudades
+2018-07-02 13:46:34 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 13:46:34 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 13:46:34 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 13:46:36 INFO  Server:45 - Ciudad puntuad: Madrid
+2018-07-02 13:46:36 INFO  VentanaPuntuarCiudad:133 - Su puntuacion se ha registrado con exito
+2018-07-02 14:02:40 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 14:02:40 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 14:02:40 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 14:02:40 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 14:02:40 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 14:02:40 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 14:02:40 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 14:02:40 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 3 clases. Tiempos : input=297 ms, enhance=151 ms, total=448 ms. Compruebe el LOG para los detalles
+2018-07-02 14:03:00 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 14:03:00 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 14:03:00 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 14:03:02 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 14:03:02 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 14:03:02 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 14:03:16 INFO  VentanLogin:90 - Inicio
+2018-07-02 14:03:26 INFO  VentanLogin:127 - Boton aceptar login
+2018-07-02 14:03:27 INFO  Server:175 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 14:03:28 INFO  VentanLogin:142 - Exito identificando al usuario
+2018-07-02 14:03:28 INFO  VentanLogin:147 - DevolverUsuario correcto!
+2018-07-02 14:03:28 INFO  VentanaPerfilUsuario:72 - Perfil del usuario
+2018-07-02 14:03:30 INFO  Server:83 - El cliente pregunta por las ciudades
+2018-07-02 14:03:31 INFO  Server:92 - Ciudades puntuadas por usuarios obtenidas
+2018-07-02 14:18:28 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 14:18:28 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 14:18:28 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 14:18:28 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 14:18:28 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 14:18:28 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 14:18:28 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 14:18:28 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 3 clases. Tiempos : input=257 ms, enhance=96 ms, total=353 ms. Compruebe el LOG para los detalles
+2018-07-02 14:18:47 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 14:18:47 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 14:18:47 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 14:18:50 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 14:18:50 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 14:18:50 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 14:19:12 INFO  VentanLogin:90 - Inicio
+2018-07-02 14:19:20 INFO  VentanLogin:127 - Boton aceptar login
+2018-07-02 14:19:21 INFO  Server:176 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 14:19:21 INFO  VentanLogin:142 - Exito identificando al usuario
+2018-07-02 14:19:21 INFO  VentanLogin:147 - DevolverUsuario correcto!
+2018-07-02 14:19:21 INFO  VentanaPerfilUsuario:73 - Perfil del usuario
+2018-07-02 14:19:23 INFO  Server:84 - El cliente pregunta por las ciudades
+2018-07-02 14:19:23 INFO  Server:93 - Ciudades puntuadas por usuarios obtenidas
+2018-07-02 14:21:17 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 14:21:18 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 14:21:18 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 14:21:18 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 14:21:18 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 14:21:18 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 14:21:18 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 14:21:18 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 3 clases. Tiempos : input=276 ms, enhance=102 ms, total=378 ms. Compruebe el LOG para los detalles
+2018-07-02 14:21:52 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 14:21:52 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 14:21:52 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 14:21:55 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 14:21:55 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 14:21:55 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 14:22:13 INFO  VentanLogin:90 - Inicio
+2018-07-02 14:22:20 INFO  VentanLogin:127 - Boton aceptar login
+2018-07-02 14:22:20 INFO  Server:176 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 14:22:21 INFO  VentanLogin:142 - Exito identificando al usuario
+2018-07-02 14:22:21 INFO  VentanLogin:147 - DevolverUsuario correcto!
+2018-07-02 14:22:21 INFO  VentanaPerfilUsuario:73 - Perfil del usuario
+2018-07-02 14:22:23 INFO  Server:84 - El cliente pregunta por las ciudades
+2018-07-02 14:22:23 INFO  Server:93 - Ciudades puntuadas por usuarios obtenidas
+2018-07-02 14:29:12 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 14:29:12 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 14:29:12 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 14:29:12 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 14:29:12 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 14:29:12 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 14:29:12 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 14:29:12 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 3 clases. Tiempos : input=266 ms, enhance=100 ms, total=366 ms. Compruebe el LOG para los detalles
+2018-07-02 14:29:52 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 14:29:52 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 14:29:52 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 14:29:52 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 14:29:52 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 14:29:52 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 14:29:52 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 14:29:52 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 3 clases. Tiempos : input=260 ms, enhance=75 ms, total=335 ms. Compruebe el LOG para los detalles
+2018-07-02 14:30:08 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 14:30:08 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 14:30:08 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 14:30:11 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 14:30:11 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 14:30:11 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 14:30:22 INFO  VentanLogin:90 - Inicio
+2018-07-02 14:30:31 INFO  VentanLogin:127 - Boton aceptar login
+2018-07-02 14:30:31 INFO  Server:176 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 14:30:32 INFO  VentanLogin:142 - Exito identificando al usuario
+2018-07-02 14:30:32 INFO  VentanLogin:147 - DevolverUsuario correcto!
+2018-07-02 14:30:32 INFO  VentanaPerfilUsuario:73 - Perfil del usuario
+2018-07-02 14:30:34 INFO  Server:84 - El cliente pregunta por las ciudades
+2018-07-02 14:30:34 ERROR ManagerDAO:600 - Error intentado obtener las ciudades
+2018-07-02 14:30:34 INFO  Server:93 - Ciudades puntuadas por usuarios obtenidas
+2018-07-02 14:32:31 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 14:32:31 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 14:32:31 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 14:32:31 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 14:32:31 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 14:32:31 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 14:32:31 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 14:32:31 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 3 clases. Tiempos : input=261 ms, enhance=106 ms, total=367 ms. Compruebe el LOG para los detalles
+2018-07-02 14:32:52 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 14:32:52 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 14:32:52 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 14:32:54 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 14:32:54 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 14:32:54 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 14:33:12 INFO  VentanLogin:90 - Inicio
+2018-07-02 14:33:21 INFO  VentanLogin:127 - Boton aceptar login
+2018-07-02 14:33:21 INFO  Server:176 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 14:33:22 INFO  VentanLogin:142 - Exito identificando al usuario
+2018-07-02 14:33:22 INFO  VentanLogin:147 - DevolverUsuario correcto!
+2018-07-02 14:33:22 INFO  VentanaPerfilUsuario:73 - Perfil del usuario
+2018-07-02 14:33:25 INFO  Server:84 - El cliente pregunta por las ciudades
+2018-07-02 14:33:26 ERROR ManagerDAO:600 - Error intentado obtener las ciudades
+2018-07-02 14:33:26 INFO  Server:93 - Ciudades puntuadas por usuarios obtenidas
+2018-07-02 14:35:23 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 14:35:23 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 14:35:23 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 14:35:23 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 14:35:23 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 14:35:23 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 14:35:23 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 14:35:23 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 3 clases. Tiempos : input=248 ms, enhance=91 ms, total=339 ms. Compruebe el LOG para los detalles
+2018-07-02 14:35:48 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 14:35:48 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 14:35:48 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 14:35:50 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 14:35:50 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 14:35:50 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 14:36:02 INFO  VentanLogin:90 - Inicio
+2018-07-02 14:36:10 INFO  VentanLogin:127 - Boton aceptar login
+2018-07-02 14:36:11 INFO  Server:176 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 14:36:11 INFO  VentanLogin:142 - Exito identificando al usuario
+2018-07-02 14:36:11 INFO  VentanLogin:147 - DevolverUsuario correcto!
+2018-07-02 14:36:11 INFO  VentanaPerfilUsuario:73 - Perfil del usuario
+2018-07-02 14:36:13 INFO  Server:84 - El cliente pregunta por las ciudades
+2018-07-02 14:36:13 INFO  Server:93 - Ciudades puntuadas por usuarios obtenidas
+2018-07-02 14:37:43 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 14:37:44 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 14:37:44 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 14:37:44 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 14:37:44 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 14:37:44 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 14:37:44 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 14:37:44 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 3 clases. Tiempos : input=257 ms, enhance=78 ms, total=335 ms. Compruebe el LOG para los detalles
+2018-07-02 14:38:02 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 14:38:02 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 14:38:02 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 14:38:04 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 14:38:04 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 14:38:04 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 14:38:16 INFO  VentanLogin:90 - Inicio
+2018-07-02 14:38:24 INFO  VentanLogin:127 - Boton aceptar login
+2018-07-02 14:38:24 INFO  Server:176 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 14:38:25 INFO  VentanLogin:142 - Exito identificando al usuario
+2018-07-02 14:38:25 INFO  VentanLogin:147 - DevolverUsuario correcto!
+2018-07-02 14:38:25 INFO  VentanaPerfilUsuario:73 - Perfil del usuario
+2018-07-02 14:38:28 INFO  Server:84 - El cliente pregunta por las ciudades
+2018-07-02 14:38:28 INFO  Server:93 - Ciudades puntuadas por usuarios obtenidas
+2018-07-02 15:08:15 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 15:08:15 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 15:08:15 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 15:08:15 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 15:08:15 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 15:08:15 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 15:08:15 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 15:08:15 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 3 clases. Tiempos : input=232 ms, enhance=74 ms, total=306 ms. Compruebe el LOG para los detalles
+2018-07-02 15:08:41 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 15:08:41 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 15:08:41 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 15:08:43 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 15:08:43 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 15:08:43 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 15:08:53 INFO  VentanLogin:90 - Inicio
+2018-07-02 15:09:01 INFO  VentanLogin:127 - Boton aceptar login
+2018-07-02 15:09:02 INFO  Server:176 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 15:09:03 INFO  VentanLogin:142 - Exito identificando al usuario
+2018-07-02 15:09:03 INFO  VentanLogin:147 - DevolverUsuario correcto!
+2018-07-02 15:09:03 INFO  Server:93 - Ciudades puntuadas por usuarios obtenidas
+2018-07-02 15:09:03 INFO  VentanaPerfilUsuario:76 - Perfil del usuario
+2018-07-02 15:09:08 INFO  Server:84 - El cliente pregunta por las ciudades
+2018-07-02 15:09:10 INFO  Server:84 - El cliente pregunta por las ciudades
+2018-07-02 15:12:17 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 15:12:18 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 15:12:18 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 15:12:18 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 15:12:18 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 15:12:18 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 15:12:18 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 15:12:18 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 3 clases. Tiempos : input=288 ms, enhance=99 ms, total=387 ms. Compruebe el LOG para los detalles
+2018-07-02 15:12:37 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 15:12:37 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 15:12:37 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 15:12:39 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 15:12:39 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 15:12:39 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 15:13:00 INFO  VentanLogin:90 - Inicio
+2018-07-02 15:13:07 INFO  VentanLogin:127 - Boton aceptar login
+2018-07-02 15:13:08 INFO  Server:176 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 15:13:09 INFO  VentanLogin:142 - Exito identificando al usuario
+2018-07-02 15:13:09 INFO  VentanLogin:147 - DevolverUsuario correcto!
+2018-07-02 15:13:09 INFO  Server:93 - Ciudades puntuadas por usuarios obtenidas
+2018-07-02 15:13:09 INFO  VentanaPerfilUsuario:77 - Perfil del usuario
+2018-07-02 15:13:12 INFO  Server:84 - El cliente pregunta por las ciudades
+2018-07-02 15:13:28 INFO  Server:84 - El cliente pregunta por las ciudades
+2018-07-02 15:13:29 INFO  Server:84 - El cliente pregunta por las ciudades
+2018-07-02 15:13:46 INFO  Server:84 - El cliente pregunta por las ciudades
+2018-07-02 15:15:21 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 15:15:21 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 15:15:21 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 15:15:21 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 15:15:21 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 15:15:21 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 15:15:21 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 15:15:21 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 3 clases. Tiempos : input=257 ms, enhance=131 ms, total=388 ms. Compruebe el LOG para los detalles
+2018-07-02 15:15:39 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 15:15:39 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 15:15:39 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 15:15:41 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 15:15:41 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 15:15:41 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 15:15:57 INFO  VentanLogin:90 - Inicio
+2018-07-02 15:16:06 INFO  VentanLogin:127 - Boton aceptar login
+2018-07-02 15:16:07 INFO  Server:176 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 15:16:08 INFO  VentanLogin:142 - Exito identificando al usuario
+2018-07-02 15:16:08 INFO  VentanLogin:147 - DevolverUsuario correcto!
+2018-07-02 15:16:08 INFO  Server:93 - Ciudades puntuadas por usuarios obtenidas
+2018-07-02 15:16:08 INFO  VentanaPerfilUsuario:77 - Perfil del usuario
+2018-07-02 15:16:10 INFO  Server:84 - El cliente pregunta por las ciudades
+2018-07-02 15:16:18 INFO  Server:84 - El cliente pregunta por las ciudades
+2018-07-02 15:16:24 INFO  Server:84 - El cliente pregunta por las ciudades
+2018-07-02 15:19:21 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 15:19:21 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 15:19:21 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 15:19:21 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 15:19:21 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 15:19:21 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 15:19:21 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 15:19:21 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 3 clases. Tiempos : input=260 ms, enhance=129 ms, total=389 ms. Compruebe el LOG para los detalles
+2018-07-02 15:19:38 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 15:19:38 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 15:19:38 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 15:19:40 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 15:19:40 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 15:19:40 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 15:19:52 INFO  VentanLogin:90 - Inicio
+2018-07-02 15:20:01 INFO  VentanLogin:127 - Boton aceptar login
+2018-07-02 15:20:02 INFO  Server:176 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 15:20:03 INFO  VentanLogin:142 - Exito identificando al usuario
+2018-07-02 15:20:03 INFO  VentanLogin:147 - DevolverUsuario correcto!
+2018-07-02 15:20:03 INFO  Server:93 - Ciudades puntuadas por usuarios obtenidas
+2018-07-02 15:20:03 INFO  VentanaPerfilUsuario:77 - Perfil del usuario
+2018-07-02 15:20:06 INFO  Server:84 - El cliente pregunta por las ciudades
+2018-07-02 15:20:07 INFO  Server:84 - El cliente pregunta por las ciudades
+2018-07-02 17:41:18 INFO  Server:84 - El cliente pregunta por las ciudades
+2018-07-02 17:41:19 INFO  Server:84 - El cliente pregunta por las ciudades
+2018-07-02 17:41:21 INFO  Server:84 - El cliente pregunta por las ciudades
+2018-07-02 17:41:23 INFO  Server:84 - El cliente pregunta por las ciudades
+2018-07-02 17:41:23 INFO  VentanLogin:90 - Inicio
+2018-07-02 17:41:28 INFO  VentanLogin:90 - Login
+2018-07-02 17:41:28 INFO  VentanLogin:202 - en

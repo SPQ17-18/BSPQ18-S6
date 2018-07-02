@@ -4,7 +4,6 @@ import java.awt.EventQueue;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
-import java.util.logging.Level;
 
 import javax.swing.JFrame;
 
@@ -15,6 +14,8 @@ import es.deusto.spq.ciudades.server.jdo.DAO.ManagerDAO;
 import es.deusto.spq.ciudades.server.jdo.data.Assembler;
 import es.deusto.spq.ciudades.server.jdo.data.Ciudad;
 import es.deusto.spq.ciudades.server.jdo.data.CiudadDTO;
+import es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario;
+import es.deusto.spq.ciudades.server.jdo.data.CiudadUsuarioDTO;
 import es.deusto.spq.ciudades.server.jdo.data.Usuario;
 import es.deusto.spq.ciudades.server.jdo.data.UsuarioDTO;
 import es.deusto.spq.ciudades.server.remote.IRemoteFacade;
@@ -41,6 +42,7 @@ public class Collector extends UnicastRemoteObject implements IRemoteFacade {
 
 	public boolean puntuarCiudadUsuario(Ciudad ciudad, Usuario usuario) {
 		try {
+			System.out.println(usuario.getEmail() + " collector!");
 			dao.puntuarCiudadUsuario(ciudad, usuario);
 			logger.info("Ciudad puntuad: " + ciudad.getNombreCiudad());
 			return true;
@@ -84,6 +86,14 @@ public class Collector extends UnicastRemoteObject implements IRemoteFacade {
 
 	}
 
+	@Override
+	public ArrayList<CiudadUsuarioDTO> getCiudadesPuntuadasPorUsuarios() throws RemoteException {
+		// TODO Auto-generated method stub
+		ArrayList<CiudadUsuario> ciudades = dao.getCiudadesPuntuadasPorUsuarios();
+		logger.info("Ciudades puntuadas por usuarios obtenidas");
+		return assembler.assembleCiudadUsuario(ciudades);
+	}
+
 	/**
 	 * Metodo para actualizar una ciudad
 	 * 
@@ -108,17 +118,17 @@ public class Collector extends UnicastRemoteObject implements IRemoteFacade {
 	/**
 	 * Metodo para borrar una ciudad
 	 * 
-	 * @param idCiudad
+	 * @param nombreCiudad
 	 *            Id de la ciudad que queremos borrar
 	 * @throws RemoteException
 	 *             Lanza una excepcion en caso de que ocurra un error
 	 * @result Devuelve true cuando la ciudad se ha borrado correctamente
 	 */
-	public boolean deleteCiudad(int idCiudad) throws RemoteException {
+	public boolean deleteCiudad(String nombreCiudad) throws RemoteException {
 		try {
 
-			dao.deleteCiudad(idCiudad);
-			logger.info("Borrada la ciudad cuyo id es " + idCiudad);
+			dao.deleteCiudad(nombreCiudad);
+			logger.info("Borrada la ciudad cuyo id es " + nombreCiudad);
 			return true;
 		} catch (Exception e) {
 			logger.error("Error al borrar una ciudad");
@@ -130,19 +140,19 @@ public class Collector extends UnicastRemoteObject implements IRemoteFacade {
 	/**
 	 * Metodo para obtener los puntos de una ciudad
 	 * 
-	 * @param idCiudad
+	 * @param nombreCiudad
 	 *            Id de la ciudad para obtener los puntos
 	 * @throws RemoteException
 	 *             Lanza una excepcion en caso de que ocurra un error
 	 * @result Devuelve los puntos de una ciudad
 	 */
-	public int getCiudadPoints(int idCiudad) throws RemoteException {
+	public int getCiudadPoints(String nombreCiudad) throws RemoteException {
 		int points = -1;
 		try {
-			points = dao.getCiudadPoints(idCiudad);
-			logger.info("Obteniendo los puntos de la ciudad cuyo id es" + idCiudad);
+			points = dao.getCiudadPoints(nombreCiudad);
+			logger.info("Obteniendo los puntos de la ciudad cuyo id es" + nombreCiudad);
 		} catch (Exception e) {
-			logger.error("Error al obtener los puntos de una ciudad cuyo id es " + idCiudad);
+			logger.error("Error al obtener los puntos de una ciudad cuyo id es " + nombreCiudad);
 		}
 		return points;
 	}
@@ -205,10 +215,11 @@ public class Collector extends UnicastRemoteObject implements IRemoteFacade {
 	 *             Lanza una excepcion en caso de que ocurra un error
 	 * @result Devuelve una lista con los usuarios
 	 */
-	public ArrayList<UsuarioDTO> getUsuarios() throws RemoteException {
+	public ArrayList<Usuario> getUsuarios() throws RemoteException {
 		ArrayList<Usuario> usuarios = dao.getUsuarios();
-		logger.info("El cliente ha preguntado por los usuarios");
-		return assembler.assembleUsuario(usuarios);
+		logger.info("El cliente ha preguntado por todos los usuarios");
+		// return assembler.assembleUsuario(usuarios);
+		return usuarios;
 	}
 
 	/**
@@ -235,17 +246,17 @@ public class Collector extends UnicastRemoteObject implements IRemoteFacade {
 	/**
 	 * Metodo para borrar un usuario
 	 * 
-	 * @param usuarioDTO
+	 * @param usuario
 	 *            Data para borrar un usuario
 	 * @throws RemoteException
 	 *             Lanza una excepcion en caso de que ocurra un error
 	 * @result Devuelve true cuando borra un usuario correctamente, false si no.
 	 */
-	public boolean deleteUsuario(UsuarioDTO usuarioDTO) throws RemoteException {
+	public boolean deleteUsuario(Usuario usuario) throws RemoteException {
 		try {
-			Usuario usuario = assembler.disassembleUsuario(usuarioDTO);
+			// Usuario usuario = assembler.disassembleUsuario(usuario);
 			dao.deleteUsuario(usuario);
-			logger.info("Borra un usuario cuyo email es" + usuarioDTO.getEmail());
+			logger.info("Borra un usuario cuyo email es" + usuario.getEmail());
 			return true;
 		} catch (Exception e) {
 			logger.error("Error al borrar un usuario");
@@ -264,15 +275,7 @@ public class Collector extends UnicastRemoteObject implements IRemoteFacade {
 	 *             expulsa una excepcion
 	 */
 	public Usuario devolverUsuario(String email) throws RemoteException {
-		Usuario user = null;
-		//return dao.getUsuario(email);
-		return user;
-	}
-
-	@Override
-	public Usuario getUsuario(String email) throws RemoteException {
-		// TODO Auto-generated method stub
-		return null;
+		return ManagerDAO.usuarioDAO;
 	}
 
 	public void iniJFrame() {

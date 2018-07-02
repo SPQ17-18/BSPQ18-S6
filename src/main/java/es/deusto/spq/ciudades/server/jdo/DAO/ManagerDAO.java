@@ -3,12 +3,14 @@ package es.deusto.spq.ciudades.server.jdo.DAO;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.concurrent.SynchronousQueue;
 
 import javax.jdo.JDOHelper;
 import javax.jdo.PersistenceManager;
 import javax.jdo.PersistenceManagerFactory;
 import javax.jdo.Query;
 import javax.jdo.Transaction;
+import javax.sound.midi.Synthesizer;
 
 import org.apache.log4j.Logger;
 
@@ -74,16 +76,22 @@ public class ManagerDAO implements IManagerDAO {
 		PersistenceManager pm = pmf.getPersistenceManager();
 		Transaction tx = pm.currentTransaction();
 
+		System.out.println("Obteniendo suuario en puntuarCiudadUSuario: " + usuario.getEmail());
+
 		try {
 			tx.begin();
 
 			Ciudad ciudadBuena = null;
 			Usuario usuarioBueno = null;
 
+			@SuppressWarnings("unchecked")
 			Query<Ciudad> q = pm.newQuery("SELECT FROM " + Ciudad.class.getName());
+			@SuppressWarnings("unchecked")
 			List<Ciudad> resultCiudades = (List<Ciudad>) q.execute();
 
+			@SuppressWarnings("unchecked")
 			Query<Usuario> q2 = pm.newQuery("SELECT FROM " + Usuario.class.getName());
+			@SuppressWarnings("unchecked")
 			List<Usuario> resultUsuarios = (List<Usuario>) q2.execute();
 
 			for (Ciudad c : resultCiudades) {
@@ -95,12 +103,15 @@ public class ManagerDAO implements IManagerDAO {
 			for (Usuario u : resultUsuarios) {
 				if (u.getEmail().equals(usuario.getEmail())) {
 					usuarioBueno = u;
+					System.out.println(usuarioBueno.getNombre() + " usuarioBueno encontrado!");
 				}
 			}
 
 			// Creamos el objeto bueno a guardar:
 			// Objeto a guardar en la base de datos:
 			CiudadUsuario ciudadUsuario = new CiudadUsuario(ciudadBuena, usuarioBueno);
+			System.out.println(ciudadUsuario.getCiudad().getNombreCiudad() + " cogido ciudad de CiudadUsuario...");
+			System.out.println(ciudadUsuario.getUsuario().getNombre() + " cogido usuario de CiudadUsuario...");
 			pm.makePersistent(ciudadUsuario);
 
 			tx.commit();
@@ -182,10 +193,10 @@ public class ManagerDAO implements IManagerDAO {
 	/**
 	 * Metodo para borrar una ciudad
 	 * 
-	 * @param idCiudad
+	 * @param nombreCiudad
 	 *            Id de la ciudad a borrar
 	 */
-	public void deleteCiudad(int idCiudad) {
+	public void deleteCiudad(String nombreCiudad) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 
 		Transaction tx = pm.currentTransaction();
@@ -193,7 +204,7 @@ public class ManagerDAO implements IManagerDAO {
 		try {
 			tx.begin();
 
-			Query<Ciudad> query = pm.newQuery(Ciudad.class, "id de la ciudad =='" + idCiudad + "'");
+			Query<Ciudad> query = pm.newQuery(Ciudad.class, "id de la ciudad =='" + nombreCiudad + "'");
 
 			Collection<?> result = (Collection<?>) query.execute();
 
@@ -220,13 +231,13 @@ public class ManagerDAO implements IManagerDAO {
 	/**
 	 * Metodo para obtener los puntos de una ciudad de la base de datos
 	 * 
-	 * @param idCiudad
+	 * @param nombreCiudad
 	 *            Id de la ciudad
 	 * @throws Exception
 	 *             Lanza una excepcion en caso de que ocurra un error
 	 * @return Devuelve los puntos de una ciudad
 	 */
-	public int getCiudadPoints(int idCiudad) {
+	public int getCiudadPoints(String nombreCiudad) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 
 		pm.getFetchPlan().setMaxFetchDepth(4);
@@ -235,14 +246,15 @@ public class ManagerDAO implements IManagerDAO {
 
 		try {
 			tx.begin();
-			Query<?> q = pm.newQuery("SELECT FROM " + Ciudad.class.getName() + " WHERE idCiudad == '" + idCiudad + "'");
+			Query<?> q = pm
+					.newQuery("SELECT FROM " + Ciudad.class.getName() + " WHERE idCiudad == '" + nombreCiudad + "'");
 			@SuppressWarnings("unchecked")
 			List<Ciudad> result = (List<Ciudad>) q.execute();
 
 			points = result.get(0).getPuntuacionTotal();
 			tx.commit();
 		} catch (Exception ex) {
-			logger.error("Error al obtener los puntos de una ciudad con el id: " + idCiudad + ex.getMessage());
+			logger.error("Error al obtener los puntos de una ciudad con el id: " + nombreCiudad + ex.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -252,6 +264,8 @@ public class ManagerDAO implements IManagerDAO {
 
 		return points;
 	}
+
+	public static Usuario usuarioDAO = new Usuario();
 
 	/**
 	 * Metodo para obtener el usuario de la base de datos
@@ -276,6 +290,8 @@ public class ManagerDAO implements IManagerDAO {
 			for (Usuario u : usuarios) {
 				if (u.getEmail().equals(email)) {
 					dev = u.getPassword();
+					System.out.println("ManagerDAO:" + u.getEmail());
+					usuarioDAO.copyUsuario(u);
 				}
 			}
 
@@ -461,40 +477,38 @@ public class ManagerDAO implements IManagerDAO {
 		Usuario u18 = new Usuario("patricia@opendeusto.es", "Patricia", "Ballano", "pbb1");
 		Usuario u19 = new Usuario("sara@opendeusto.es", "Sara", "Arroyo", "samt");
 		Usuario u20 = new Usuario("lucia@opendeusto.es", "Lucia", "Garay", "lg96");
-		
-	
+
 		Usuario u3 = new Usuario("admin@opendeusto.es", "admin", "fasdfasd", "admin");
 
 		Ciudad c1 = new Ciudad("Madrid", "Espania", 0, 0, 0, 0, 0, 0);
 		Ciudad c2 = new Ciudad("Paris", "Francia", 0, 0, 0, 0, 0, 0);
 		Ciudad c3 = new Ciudad("Monaco", "Monaco", 0, 0, 0, 0, 0, 0);
-		Ciudad c4= new Ciudad("Barcelona", "Espania", 0, 0, 0, 0, 0, 0);
+		Ciudad c4 = new Ciudad("Barcelona", "Espania", 0, 0, 0, 0, 0, 0);
 		Ciudad c5 = new Ciudad("Bilbao", "Espania", 0, 0, 0, 0, 0, 0);
 		Ciudad c6 = new Ciudad("Lugo", "Espania", 0, 0, 0, 0, 0, 0);
 		Ciudad c7 = new Ciudad("Valencia", "Espania", 0, 0, 0, 0, 0, 0);
 		Ciudad c8 = new Ciudad("Londres", "Reino Unido", 0, 0, 0, 0, 0, 0);
 		Ciudad c9 = new Ciudad("Roma", "Italia", 0, 0, 0, 0, 0, 0);
-		Ciudad c10= new Ciudad("Lisboa", "Portugal", 0, 0, 0, 0, 0, 0);
-		Ciudad c11= new Ciudad("Venecia", "Italia", 0, 0, 0, 0, 0, 0);
-		Ciudad c12= new Ciudad("Budapest", "Hungria", 0, 0, 0, 0, 0, 0);
-		Ciudad c13= new Ciudad("Praga", "Republica Checa", 0, 0, 0, 0, 0, 0);
-		Ciudad c14= new Ciudad("Atenas", "Grecia", 0, 0, 0, 0, 0, 0);
-		Ciudad c15= new Ciudad("Estambul", "Turquia", 0, 0, 0, 0, 0, 0);
-		Ciudad c16= new Ciudad("Viena", "Austria", 0, 0, 0, 0, 0, 0);
-		Ciudad c17= new Ciudad("Salzburgo", "Austria", 0, 0, 0, 0, 0, 0);
-		Ciudad c18= new Ciudad("Florencia", "Italia", 0, 0, 0, 0, 0, 0);
-		Ciudad c19= new Ciudad("Cracovia", "Polonia", 0, 0, 0, 0, 0, 0);
-		Ciudad c20= new Ciudad("Estocolmo", "Suecia", 0, 0, 0, 0, 0, 0);
-		Ciudad c21= new Ciudad("Copenhague", "Dinamarca", 0, 0, 0, 0, 0, 0);
-		Ciudad c22= new Ciudad("Oporto", "Portugal", 0, 0, 0, 0, 0, 0);
-		Ciudad c23= new Ciudad("San Petersburgo", "Rusia", 0, 0, 0, 0, 0, 0);
-		Ciudad c24= new Ciudad("Granada", "Espania", 0, 0, 0, 0, 0, 0);
-		Ciudad c25= new Ciudad("Sevilla", "Espania", 0, 0, 0, 0, 0, 0);
-		Ciudad c26= new Ciudad("Moscu", "Rusia", 0, 0, 0, 0, 0, 0);
-		Ciudad c27= new Ciudad("Montecarlo", "Monaco", 0, 0, 0, 0, 0, 0);
-		Ciudad c28= new Ciudad("Amberes", "Belgica", 0, 0, 0, 0, 0, 0);
+		Ciudad c10 = new Ciudad("Lisboa", "Portugal", 0, 0, 0, 0, 0, 0);
+		Ciudad c11 = new Ciudad("Venecia", "Italia", 0, 0, 0, 0, 0, 0);
+		Ciudad c12 = new Ciudad("Budapest", "Hungria", 0, 0, 0, 0, 0, 0);
+		Ciudad c13 = new Ciudad("Praga", "Republica Checa", 0, 0, 0, 0, 0, 0);
+		Ciudad c14 = new Ciudad("Atenas", "Grecia", 0, 0, 0, 0, 0, 0);
+		Ciudad c15 = new Ciudad("Estambul", "Turquia", 0, 0, 0, 0, 0, 0);
+		Ciudad c16 = new Ciudad("Viena", "Austria", 0, 0, 0, 0, 0, 0);
+		Ciudad c17 = new Ciudad("Salzburgo", "Austria", 0, 0, 0, 0, 0, 0);
+		Ciudad c18 = new Ciudad("Florencia", "Italia", 0, 0, 0, 0, 0, 0);
+		Ciudad c19 = new Ciudad("Cracovia", "Polonia", 0, 0, 0, 0, 0, 0);
+		Ciudad c20 = new Ciudad("Estocolmo", "Suecia", 0, 0, 0, 0, 0, 0);
+		Ciudad c21 = new Ciudad("Copenhague", "Dinamarca", 0, 0, 0, 0, 0, 0);
+		Ciudad c22 = new Ciudad("Oporto", "Portugal", 0, 0, 0, 0, 0, 0);
+		Ciudad c23 = new Ciudad("San Petersburgo", "Rusia", 0, 0, 0, 0, 0, 0);
+		Ciudad c24 = new Ciudad("Granada", "Espania", 0, 0, 0, 0, 0, 0);
+		Ciudad c25 = new Ciudad("Sevilla", "Espania", 0, 0, 0, 0, 0, 0);
+		Ciudad c26 = new Ciudad("Moscu", "Rusia", 0, 0, 0, 0, 0, 0);
+		Ciudad c27 = new Ciudad("Montecarlo", "Monaco", 0, 0, 0, 0, 0, 0);
+		Ciudad c28 = new Ciudad("Amberes", "Belgica", 0, 0, 0, 0, 0, 0);
 
-		
 		ArrayList<Ciudad> cu1 = new ArrayList<Ciudad>();
 		cu1.add(c1); // El usuario 1 ha puntuado la ciudad 1
 
@@ -523,8 +537,7 @@ public class ManagerDAO implements IManagerDAO {
 			dao.storeUsuario(u18);
 			dao.storeUsuario(u19);
 			dao.storeUsuario(u20);
-			
-			
+
 			dao.storeCiudad(c1);
 			dao.storeCiudad(c2);
 			dao.storeCiudad(c3);
@@ -554,13 +567,47 @@ public class ManagerDAO implements IManagerDAO {
 			dao.storeCiudad(c27);
 			dao.storeCiudad(c28);
 
-
-
 		} catch (Exception e) {
 
 		}
 		logger.info("Base de datos rellena con exito");
 
+	}
+
+	@Override
+	public ArrayList<CiudadUsuario> getCiudadesPuntuadasPorUsuarios() {
+		PersistenceManager pm = pmf.getPersistenceManager();
+
+		Transaction tx = pm.currentTransaction();
+		ArrayList<CiudadUsuario> ciudadesPuntuadas = new ArrayList<CiudadUsuario>();
+
+		try {
+			tx.begin();
+			@SuppressWarnings("unchecked")
+			Query<CiudadUsuario> q = pm.newQuery("SELECT FROM " + CiudadUsuario.class.getName());
+			@SuppressWarnings("unchecked")
+			List<CiudadUsuario> result = (List<CiudadUsuario>) q.execute();
+
+			for (int i = 0; i < result.size(); i++) {
+				ciudadesPuntuadas.add(new CiudadUsuario());
+				ciudadesPuntuadas.get(i).copyCiudadUsuario(result.get(i));
+				ciudadesPuntuadas.get(i).setCiudad(new Ciudad());
+				ciudadesPuntuadas.get(i).getCiudad().copyCiudad(result.get(i).getCiudad());
+				ciudadesPuntuadas.get(i).setUsuario(new Usuario());
+				ciudadesPuntuadas.get(i).getUsuario().copyUsuario(result.get(i).getUsuario());
+			}
+
+			tx.commit();
+		} catch (Exception ex) {
+			logger.error("Error intentado obtener las ciudades");
+		} finally {
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+			pm.close();
+		}
+
+		return ciudadesPuntuadas;
 	}
 
 }

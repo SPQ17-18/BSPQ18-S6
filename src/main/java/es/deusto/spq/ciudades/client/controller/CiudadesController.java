@@ -7,6 +7,8 @@ import org.apache.log4j.Logger;
 
 import es.deusto.spq.ciudades.server.jdo.data.Ciudad;
 import es.deusto.spq.ciudades.server.jdo.data.CiudadDTO;
+import es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario;
+import es.deusto.spq.ciudades.server.jdo.data.CiudadUsuarioDTO;
 import es.deusto.spq.ciudades.server.jdo.data.Usuario;
 import es.deusto.spq.ciudades.server.jdo.data.UsuarioDTO;
 import es.deusto.spq.ciudades.server.remote.IRemoteFacade;
@@ -53,6 +55,16 @@ public class CiudadesController {
 		return ciudades;
 	}
 
+	public List<CiudadUsuarioDTO> getCiudadesPuntuadasPorUsuarios() {
+		List<CiudadUsuarioDTO> ciudades = null;
+		try {
+			ciudades = iRF.getCiudadesPuntuadasPorUsuarios();
+		} catch (RemoteException e) {
+			logger.error("Error al obtener las getCiudadesPuntuadasPorUsuarios del servidor.");
+		}
+		return ciudades;
+	}
+
 	/**
 	 * Actualiza una ciudad
 	 * 
@@ -73,14 +85,14 @@ public class CiudadesController {
 	/**
 	 * Borra una ciudad.
 	 * 
-	 * @param idCiudad
+	 * @param nombreCiudad
 	 *            El id de una ciudad.
 	 * @return Devuelte true si se ha borrado correctamente, false si no.
 	 */
-	public boolean deleteCiudad(int idCiudad) {
+	public boolean deleteCiudad(String nombreCiudad) {
 		boolean deleted = false;
 		try {
-			deleted = iRF.deleteCiudad(idCiudad);
+			deleted = iRF.deleteCiudad(nombreCiudad);
 		} catch (RemoteException e) {
 			logger.error("Error al borrar una ciudad.");
 		}
@@ -94,10 +106,10 @@ public class CiudadesController {
 	 *            El id de una ciudad.
 	 * @return Los puntos de una ciudad.
 	 */
-	public int getCiudadPoints(int idCiudad) {
+	public int getCiudadPoints(String nombreCiudad) {
 		int points = -1;
 		try {
-			points = iRF.getCiudadPoints(idCiudad);
+			points = iRF.getCiudadPoints(nombreCiudad);
 		} catch (RemoteException e) {
 			logger.error("Error al obtener los puntos de una ciudad.");
 		}
@@ -161,8 +173,8 @@ public class CiudadesController {
 	 * 
 	 * @return usuarios. Devuelve los usuarios que se han registrado
 	 */
-	public List<UsuarioDTO> getAllUsuarios() {
-		List<UsuarioDTO> usuarios = null;
+	public List<Usuario> getAllUsuarios() {
+		List<Usuario> usuarios = null;
 		try {
 			usuarios = iRF.getUsuarios();
 		} catch (RemoteException e) {
@@ -191,14 +203,14 @@ public class CiudadesController {
 	/**
 	 * Borra un usuario
 	 * 
-	 * @param usuarioDTO
+	 * @param usuario
 	 *            Data Container.
 	 * @return Devuelve true si el usuario se ha borrado correctamente, false si no.
 	 */
-	public boolean deleteUsuario(UsuarioDTO usuarioDTO) {
+	public boolean deleteUsuario(Usuario usuario) {
 		boolean deleted = false;
 		try {
-			deleted = iRF.deleteUsuario(usuarioDTO);
+			deleted = iRF.deleteUsuario(usuario);
 		} catch (RemoteException e) {
 			logger.error("Error al borrar un usuario.");
 		}
@@ -208,6 +220,7 @@ public class CiudadesController {
 	public boolean puntuarCiudadUsuario(Ciudad ciudad, Usuario usuario) {
 		boolean dev = false;
 		try {
+			System.out.println(usuario.getEmail() + " ciudades controller!");
 			dev = iRF.puntuarCiudadUsuario(ciudad, usuario);
 		} catch (RemoteException e) {
 			logger.error("Error al guradar puntuación de una ciudad!.");

@@ -3,8 +3,6 @@ package es.deusto.spq.ciudades.server.jdo.data;
 import java.io.Serializable;
 
 import javax.jdo.annotations.PersistenceCapable;
-import javax.jdo.annotations.Persistent;
-import javax.jdo.annotations.PrimaryKey;
 
 @PersistenceCapable
 public class Ciudad implements Serializable {

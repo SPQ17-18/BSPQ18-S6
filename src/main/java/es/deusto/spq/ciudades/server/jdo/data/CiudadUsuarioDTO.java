@@ -2,10 +2,7 @@ package es.deusto.spq.ciudades.server.jdo.data;
 
 import java.io.Serializable;
 
-import javax.jdo.annotations.PersistenceCapable;
-
-@PersistenceCapable
-public class CiudadUsuario implements Serializable {
+public class CiudadUsuarioDTO implements Serializable{
 
 	/**
 	 * 
@@ -14,11 +11,8 @@ public class CiudadUsuario implements Serializable {
 	private Ciudad ciudad;
 	private Usuario usuario;
 
-	public CiudadUsuario() {
-
-	}
-
-	public CiudadUsuario(Ciudad ciudad, Usuario usuario) {
+	public CiudadUsuarioDTO(Ciudad ciudad, Usuario usuario) {
+		super();
 		this.ciudad = ciudad;
 		this.usuario = usuario;
 	}
@@ -37,11 +31,6 @@ public class CiudadUsuario implements Serializable {
 
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
-	}
-
-	public void copyCiudadUsuario(CiudadUsuario cu) {
-		this.usuario = cu.getUsuario();
-		this.ciudad = cu.getCiudad();
 	}
 
 }

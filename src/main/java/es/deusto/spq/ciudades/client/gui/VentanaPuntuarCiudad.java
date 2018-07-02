@@ -14,6 +14,7 @@ import es.deusto.spq.ciudades.server.jdo.data.Usuario;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.sound.midi.ControllerEventListener;
+import javax.sound.midi.Synthesizer;
 import javax.swing.JButton;
 
 import java.awt.event.ActionListener;
@@ -41,9 +42,9 @@ public class VentanaPuntuarCiudad extends JFrame {
 	private JButton btnVolverPerfilUsuario;
 	private JLabel lblCiudad;
 
-	// private CiudadesController controller;
-	// private ResourceBundle resourcebundle;
-	// private Usuario user;
+	private CiudadesController controller;
+	private ResourceBundle resourcebundle;
+	private Usuario user;
 
 	private JSpinner spnCultura, spnGastronomia, spnOcio, spnTransporte, spnPuntuacionTotal;
 	private JLabel nombreCiudadAPuntuar;
@@ -51,9 +52,11 @@ public class VentanaPuntuarCiudad extends JFrame {
 	public VentanaPuntuarCiudad(final CiudadesController controller, final ResourceBundle resourcebundle,
 			final Usuario user, final CiudadDTO ciudad) {
 
-		// this.controller = controller;
-		// this.resourcebundle = resourcebundle;
-		// this.user = user;
+		this.controller = controller;
+		this.resourcebundle = resourcebundle;
+		this.user = user;
+		
+		System.out.println(VentanaPuntuarCiudad.this.user.getEmail()+ " VentanaPuntuarCiudad");
 
 		SpinnerNumberModel model1 = new SpinnerNumberModel(5.0, 1.0, 10.0, 1.0);
 		SpinnerNumberModel model2 = new SpinnerNumberModel(5.0, 1.0, 10.0, 1.0);
@@ -62,14 +65,14 @@ public class VentanaPuntuarCiudad extends JFrame {
 		SpinnerNumberModel model5 = new SpinnerNumberModel(5.0, 1.0, 10.0, 1.0);
 
 		nombreCiudadAPuntuar = new JLabel(ciudad.getNombreCiudad());
-		lblPuntuacionCultura = new JLabel(resourcebundle.getString("culturePunctuation")+ " :");
-		lblPuntuacionGastronomia = new JLabel(resourcebundle.getString("gastronomyPunctuation")+ " :");
-		lblPuntuacionOcio = new JLabel(resourcebundle.getString("leisurePunctuation")+ " :");
-		lblPuntuacionTransporte = new JLabel(resourcebundle.getString("transportPunctuation")+ " :");
-		lblPuntuacionTotal = new JLabel(resourcebundle.getString("totalPunctuation")+" :");
-		btnPuntuar = new JButton(resourcebundle.getString("punctuateCity")+ " :");
+		lblPuntuacionCultura = new JLabel(resourcebundle.getString("culturePunctuation") + " :");
+		lblPuntuacionGastronomia = new JLabel(resourcebundle.getString("gastronomyPunctuation") + " :");
+		lblPuntuacionOcio = new JLabel(resourcebundle.getString("leisurePunctuation") + " :");
+		lblPuntuacionTransporte = new JLabel(resourcebundle.getString("transportPunctuation") + " :");
+		lblPuntuacionTotal = new JLabel(resourcebundle.getString("totalPunctuation") + " :");
+		btnPuntuar = new JButton(resourcebundle.getString("punctuateCity") + " :");
 		btnVolverPerfilUsuario = new JButton(resourcebundle.getString("goToUserProfile"));
-		lblCiudad = new JLabel(resourcebundle.getString("city")+ " :");
+		lblCiudad = new JLabel(resourcebundle.getString("city") + " :");
 		spnCultura = new JSpinner(model1);
 		spnGastronomia = new JSpinner(model2);
 		spnOcio = new JSpinner(model3);
@@ -124,6 +127,8 @@ public class VentanaPuntuarCiudad extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				Assembler assembler = new Assembler();
 				Ciudad _ciudad = assembler.disassembleCiudad(ciudad);
+				System.out.println(_ciudad.getNombreCiudad() + " btnPuntuar correcto!");
+				System.out.println(user.getEmail() + " btnPUntuar");
 				controller.puntuarCiudadUsuario(_ciudad, user);
 				logger.info("Su puntuacion se ha registrado con exito");
 			}
