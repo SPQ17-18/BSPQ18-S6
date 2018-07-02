@@ -106,6 +106,10 @@ public class Assembler {
 		Puntuacion p = new Puntuacion();
 		p.setNombreCiudad(puntuacionDTO.getNombreCiudad());
 		p.setPuntuacionTotal(puntuacionDTO.getPuntuacionTotal());
+		p.setPuntuacionCultura(puntuacionDTO.getPuntuacionCultura());
+		p.setPuntuacionGastronomia(puntuacionDTO.getPuntuacionGastronomia());
+		p.setPuntuacionOcio(puntuacionDTO.getPuntuacionOcio());
+		p.setPuntuacionTransporte(puntuacionDTO.getPuntuacionTransporte());
 		return p;
 	}
 

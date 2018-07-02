@@ -218,9 +218,9 @@ public class Collector extends UnicastRemoteObject implements IRemoteFacade {
 	 * @result Devuelve true cuando el usuario se registra correctamentewhen the
 	 *         employee is correctly registered
 	 */
-	public boolean registerUsuario(Usuario usuario) throws RemoteException {
+	public boolean registerUsuario(UsuarioDTO usuarioDTO) throws RemoteException {
 		try {
-			// Usuario usuario = assembler.disassembleUsuario(usuarioDTO);
+			Usuario usuario = assembler.disassembleUsuario(usuarioDTO);
 			dao.storeUsuario(usuario);
 			logger.info("Inserta un usuario a la base de datos llamado" + usuario.getNombre());
 			return true;

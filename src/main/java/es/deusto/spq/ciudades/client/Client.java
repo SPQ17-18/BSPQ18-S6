@@ -31,7 +31,7 @@ public class Client {
 
 	}
 
-	private void conectarConFachada(String[] args) {
+	public void conectarConFachada(String[] args) {
 		if (System.getSecurityManager() == null) {
 			System.setSecurityManager(new SecurityManager());
 		}

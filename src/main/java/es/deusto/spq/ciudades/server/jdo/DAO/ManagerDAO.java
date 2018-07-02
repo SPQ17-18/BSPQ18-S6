@@ -168,35 +168,26 @@ public class ManagerDAO implements IManagerDAO {
 		return ciudades;
 	}
 
-	/**
-	 * Metodo para actualizar una ciudad de la base de datos
-	 * 
-	 * @param ciudad
-	 *            Ciudad a actualizar
-	 * @throws Exception
-	 *             Lanza una excepcion cuando ocurre un error
-	 */
-
-	@Override
-	public void updateCiudad(Ciudad c) {
-		PersistenceManager pm = pmf.getPersistenceManager();
-		Transaction tx = pm.currentTransaction();
-
-		try {
-			tx.begin();
-			pm.makePersistent(c);
-			tx.commit();
-		} catch (Exception ex) {
-			System.out.println("Error actualizando una ciudad: " + ex.getMessage());
-		} finally {
-			if (tx != null && tx.isActive()) {
-				tx.rollback();
-			}
-
-			pm.close();
-		}
-
-	}
+	/*	*//**
+			 * Metodo para actualizar una ciudad de la base de datos
+			 * 
+			 * @param ciudad
+			 *            Ciudad a actualizar
+			 * @throws Exception
+			 *             Lanza una excepcion cuando ocurre un error
+			 *//*
+				 * 
+				 * @Override public void updateCiudad(Ciudad c) { PersistenceManager pm =
+				 * pmf.getPersistenceManager(); Transaction tx = pm.currentTransaction();
+				 * 
+				 * try { tx.begin(); pm.makePersistent(c); tx.commit(); } catch (Exception ex) {
+				 * System.out.println("Error actualizando una ciudad: " + ex.getMessage()); }
+				 * finally { if (tx != null && tx.isActive()) { tx.rollback(); }
+				 * 
+				 * pm.close(); }
+				 * 
+				 * }
+				 */
 
 	/**
 	 * Metodo para borrar una ciudad
@@ -648,6 +639,12 @@ public class ManagerDAO implements IManagerDAO {
 		}
 
 		return ciudadesPuntuadas;
+	}
+
+	@Override
+	public void updateCiudad(Ciudad ciudad) throws Exception {
+		// TODO Auto-generated method stub
+
 	}
 
 }

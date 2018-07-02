@@ -179,7 +179,7 @@ public class CiudadesController {
 	 *            Data Container.
 	 * @return Devuelve true si registra correctamente al usuario, false si no.
 	 */
-	public boolean registerUsuario(Usuario usuario) {
+	public boolean registerUsuario(UsuarioDTO usuario) {
 		boolean registered = false;
 		try {
 			registered = iRF.registerUsuario(usuario);

@@ -38,7 +38,6 @@ public class VentanaPuntuarCiudad extends JFrame {
 	private JLabel lblPuntuacionGastronomia;
 	private JLabel lblPuntuacionOcio;
 	private JLabel lblPuntuacionTransporte;
-	private JLabel lblPuntuacionTotal;
 	private JButton btnPuntuar;
 	private JButton btnVolverPerfilUsuario;
 	private JLabel lblCiudad;
@@ -47,7 +46,7 @@ public class VentanaPuntuarCiudad extends JFrame {
 	private ResourceBundle resourcebundle;
 	private Usuario user;
 
-	private JSpinner spnCultura, spnGastronomia, spnOcio, spnTransporte, spnPuntuacionTotal;
+	private JSpinner spnCultura, spnGastronomia, spnOcio, spnTransporte;
 	private JLabel nombreCiudadAPuntuar;
 
 	public VentanaPuntuarCiudad(final CiudadesController controller, final ResourceBundle resourcebundle,
@@ -63,14 +62,12 @@ public class VentanaPuntuarCiudad extends JFrame {
 		SpinnerNumberModel model2 = new SpinnerNumberModel(5, 1, 10, 1);
 		SpinnerNumberModel model3 = new SpinnerNumberModel(5, 1, 10, 1);
 		SpinnerNumberModel model4 = new SpinnerNumberModel(5, 1, 10, 1);
-		SpinnerNumberModel model5 = new SpinnerNumberModel(5, 1, 10, 1);
 
 		nombreCiudadAPuntuar = new JLabel(ciudad.getNombreCiudad());
 		lblPuntuacionCultura = new JLabel(resourcebundle.getString("culturePunctuation") + " :");
 		lblPuntuacionGastronomia = new JLabel(resourcebundle.getString("gastronomyPunctuation") + " :");
 		lblPuntuacionOcio = new JLabel(resourcebundle.getString("leisurePunctuation") + " :");
 		lblPuntuacionTransporte = new JLabel(resourcebundle.getString("transportPunctuation") + " :");
-		lblPuntuacionTotal = new JLabel(resourcebundle.getString("totalPunctuation") + " :");
 		btnPuntuar = new JButton(resourcebundle.getString("punctuateCity") + " :");
 		btnVolverPerfilUsuario = new JButton(resourcebundle.getString("goToUserProfile"));
 		lblCiudad = new JLabel(resourcebundle.getString("city") + " :");
@@ -78,7 +75,6 @@ public class VentanaPuntuarCiudad extends JFrame {
 		spnGastronomia = new JSpinner(model2);
 		spnOcio = new JSpinner(model3);
 		spnTransporte = new JSpinner(model4);
-		spnPuntuacionTotal = new JSpinner(model5);
 
 		getContentPane().setLayout(null);
 		setTitle(ciudad.getNombreCiudad());
@@ -89,7 +85,6 @@ public class VentanaPuntuarCiudad extends JFrame {
 		getContentPane().add(lblPuntuacionGastronomia);
 		getContentPane().add(lblPuntuacionOcio);
 		getContentPane().add(lblPuntuacionTransporte);
-		getContentPane().add(lblPuntuacionTotal);
 		getContentPane().add(btnPuntuar);
 		getContentPane().add(btnVolverPerfilUsuario);
 		getContentPane().add(lblCiudad);
@@ -97,14 +92,12 @@ public class VentanaPuntuarCiudad extends JFrame {
 		getContentPane().add(spnGastronomia);
 		getContentPane().add(spnOcio);
 		getContentPane().add(spnTransporte);
-		getContentPane().add(spnPuntuacionTotal);
 		getContentPane().add(nombreCiudadAPuntuar);
 
 		lblPuntuacionCultura.setBounds(55, 91, 171, 16);
 		lblPuntuacionGastronomia.setBounds(56, 126, 170, 16);
 		lblPuntuacionOcio.setBounds(55, 162, 171, 16);
 		lblPuntuacionTransporte.setBounds(55, 201, 171, 16);
-		lblPuntuacionTotal.setBounds(55, 253, 171, 16);
 		btnPuntuar.setBounds(221, 337, 158, 25);
 		btnVolverPerfilUsuario.setBounds(12, 337, 184, 25);
 		lblCiudad.setBounds(55, 29, 129, 16);
@@ -112,7 +105,6 @@ public class VentanaPuntuarCiudad extends JFrame {
 		spnGastronomia.setBounds(241, 126, 51, 33);
 		spnOcio.setBounds(241, 163, 51, 33);
 		spnTransporte.setBounds(241, 201, 51, 33);
-		spnPuntuacionTotal.setBounds(241, 253, 51, 33);
 		nombreCiudadAPuntuar.setBounds(196, 29, 129, 16);
 
 		btnVolverPerfilUsuario.addActionListener(new ActionListener() {
@@ -131,11 +123,17 @@ public class VentanaPuntuarCiudad extends JFrame {
 				Ciudad _ciudad = assembler.disassembleCiudad(ciudad);
 				controller.puntuarCiudadUsuario(_ciudad, user);
 
+				// Calculamos la puntuación media de todas las demás puntuaciones y la
+				// incorparamos al objeto:
+				int puntacionMediaTotal = (Integer) spnOcio.getValue() + (Integer) spnGastronomia.getValue()
+						+ (Integer) spnCultura.getValue() + (Integer) spnTransporte.getValue();
+				puntacionMediaTotal /= 4;
+
 				// Guardamos las diferentes puntuaciones de la ciudad votada por el usuario:
-				PuntuacionDTO puntuacionDTO = new PuntuacionDTO(_ciudad.getNombreCiudad(),
-						(Integer) spnPuntuacionTotal.getValue(), (Integer) spnOcio.getValue(),
-						(Integer) spnGastronomia.getValue(), (Integer) spnCultura.getValue(),
-						(Integer) spnTransporte.getValue());
+				PuntuacionDTO puntuacionDTO = new PuntuacionDTO(_ciudad.getNombreCiudad(), puntacionMediaTotal,
+						(Integer) spnOcio.getValue(), (Integer) spnGastronomia.getValue(),
+						(Integer) spnCultura.getValue(), (Integer) spnTransporte.getValue());
+
 				controller.insertarPuntuacion(puntuacionDTO);
 				logger.info("Su puntuacion se ha registrado con exito");
 				btnVolverPerfilUsuario.doClick();
