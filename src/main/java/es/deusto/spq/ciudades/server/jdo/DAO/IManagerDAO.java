@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import es.deusto.spq.ciudades.server.jdo.data.Ciudad;
 import es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario;
+import es.deusto.spq.ciudades.server.jdo.data.Puntuacion;
 import es.deusto.spq.ciudades.server.jdo.data.Usuario;
 import es.deusto.spq.ciudades.server.jdo.data.UsuarioDTO;
 
@@ -14,6 +15,7 @@ public interface IManagerDAO {
 	public void updateCiudad(Ciudad ciudad) throws Exception;
 	public void deleteCiudad(String nombreCiudad);
 	public int getCiudadPoints(String nombreCiudad);
+	public void storePuntuacion(Puntuacion puntuacion) throws Exception;
 
 	public void storeUsuario(Usuario usuario)throws Exception;
 	public ArrayList<Usuario> getUsuarios();
@@ -21,6 +23,7 @@ public interface IManagerDAO {
 	public void manageUsuario(Usuario usuario) throws Exception;
 	public String getUsuario(String email);
 	public ArrayList<CiudadUsuario> getCiudadesPuntuadasPorUsuarios();
+	public ArrayList<Puntuacion> getPuntuaciones();
 	
 	public void puntuarCiudadUsuario(Ciudad ciudad, Usuario usuario) throws Exception;
 		

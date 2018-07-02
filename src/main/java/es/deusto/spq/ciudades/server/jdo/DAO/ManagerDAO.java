@@ -16,6 +16,7 @@ import org.apache.log4j.Logger;
 
 import es.deusto.spq.ciudades.server.jdo.data.Ciudad;
 import es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario;
+import es.deusto.spq.ciudades.server.jdo.data.Puntuacion;
 import es.deusto.spq.ciudades.server.jdo.data.Usuario;
 
 public class ManagerDAO implements IManagerDAO {
@@ -42,6 +43,13 @@ public class ManagerDAO implements IManagerDAO {
 	public void storeCiudad(Ciudad ciudad) throws Exception {
 		logger.info("Guardando una ciudad cuyo nombre es " + ciudad.getNombreCiudad());
 		this.storeObject(ciudad);
+	}
+
+	@Override
+	public void storePuntuacion(Puntuacion puntuacion) throws Exception {
+		// TODO Auto-generated method stub
+		logger.info("Guardando ciudad puntuada... " + puntuacion.getNombreCiudad());
+		this.storeObject(puntuacion);
 	}
 
 	/**
@@ -600,6 +608,38 @@ public class ManagerDAO implements IManagerDAO {
 			tx.commit();
 		} catch (Exception ex) {
 			logger.error("Error intentado obtener las ciudades");
+		} finally {
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+			pm.close();
+		}
+
+		return ciudadesPuntuadas;
+	}
+
+	@Override
+	public ArrayList<Puntuacion> getPuntuaciones() {
+		PersistenceManager pm = pmf.getPersistenceManager();
+
+		Transaction tx = pm.currentTransaction();
+		ArrayList<Puntuacion> ciudadesPuntuadas = new ArrayList<Puntuacion>();
+
+		try {
+			tx.begin();
+			@SuppressWarnings("unchecked")
+			Query<Puntuacion> q = pm.newQuery("SELECT FROM " + Puntuacion.class.getName());
+			@SuppressWarnings("unchecked")
+			List<Puntuacion> result = (List<Puntuacion>) q.execute();
+
+			for (int i = 0; i < result.size(); i++) {
+				ciudadesPuntuadas.add(new Puntuacion());
+				ciudadesPuntuadas.get(i).copyPuntuacion(result.get(i));
+			}
+
+			tx.commit();
+		} catch (Exception ex) {
+			logger.error("Error intentado obtener las puntuacuones de las ciudades");
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();

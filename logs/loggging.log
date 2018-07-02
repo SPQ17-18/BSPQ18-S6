@@ -3339,3 +3339,880 @@
 2018-07-02 17:41:23 INFO  VentanLogin:90 - Inicio
 2018-07-02 17:41:28 INFO  VentanLogin:90 - Login
 2018-07-02 17:41:28 INFO  VentanLogin:202 - en
+2018-07-02 18:58:38 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 18:58:38 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 18:58:38 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 18:58:38 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 18:58:38 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 18:58:38 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 18:58:38 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 18:58:38 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 3 clases. Tiempos : input=260 ms, enhance=102 ms, total=362 ms. Compruebe el LOG para los detalles
+2018-07-02 18:59:01 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 18:59:01 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 18:59:01 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 18:59:04 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 18:59:04 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 18:59:04 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 18:59:24 INFO  VentanLogin:90 - Inicio
+2018-07-02 18:59:37 INFO  VentanLogin:127 - Boton aceptar login
+2018-07-02 18:59:38 INFO  Server:176 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 18:59:39 INFO  VentanLogin:142 - Exito identificando al usuario
+2018-07-02 18:59:39 INFO  VentanLogin:147 - DevolverUsuario correcto!
+2018-07-02 18:59:39 INFO  Server:93 - Ciudades puntuadas por usuarios obtenidas
+2018-07-02 18:59:39 INFO  VentanaPerfilUsuario:77 - Perfil del usuario
+2018-07-02 18:59:42 INFO  Server:84 - El cliente pregunta por las ciudades
+2018-07-02 18:59:43 INFO  Server:84 - El cliente pregunta por las ciudades
+2018-07-02 19:01:48 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 19:01:48 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 19:01:48 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 19:01:48 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 19:01:48 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 19:01:48 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 19:01:48 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 19:01:48 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 3 clases. Tiempos : input=299 ms, enhance=133 ms, total=432 ms. Compruebe el LOG para los detalles
+2018-07-02 19:02:05 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 19:02:05 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 19:02:05 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 19:02:07 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 19:02:07 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 19:02:07 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 19:02:19 INFO  VentanLogin:90 - Inicio
+2018-07-02 19:02:30 INFO  VentanLogin:127 - Boton aceptar login
+2018-07-02 19:02:31 INFO  Server:176 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 19:02:32 INFO  VentanLogin:142 - Exito identificando al usuario
+2018-07-02 19:02:32 INFO  VentanLogin:147 - DevolverUsuario correcto!
+2018-07-02 19:02:32 INFO  Server:93 - Ciudades puntuadas por usuarios obtenidas
+2018-07-02 19:02:32 INFO  VentanaPerfilUsuario:77 - Perfil del usuario
+2018-07-02 19:02:35 INFO  Server:84 - El cliente pregunta por las ciudades
+2018-07-02 19:23:23 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 19:23:23 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 19:23:23 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 19:23:23 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 19:23:23 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 19:23:23 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Puntuacion.class" con definicion enhanced
+2018-07-02 19:23:23 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Puntuacion
+2018-07-02 19:23:23 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 19:23:23 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 19:23:23 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=233 ms, enhance=113 ms, total=346 ms. Compruebe el LOG para los detalles
+2018-07-02 19:23:41 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 19:23:41 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 19:23:41 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 19:23:43 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 19:23:43 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 19:23:43 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 19:23:55 INFO  VentanLogin:90 - Inicio
+2018-07-02 19:24:05 INFO  VentanLogin:127 - Boton aceptar login
+2018-07-02 19:24:06 INFO  Server:190 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 19:24:07 INFO  VentanLogin:142 - Exito identificando al usuario
+2018-07-02 19:24:07 INFO  VentanLogin:147 - DevolverUsuario correcto!
+2018-07-02 19:24:07 INFO  Server:107 - Ciudades puntuadas por usuarios obtenidas
+2018-07-02 19:24:07 INFO  VentanaPerfilUsuario:77 - Perfil del usuario
+2018-07-02 19:24:09 INFO  Server:98 - El cliente pregunta por las ciudades
+2018-07-02 19:24:11 INFO  Server:98 - El cliente pregunta por las ciudades
+2018-07-02 19:24:20 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 19:24:20 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 19:24:20 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 19:28:33 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 19:28:33 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 19:28:33 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 19:28:33 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 19:28:33 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 19:28:33 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Puntuacion.class" con definicion enhanced
+2018-07-02 19:28:33 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Puntuacion
+2018-07-02 19:28:33 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 19:28:33 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 19:28:33 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=243 ms, enhance=119 ms, total=362 ms. Compruebe el LOG para los detalles
+2018-07-02 19:28:49 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 19:28:49 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 19:28:49 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 19:28:51 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 19:28:51 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 19:28:51 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 19:29:00 INFO  VentanLogin:90 - Inicio
+2018-07-02 19:29:09 INFO  VentanLogin:127 - Boton aceptar login
+2018-07-02 19:29:09 INFO  Server:190 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 19:29:10 INFO  VentanLogin:142 - Exito identificando al usuario
+2018-07-02 19:29:10 INFO  VentanLogin:147 - DevolverUsuario correcto!
+2018-07-02 19:29:10 INFO  Server:107 - Ciudades puntuadas por usuarios obtenidas
+2018-07-02 19:29:10 INFO  VentanaPerfilUsuario:77 - Perfil del usuario
+2018-07-02 19:29:12 INFO  Server:98 - El cliente pregunta por las ciudades
+2018-07-02 19:29:17 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 19:29:17 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 19:29:17 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 19:30:05 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 19:30:05 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 19:30:05 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 19:31:45 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 19:31:45 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 19:31:45 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 19:31:45 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 19:31:45 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 19:31:45 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Puntuacion.class" con definicion enhanced
+2018-07-02 19:31:45 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Puntuacion
+2018-07-02 19:31:45 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 19:31:45 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 19:31:45 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=255 ms, enhance=81 ms, total=336 ms. Compruebe el LOG para los detalles
+2018-07-02 19:32:08 INFO  SchemaTool:82 - DataNucleus SchemaTool : Creación del esquema para clases
+2018-07-02 19:32:08 INFO  SchemaTool:82 - DataNucleus SchemaTool : Classpath
+2018-07-02 19:32:08 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\datanucleus\datanucleus-maven-plugin\5.0.2\datanucleus-maven-plugin-5.0.2.jar
+2018-07-02 19:32:08 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\codehaus\plexus\plexus-utils\3.0.8\plexus-utils-3.0.8.jar
+2018-07-02 19:32:08 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\apache\maven\maven-artifact\3.0.4\maven-artifact-3.0.4.jar
+2018-07-02 19:32:08 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\apache\maven\maven-plugin-api\3.0.4\maven-plugin-api-3.0.4.jar
+2018-07-02 19:32:08 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\apache\maven\maven-model\3.0.4\maven-model-3.0.4.jar
+2018-07-02 19:32:08 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\sonatype\sisu\sisu-inject-plexus\2.3.0\sisu-inject-plexus-2.3.0.jar
+2018-07-02 19:32:08 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\codehaus\plexus\plexus-component-annotations\1.5.5\plexus-component-annotations-1.5.5.jar
+2018-07-02 19:32:08 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\sonatype\sisu\sisu-inject-bean\2.3.0\sisu-inject-bean-2.3.0.jar
+2018-07-02 19:32:08 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\sonatype\sisu\sisu-guice\3.1.0\sisu-guice-3.1.0-no_aop.jar
+2018-07-02 19:32:08 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\sonatype\sisu\sisu-guava\0.9.9\sisu-guava-0.9.9.jar
+2018-07-02 19:32:08 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\codehaus\plexus\plexus-container-default\1.5.5\plexus-container-default-1.5.5.jar
+2018-07-02 19:32:08 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\codehaus\plexus\plexus-classworlds\2.2.2\plexus-classworlds-2.2.2.jar
+2018-07-02 19:32:08 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\apache\xbean\xbean-reflect\3.4\xbean-reflect-3.4.jar
+2018-07-02 19:32:08 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\log4j\log4j\1.2.12\log4j-1.2.12.jar
+2018-07-02 19:32:08 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\commons-logging\commons-logging-api\1.1\commons-logging-api-1.1.jar
+2018-07-02 19:32:08 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\com\google\collections\google-collections\1.0\google-collections-1.0.jar
+2018-07-02 19:32:08 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\junit\junit\3.8.2\junit-3.8.2.jar
+2018-07-02 19:32:08 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes
+2018-07-02 19:32:08 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\datanucleus\datanucleus-core\5.1.10\datanucleus-core-5.1.10.jar
+2018-07-02 19:32:08 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\datanucleus\datanucleus-api-jdo\5.1.8\datanucleus-api-jdo-5.1.8.jar
+2018-07-02 19:32:08 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\datanucleus\datanucleus-rdbms\5.1.11\datanucleus-rdbms-5.1.11.jar
+2018-07-02 19:32:08 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\datanucleus\javax.jdo\3.2.0-m8\javax.jdo-3.2.0-m8.jar
+2018-07-02 19:32:08 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\javax\transaction\transaction-api\1.1\transaction-api-1.1.jar
+2018-07-02 19:32:08 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\mysql\mysql-connector-java\5.1.45\mysql-connector-java-5.1.45.jar
+2018-07-02 19:32:08 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar
+2018-07-02 19:32:08 INFO  Persistence:82 - Propiedad datanucleus.validateconstraints desconocida - vamos a ignorarla
+2018-07-02 19:32:08 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 19:32:08 INFO  Persistence:82 - Propiedad datanucleus.validatetables desconocida - vamos a ignorarla
+2018-07-02 19:32:10 INFO  SchemaTool:82 - DataNucleus SchemaTool : Propiedades para persistencia
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  datanucleus.autostartmechanism=None
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  datanucleus.connectiondrivername=com.mysql.jdbc.Driver
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  datanucleus.connectionurl=jdbc:mysql://localhost/proyectoCiudadesDB?verifyServerCertificate=false&useSSL=true
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  datanucleus.connectionusername=spq
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  datanucleus.mapping=mysql
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  datanucleus.metadata.validate=false
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  datanucleus.rdbms.checkexisttablesorviews=true
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  datanucleus.readonlydatastore=false
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  datanucleus.schema.autocreatecolumns=true
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  datanucleus.schema.autocreateconstraints=true
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  datanucleus.schema.autocreatetables=true
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  datanucleus.validateconstraints=false
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  datanucleus.validatetables=false
+2018-07-02 19:32:10 INFO  SchemaTool:82 - DataNucleus SchemaTool : Ficheros
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\Client.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\controller\CiudadesController.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaCrearPerfil$1.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaCrearPerfil$2.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaCrearPerfil.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPerfilUsuario$1.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPerfilUsuario$2.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPerfilUsuario$3.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPerfilUsuario$4.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPerfilUsuario.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPuntuarCiudad$1.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPuntuarCiudad$2.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPuntuarCiudad.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanLogin$1.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanLogin$2.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanLogin$3.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanLogin.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\Collector$1.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\Collector.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\DAO\IManagerDAO.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\DAO\ManagerDAO.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Assembler.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadDTO.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuarioDTO.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Puntuacion.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\PuntuacionDTO.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\UsuarioDTO.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\remote\IRemoteFacade.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\Server$1RMIRegistryRunnable.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\Server$1RMIServerRunnable.class
+2018-07-02 19:32:10 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\Server.class
+2018-07-02 19:32:17 INFO  SchemaTool:82 - DataNucleus SchemaTool ha terminado con exito
+2018-07-02 19:32:52 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 19:32:52 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 19:32:52 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 19:32:54 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: cristian@opendeusto.es
+2018-07-02 19:32:54 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: jesus@opendeusto.es
+2018-07-02 19:32:54 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: admin@opendeusto.es
+2018-07-02 19:32:54 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: jon@opendeusto.es
+2018-07-02 19:32:54 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: xabi@opendeusto.es
+2018-07-02 19:32:55 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: mar@opendeusto.es
+2018-07-02 19:32:55 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: luis@opendeusto.es
+2018-07-02 19:32:55 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: javi@opendeusto.es
+2018-07-02 19:32:55 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: pablo@opendeusto.es
+2018-07-02 19:32:55 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: laura@opendeusto.es
+2018-07-02 19:32:55 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: martina@opendeusto.es
+2018-07-02 19:32:55 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: unai@opendeusto.es
+2018-07-02 19:32:55 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: oscar@opendeusto.es
+2018-07-02 19:32:55 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: andoni@opendeusto.es
+2018-07-02 19:32:55 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: jonh@opendeusto.es
+2018-07-02 19:32:55 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: paula@opendeusto.es
+2018-07-02 19:32:55 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: belen@opendeusto.es
+2018-07-02 19:32:55 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: patricia@opendeusto.es
+2018-07-02 19:32:55 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: sara@opendeusto.es
+2018-07-02 19:32:55 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: lucia@opendeusto.es
+2018-07-02 19:32:55 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Madrid
+2018-07-02 19:32:55 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Paris
+2018-07-02 19:32:55 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Monaco
+2018-07-02 19:32:55 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Barcelona
+2018-07-02 19:32:55 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Bilbao
+2018-07-02 19:32:55 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Lugo
+2018-07-02 19:32:56 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Valencia
+2018-07-02 19:32:56 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Londres
+2018-07-02 19:32:56 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Roma
+2018-07-02 19:32:56 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Lisboa
+2018-07-02 19:32:56 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Venecia
+2018-07-02 19:32:56 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Budapest
+2018-07-02 19:32:56 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Praga
+2018-07-02 19:32:56 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Atenas
+2018-07-02 19:32:56 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Estambul
+2018-07-02 19:32:56 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Viena
+2018-07-02 19:32:56 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Salzburgo
+2018-07-02 19:32:56 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Florencia
+2018-07-02 19:32:56 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Cracovia
+2018-07-02 19:32:56 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Estocolmo
+2018-07-02 19:32:56 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Copenhague
+2018-07-02 19:32:56 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Oporto
+2018-07-02 19:32:56 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es San Petersburgo
+2018-07-02 19:32:56 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Granada
+2018-07-02 19:32:56 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Sevilla
+2018-07-02 19:32:56 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Moscu
+2018-07-02 19:32:56 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Montecarlo
+2018-07-02 19:32:56 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Amberes
+2018-07-02 19:32:56 INFO  ManagerDAO:581 - Base de datos rellena con exito
+2018-07-02 19:33:38 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 19:33:39 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 19:33:39 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 19:33:39 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 19:33:39 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 19:33:39 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Puntuacion.class" con definicion enhanced
+2018-07-02 19:33:39 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Puntuacion
+2018-07-02 19:33:39 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 19:33:39 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 19:33:39 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=253 ms, enhance=124 ms, total=377 ms. Compruebe el LOG para los detalles
+2018-07-02 19:33:57 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 19:33:57 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 19:33:57 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 19:33:59 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 19:33:59 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 19:33:59 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 19:34:11 INFO  VentanLogin:90 - Inicio
+2018-07-02 19:34:19 INFO  VentanLogin:127 - Boton aceptar login
+2018-07-02 19:34:20 INFO  Server:190 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 19:34:21 INFO  VentanLogin:142 - Exito identificando al usuario
+2018-07-02 19:34:21 INFO  VentanLogin:147 - DevolverUsuario correcto!
+2018-07-02 19:34:21 INFO  Server:107 - Ciudades puntuadas por usuarios obtenidas
+2018-07-02 19:34:21 INFO  VentanaPerfilUsuario:77 - Perfil del usuario
+2018-07-02 19:34:23 INFO  Server:98 - El cliente pregunta por las ciudades
+2018-07-02 19:34:28 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 19:34:28 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 19:34:28 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 19:36:22 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 19:36:22 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 19:36:22 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 19:36:22 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 19:36:22 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 19:36:22 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Puntuacion.class" con definicion enhanced
+2018-07-02 19:36:22 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Puntuacion
+2018-07-02 19:36:22 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 19:36:22 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 19:36:22 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=246 ms, enhance=108 ms, total=354 ms. Compruebe el LOG para los detalles
+2018-07-02 19:36:44 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 19:36:44 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 19:36:44 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 19:36:46 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 19:36:46 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 19:36:46 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 19:37:12 INFO  VentanLogin:90 - Inicio
+2018-07-02 19:37:20 INFO  VentanLogin:127 - Boton aceptar login
+2018-07-02 19:37:21 INFO  Server:190 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 19:37:22 INFO  VentanLogin:142 - Exito identificando al usuario
+2018-07-02 19:37:22 INFO  VentanLogin:147 - DevolverUsuario correcto!
+2018-07-02 19:37:22 INFO  Server:107 - Ciudades puntuadas por usuarios obtenidas
+2018-07-02 19:37:22 INFO  VentanaPerfilUsuario:77 - Perfil del usuario
+2018-07-02 19:37:24 INFO  Server:98 - El cliente pregunta por las ciudades
+2018-07-02 19:37:27 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 19:37:27 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 19:37:27 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 19:37:29 INFO  ManagerDAO:51 - Guardando ciudad puntuada... Monaco
+2018-07-02 19:37:30 INFO  Server:82 - Insertada nueva puntuación de ciudad null
+2018-07-02 19:37:30 INFO  VentanaPuntuarCiudad:137 - Su puntuacion se ha registrado con exito
+2018-07-02 19:37:47 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 19:37:47 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 19:37:47 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 19:37:48 INFO  ManagerDAO:51 - Guardando ciudad puntuada... Monaco
+2018-07-02 19:37:48 INFO  Server:82 - Insertada nueva puntuación de ciudad null
+2018-07-02 19:37:48 INFO  VentanaPuntuarCiudad:137 - Su puntuacion se ha registrado con exito
+2018-07-02 19:37:56 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 19:37:56 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 19:37:56 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 19:37:57 INFO  ManagerDAO:51 - Guardando ciudad puntuada... Monaco
+2018-07-02 19:37:57 INFO  Server:82 - Insertada nueva puntuación de ciudad null
+2018-07-02 19:37:57 INFO  VentanaPuntuarCiudad:137 - Su puntuacion se ha registrado con exito
+2018-07-02 19:52:00 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 19:52:00 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 19:52:00 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 19:52:00 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 19:52:00 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 19:52:00 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Puntuacion.class" con definicion enhanced
+2018-07-02 19:52:00 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Puntuacion
+2018-07-02 19:52:00 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 19:52:00 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 19:52:00 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=284 ms, enhance=89 ms, total=373 ms. Compruebe el LOG para los detalles
+2018-07-02 19:52:20 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 19:52:20 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 19:52:20 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 19:52:22 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 19:52:22 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 19:52:22 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 19:52:37 INFO  VentanLogin:90 - Inicio
+2018-07-02 19:52:45 INFO  VentanLogin:127 - Boton aceptar login
+2018-07-02 19:52:46 INFO  Server:198 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 19:52:47 INFO  VentanLogin:142 - Exito identificando al usuario
+2018-07-02 19:52:47 INFO  VentanLogin:147 - DevolverUsuario correcto!
+2018-07-02 19:52:47 INFO  Server:107 - Ciudades puntuadas por usuarios obtenidas
+2018-07-02 19:52:47 INFO  VentanaPerfilUsuario:78 - Perfil del usuario
+2018-07-02 19:52:51 INFO  Server:98 - El cliente pregunta por las ciudades
+2018-07-02 19:52:52 INFO  Server:98 - El cliente pregunta por las ciudades
+2018-07-02 19:52:52 INFO  Server:115 - Puntuaciones de ciudades obteneidas
+2018-07-02 19:53:39 INFO  Server:98 - El cliente pregunta por las ciudades
+2018-07-02 19:53:42 INFO  Server:98 - El cliente pregunta por las ciudades
+2018-07-02 19:53:42 INFO  Server:115 - Puntuaciones de ciudades obteneidas
+2018-07-02 19:55:44 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 19:55:44 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 19:55:44 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 19:55:44 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 19:55:44 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 19:55:44 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Puntuacion.class" con definicion enhanced
+2018-07-02 19:55:44 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Puntuacion
+2018-07-02 19:55:44 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 19:55:44 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 19:55:44 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=234 ms, enhance=144 ms, total=378 ms. Compruebe el LOG para los detalles
+2018-07-02 19:56:01 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 19:56:01 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 19:56:01 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 19:56:03 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 19:56:03 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 19:56:03 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 19:56:17 INFO  VentanLogin:90 - Inicio
+2018-07-02 19:56:30 INFO  VentanLogin:127 - Boton aceptar login
+2018-07-02 19:56:30 INFO  Server:198 - Usuario con email jesus@opendeusto.es se ha logeado correctamente
+2018-07-02 19:56:32 INFO  VentanLogin:142 - Exito identificando al usuario
+2018-07-02 19:56:32 INFO  VentanLogin:147 - DevolverUsuario correcto!
+2018-07-02 19:56:32 INFO  Server:107 - Ciudades puntuadas por usuarios obtenidas
+2018-07-02 19:56:32 INFO  VentanaPerfilUsuario:78 - Perfil del usuario
+2018-07-02 19:56:34 INFO  Server:98 - El cliente pregunta por las ciudades
+2018-07-02 19:56:35 INFO  Server:98 - El cliente pregunta por las ciudades
+2018-07-02 19:56:35 INFO  Server:115 - Puntuaciones de ciudades obteneidas
+2018-07-02 19:56:36 INFO  Server:98 - El cliente pregunta por las ciudades
+2018-07-02 19:56:49 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 19:56:49 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 19:56:49 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 19:56:52 INFO  Server:49 - Ciudad puntuad: Budapest
+2018-07-02 19:56:52 INFO  ManagerDAO:51 - Guardando ciudad puntuada... Budapest
+2018-07-02 19:56:52 INFO  Server:82 - Insertada nueva puntuación de ciudad null
+2018-07-02 19:56:52 INFO  VentanaPuntuarCiudad:138 - Su puntuacion se ha registrado con exito
+2018-07-02 19:56:52 INFO  Server:107 - Ciudades puntuadas por usuarios obtenidas
+2018-07-02 19:56:52 INFO  VentanaPerfilUsuario:78 - Perfil del usuario
+2018-07-02 19:56:57 INFO  Server:98 - El cliente pregunta por las ciudades
+2018-07-02 19:56:57 INFO  Server:115 - Puntuaciones de ciudades obteneidas
+2018-07-02 19:57:00 INFO  Server:98 - El cliente pregunta por las ciudades
+2018-07-02 19:57:12 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 19:57:12 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 19:57:12 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 19:57:13 INFO  Server:49 - Ciudad puntuad: Viena
+2018-07-02 19:57:13 INFO  ManagerDAO:51 - Guardando ciudad puntuada... Viena
+2018-07-02 19:57:14 INFO  Server:82 - Insertada nueva puntuación de ciudad null
+2018-07-02 19:57:14 INFO  VentanaPuntuarCiudad:138 - Su puntuacion se ha registrado con exito
+2018-07-02 19:57:14 INFO  Server:107 - Ciudades puntuadas por usuarios obtenidas
+2018-07-02 19:57:14 INFO  VentanaPerfilUsuario:78 - Perfil del usuario
+2018-07-02 19:57:17 INFO  Server:98 - El cliente pregunta por las ciudades
+2018-07-02 19:57:17 INFO  Server:115 - Puntuaciones de ciudades obteneidas
+2018-07-02 19:57:23 INFO  VentanLogin:90 - Inicio
+2018-07-02 19:57:35 INFO  VentanLogin:127 - Boton aceptar login
+2018-07-02 19:57:35 INFO  Server:198 - Usuario con email admin@opendeusto.es se ha logeado correctamente
+2018-07-02 19:57:36 INFO  VentanLogin:142 - Exito identificando al usuario
+2018-07-02 19:57:36 INFO  VentanLogin:147 - DevolverUsuario correcto!
+2018-07-02 19:57:36 INFO  Server:107 - Ciudades puntuadas por usuarios obtenidas
+2018-07-02 19:57:36 INFO  VentanaPerfilUsuario:78 - Perfil del usuario
+2018-07-02 19:57:39 INFO  Server:98 - El cliente pregunta por las ciudades
+2018-07-02 19:58:02 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 19:58:02 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 19:58:02 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 19:58:03 INFO  Server:49 - Ciudad puntuad: Sevilla
+2018-07-02 19:58:03 INFO  ManagerDAO:51 - Guardando ciudad puntuada... Sevilla
+2018-07-02 19:58:04 INFO  Server:82 - Insertada nueva puntuación de ciudad null
+2018-07-02 19:58:04 INFO  VentanaPuntuarCiudad:138 - Su puntuacion se ha registrado con exito
+2018-07-02 19:58:04 INFO  Server:107 - Ciudades puntuadas por usuarios obtenidas
+2018-07-02 19:58:04 INFO  VentanaPerfilUsuario:78 - Perfil del usuario
+2018-07-02 19:58:07 INFO  Server:98 - El cliente pregunta por las ciudades
+2018-07-02 19:58:07 INFO  Server:115 - Puntuaciones de ciudades obteneidas
+2018-07-02 19:58:12 INFO  VentanLogin:90 - Inicio
+2018-07-02 19:58:23 INFO  VentanLogin:127 - Boton aceptar login
+2018-07-02 19:58:23 INFO  Server:198 - Usuario con email jesus@opendeusto.es se ha logeado correctamente
+2018-07-02 19:58:24 INFO  VentanLogin:142 - Exito identificando al usuario
+2018-07-02 19:58:24 INFO  VentanLogin:147 - DevolverUsuario correcto!
+2018-07-02 19:58:24 INFO  Server:107 - Ciudades puntuadas por usuarios obtenidas
+2018-07-02 19:58:24 INFO  VentanaPerfilUsuario:78 - Perfil del usuario
+2018-07-02 19:58:25 INFO  VentanLogin:90 - Inicio
+2018-07-02 19:58:34 INFO  VentanLogin:127 - Boton aceptar login
+2018-07-02 19:58:34 INFO  Server:198 - Usuario con email jesus@opendeusto.es se ha logeado correctamente
+2018-07-02 19:58:35 INFO  VentanLogin:142 - Exito identificando al usuario
+2018-07-02 19:58:35 INFO  VentanLogin:147 - DevolverUsuario correcto!
+2018-07-02 19:58:35 INFO  Server:107 - Ciudades puntuadas por usuarios obtenidas
+2018-07-02 19:58:35 INFO  VentanaPerfilUsuario:78 - Perfil del usuario
+2018-07-02 19:58:37 INFO  Server:98 - El cliente pregunta por las ciudades
+2018-07-02 19:58:53 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 19:58:53 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 19:58:53 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 19:58:55 INFO  Server:49 - Ciudad puntuad: Moscu
+2018-07-02 19:58:55 INFO  ManagerDAO:51 - Guardando ciudad puntuada... Moscu
+2018-07-02 19:58:55 INFO  Server:82 - Insertada nueva puntuación de ciudad null
+2018-07-02 19:58:55 INFO  VentanaPuntuarCiudad:138 - Su puntuacion se ha registrado con exito
+2018-07-02 19:58:55 INFO  Server:107 - Ciudades puntuadas por usuarios obtenidas
+2018-07-02 19:58:55 INFO  VentanaPerfilUsuario:78 - Perfil del usuario
+2018-07-02 19:58:57 INFO  Server:98 - El cliente pregunta por las ciudades
+2018-07-02 19:58:57 INFO  Server:115 - Puntuaciones de ciudades obteneidas
+2018-07-02 20:18:14 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 20:18:14 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 20:18:14 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 20:18:14 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 20:18:14 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 20:18:14 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Puntuacion.class" con definicion enhanced
+2018-07-02 20:18:14 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Puntuacion
+2018-07-02 20:18:14 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 20:18:14 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 20:18:14 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=281 ms, enhance=133 ms, total=414 ms. Compruebe el LOG para los detalles
+2018-07-02 20:18:43 INFO  SchemaTool:82 - DataNucleus SchemaTool : Creación del esquema para clases
+2018-07-02 20:18:43 INFO  SchemaTool:82 - DataNucleus SchemaTool : Classpath
+2018-07-02 20:18:43 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\datanucleus\datanucleus-maven-plugin\5.0.2\datanucleus-maven-plugin-5.0.2.jar
+2018-07-02 20:18:43 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\codehaus\plexus\plexus-utils\3.0.8\plexus-utils-3.0.8.jar
+2018-07-02 20:18:43 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\apache\maven\maven-artifact\3.0.4\maven-artifact-3.0.4.jar
+2018-07-02 20:18:43 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\apache\maven\maven-plugin-api\3.0.4\maven-plugin-api-3.0.4.jar
+2018-07-02 20:18:43 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\apache\maven\maven-model\3.0.4\maven-model-3.0.4.jar
+2018-07-02 20:18:43 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\sonatype\sisu\sisu-inject-plexus\2.3.0\sisu-inject-plexus-2.3.0.jar
+2018-07-02 20:18:43 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\codehaus\plexus\plexus-component-annotations\1.5.5\plexus-component-annotations-1.5.5.jar
+2018-07-02 20:18:43 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\sonatype\sisu\sisu-inject-bean\2.3.0\sisu-inject-bean-2.3.0.jar
+2018-07-02 20:18:43 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\sonatype\sisu\sisu-guice\3.1.0\sisu-guice-3.1.0-no_aop.jar
+2018-07-02 20:18:43 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\sonatype\sisu\sisu-guava\0.9.9\sisu-guava-0.9.9.jar
+2018-07-02 20:18:43 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\codehaus\plexus\plexus-container-default\1.5.5\plexus-container-default-1.5.5.jar
+2018-07-02 20:18:43 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\codehaus\plexus\plexus-classworlds\2.2.2\plexus-classworlds-2.2.2.jar
+2018-07-02 20:18:43 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\apache\xbean\xbean-reflect\3.4\xbean-reflect-3.4.jar
+2018-07-02 20:18:43 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\log4j\log4j\1.2.12\log4j-1.2.12.jar
+2018-07-02 20:18:43 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\commons-logging\commons-logging-api\1.1\commons-logging-api-1.1.jar
+2018-07-02 20:18:43 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\com\google\collections\google-collections\1.0\google-collections-1.0.jar
+2018-07-02 20:18:43 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\junit\junit\3.8.2\junit-3.8.2.jar
+2018-07-02 20:18:43 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes
+2018-07-02 20:18:43 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\datanucleus\datanucleus-core\5.1.10\datanucleus-core-5.1.10.jar
+2018-07-02 20:18:43 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\datanucleus\datanucleus-api-jdo\5.1.8\datanucleus-api-jdo-5.1.8.jar
+2018-07-02 20:18:43 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\datanucleus\datanucleus-rdbms\5.1.11\datanucleus-rdbms-5.1.11.jar
+2018-07-02 20:18:43 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\datanucleus\javax.jdo\3.2.0-m8\javax.jdo-3.2.0-m8.jar
+2018-07-02 20:18:43 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\javax\transaction\transaction-api\1.1\transaction-api-1.1.jar
+2018-07-02 20:18:43 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\mysql\mysql-connector-java\5.1.45\mysql-connector-java-5.1.45.jar
+2018-07-02 20:18:43 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar
+2018-07-02 20:18:43 INFO  Persistence:82 - Propiedad datanucleus.validateconstraints desconocida - vamos a ignorarla
+2018-07-02 20:18:43 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 20:18:43 INFO  Persistence:82 - Propiedad datanucleus.validatetables desconocida - vamos a ignorarla
+2018-07-02 20:18:45 INFO  SchemaTool:82 - DataNucleus SchemaTool : Propiedades para persistencia
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  datanucleus.autostartmechanism=None
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  datanucleus.connectiondrivername=com.mysql.jdbc.Driver
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  datanucleus.connectionurl=jdbc:mysql://localhost/proyectoCiudadesDB?verifyServerCertificate=false&useSSL=true
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  datanucleus.connectionusername=spq
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  datanucleus.mapping=mysql
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  datanucleus.metadata.validate=false
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  datanucleus.rdbms.checkexisttablesorviews=true
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  datanucleus.readonlydatastore=false
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  datanucleus.schema.autocreatecolumns=true
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  datanucleus.schema.autocreateconstraints=true
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  datanucleus.schema.autocreatetables=true
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  datanucleus.validateconstraints=false
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  datanucleus.validatetables=false
+2018-07-02 20:18:45 INFO  SchemaTool:82 - DataNucleus SchemaTool : Ficheros
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\Client.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\controller\CiudadesController.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaCrearPerfil$1.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaCrearPerfil$2.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaCrearPerfil.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPerfilUsuario$1.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPerfilUsuario$2.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPerfilUsuario$3.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPerfilUsuario$4.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPerfilUsuario.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPuntuarCiudad$1.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPuntuarCiudad$2.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPuntuarCiudad.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanLogin$1.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanLogin$2.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanLogin$3.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanLogin.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\Collector$1.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\Collector.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\DAO\IManagerDAO.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\DAO\ManagerDAO.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Assembler.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadDTO.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuarioDTO.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Puntuacion.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\PuntuacionDTO.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\UsuarioDTO.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\remote\IRemoteFacade.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\Server$1RMIRegistryRunnable.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\Server$1RMIServerRunnable.class
+2018-07-02 20:18:45 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\Server.class
+2018-07-02 20:18:51 INFO  SchemaTool:82 - DataNucleus SchemaTool ha terminado con exito
+2018-07-02 20:19:36 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 20:19:36 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 20:19:36 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 20:19:38 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: cristian@opendeusto.es
+2018-07-02 20:19:38 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: jesus@opendeusto.es
+2018-07-02 20:19:38 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: admin@opendeusto.es
+2018-07-02 20:19:38 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: jon@opendeusto.es
+2018-07-02 20:19:38 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: xabi@opendeusto.es
+2018-07-02 20:19:38 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: mar@opendeusto.es
+2018-07-02 20:19:38 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: luis@opendeusto.es
+2018-07-02 20:19:38 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: javi@opendeusto.es
+2018-07-02 20:19:38 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: pablo@opendeusto.es
+2018-07-02 20:19:38 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: laura@opendeusto.es
+2018-07-02 20:19:39 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: martina@opendeusto.es
+2018-07-02 20:19:39 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: unai@opendeusto.es
+2018-07-02 20:19:39 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: oscar@opendeusto.es
+2018-07-02 20:19:39 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: andoni@opendeusto.es
+2018-07-02 20:19:39 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: jonh@opendeusto.es
+2018-07-02 20:19:39 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: paula@opendeusto.es
+2018-07-02 20:19:39 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: belen@opendeusto.es
+2018-07-02 20:19:39 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: patricia@opendeusto.es
+2018-07-02 20:19:39 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: sara@opendeusto.es
+2018-07-02 20:19:39 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: lucia@opendeusto.es
+2018-07-02 20:19:39 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Madrid
+2018-07-02 20:19:39 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Paris
+2018-07-02 20:19:39 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Monaco
+2018-07-02 20:19:39 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Barcelona
+2018-07-02 20:19:39 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Bilbao
+2018-07-02 20:19:39 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Lugo
+2018-07-02 20:19:39 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Valencia
+2018-07-02 20:19:39 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Londres
+2018-07-02 20:19:39 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Roma
+2018-07-02 20:19:39 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Lisboa
+2018-07-02 20:19:39 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Venecia
+2018-07-02 20:19:39 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Budapest
+2018-07-02 20:19:40 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Praga
+2018-07-02 20:19:40 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Atenas
+2018-07-02 20:19:40 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Estambul
+2018-07-02 20:19:40 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Viena
+2018-07-02 20:19:40 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Salzburgo
+2018-07-02 20:19:40 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Florencia
+2018-07-02 20:19:40 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Cracovia
+2018-07-02 20:19:40 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Estocolmo
+2018-07-02 20:19:40 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Copenhague
+2018-07-02 20:19:40 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Oporto
+2018-07-02 20:19:40 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es San Petersburgo
+2018-07-02 20:19:40 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Granada
+2018-07-02 20:19:40 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Sevilla
+2018-07-02 20:19:40 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Moscu
+2018-07-02 20:19:40 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Montecarlo
+2018-07-02 20:19:40 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Amberes
+2018-07-02 20:19:40 INFO  ManagerDAO:581 - Base de datos rellena con exito
+2018-07-02 20:20:50 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 20:20:50 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 20:20:50 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 20:20:53 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 20:20:53 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 20:20:53 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 20:21:36 INFO  VentanLogin:90 - Inicio
+2018-07-02 20:21:50 INFO  VentanLogin:127 - Boton aceptar login
+2018-07-02 20:21:51 INFO  Server:198 - Usuario con email jesus@opendeusto.es se ha logeado correctamente
+2018-07-02 20:21:52 INFO  VentanLogin:142 - Exito identificando al usuario
+2018-07-02 20:21:52 INFO  VentanLogin:147 - DevolverUsuario correcto!
+2018-07-02 20:21:52 INFO  Server:107 - Ciudades puntuadas por usuarios obtenidas
+2018-07-02 20:21:52 INFO  VentanaPerfilUsuario:78 - Perfil del usuario
+2018-07-02 20:21:54 INFO  Server:98 - El cliente pregunta por las ciudades
+2018-07-02 20:22:49 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 20:22:49 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 20:22:49 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 20:22:52 INFO  Server:49 - Ciudad puntuad: Paris
+2018-07-02 20:22:52 INFO  ManagerDAO:51 - Guardando ciudad puntuada... Paris
+2018-07-02 20:22:52 INFO  Server:82 - Insertada nueva puntuación de ciudad null
+2018-07-02 20:22:52 INFO  VentanaPuntuarCiudad:140 - Su puntuacion se ha registrado con exito
+2018-07-02 20:22:52 INFO  Server:107 - Ciudades puntuadas por usuarios obtenidas
+2018-07-02 20:22:52 INFO  VentanaPerfilUsuario:78 - Perfil del usuario
+2018-07-02 20:23:03 INFO  Server:98 - El cliente pregunta por las ciudades
+2018-07-02 20:23:06 INFO  VentanLogin:90 - Inicio
+2018-07-02 20:34:20 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 20:34:20 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 20:34:20 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 20:34:20 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 20:34:20 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 20:34:20 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Puntuacion.class" con definicion enhanced
+2018-07-02 20:34:20 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Puntuacion
+2018-07-02 20:34:20 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 20:34:20 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 20:34:20 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=273 ms, enhance=131 ms, total=404 ms. Compruebe el LOG para los detalles
+2018-07-02 20:34:48 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 20:34:48 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 20:34:48 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 20:34:50 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 20:34:50 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 20:34:50 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 20:35:18 INFO  VentanLogin:90 - Inicio
+2018-07-02 20:36:17 INFO  VentanLogin:127 - Boton aceptar login
+2018-07-02 20:36:17 INFO  Server:198 - Usuario con email jesus@opendeusto.es se ha logeado correctamente
+2018-07-02 20:36:20 INFO  VentanLogin:142 - Exito identificando al usuario
+2018-07-02 20:36:20 INFO  VentanLogin:147 - DevolverUsuario correcto!
+2018-07-02 20:36:20 INFO  Server:107 - Ciudades puntuadas por usuarios obtenidas
+2018-07-02 20:36:20 INFO  VentanaPerfilUsuario:78 - Perfil del usuario
+2018-07-02 20:36:23 INFO  Server:98 - El cliente pregunta por las ciudades
+2018-07-02 20:36:23 INFO  Server:115 - Puntuaciones de ciudades obteneidas
+2018-07-02 20:37:30 INFO  Enhancer:82 - DataNucleus Enhancer (versión 5.1.10) para el API "JDO" utilisando el JRE "{2}"
+2018-07-02 20:37:30 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class" con definicion enhanced
+2018-07-02 20:37:30 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Ciudad
+2018-07-02 20:37:30 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class" con definicion enhanced
+2018-07-02 20:37:30 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario
+2018-07-02 20:37:30 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Puntuacion.class" con definicion enhanced
+2018-07-02 20:37:30 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Puntuacion
+2018-07-02 20:37:30 INFO  Enhancer:82 - Escribiendo el archivo de clase "C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class" con definicion enhanced
+2018-07-02 20:37:30 INFO  Enhancer:82 - ENHANCED (Persistable) : es.deusto.spq.ciudades.server.jdo.data.Usuario
+2018-07-02 20:37:30 INFO  Enhancer:82 - DataNucleus Enhancer ha terminado con exito para 4 clases. Tiempos : input=265 ms, enhance=124 ms, total=389 ms. Compruebe el LOG para los detalles
+2018-07-02 20:37:59 INFO  SchemaTool:82 - DataNucleus SchemaTool : Creación del esquema para clases
+2018-07-02 20:37:59 INFO  SchemaTool:82 - DataNucleus SchemaTool : Classpath
+2018-07-02 20:37:59 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\datanucleus\datanucleus-maven-plugin\5.0.2\datanucleus-maven-plugin-5.0.2.jar
+2018-07-02 20:37:59 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\codehaus\plexus\plexus-utils\3.0.8\plexus-utils-3.0.8.jar
+2018-07-02 20:37:59 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\apache\maven\maven-artifact\3.0.4\maven-artifact-3.0.4.jar
+2018-07-02 20:37:59 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\apache\maven\maven-plugin-api\3.0.4\maven-plugin-api-3.0.4.jar
+2018-07-02 20:37:59 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\apache\maven\maven-model\3.0.4\maven-model-3.0.4.jar
+2018-07-02 20:37:59 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\sonatype\sisu\sisu-inject-plexus\2.3.0\sisu-inject-plexus-2.3.0.jar
+2018-07-02 20:37:59 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\codehaus\plexus\plexus-component-annotations\1.5.5\plexus-component-annotations-1.5.5.jar
+2018-07-02 20:37:59 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\sonatype\sisu\sisu-inject-bean\2.3.0\sisu-inject-bean-2.3.0.jar
+2018-07-02 20:37:59 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\sonatype\sisu\sisu-guice\3.1.0\sisu-guice-3.1.0-no_aop.jar
+2018-07-02 20:37:59 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\sonatype\sisu\sisu-guava\0.9.9\sisu-guava-0.9.9.jar
+2018-07-02 20:37:59 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\codehaus\plexus\plexus-container-default\1.5.5\plexus-container-default-1.5.5.jar
+2018-07-02 20:37:59 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\codehaus\plexus\plexus-classworlds\2.2.2\plexus-classworlds-2.2.2.jar
+2018-07-02 20:37:59 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\apache\xbean\xbean-reflect\3.4\xbean-reflect-3.4.jar
+2018-07-02 20:37:59 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\log4j\log4j\1.2.12\log4j-1.2.12.jar
+2018-07-02 20:37:59 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\commons-logging\commons-logging-api\1.1\commons-logging-api-1.1.jar
+2018-07-02 20:38:00 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\com\google\collections\google-collections\1.0\google-collections-1.0.jar
+2018-07-02 20:38:00 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\junit\junit\3.8.2\junit-3.8.2.jar
+2018-07-02 20:38:00 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes
+2018-07-02 20:38:00 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\datanucleus\datanucleus-core\5.1.10\datanucleus-core-5.1.10.jar
+2018-07-02 20:38:00 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\datanucleus\datanucleus-api-jdo\5.1.8\datanucleus-api-jdo-5.1.8.jar
+2018-07-02 20:38:00 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\datanucleus\datanucleus-rdbms\5.1.11\datanucleus-rdbms-5.1.11.jar
+2018-07-02 20:38:00 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\datanucleus\javax.jdo\3.2.0-m8\javax.jdo-3.2.0-m8.jar
+2018-07-02 20:38:00 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\javax\transaction\transaction-api\1.1\transaction-api-1.1.jar
+2018-07-02 20:38:00 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\mysql\mysql-connector-java\5.1.45\mysql-connector-java-5.1.45.jar
+2018-07-02 20:38:00 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar
+2018-07-02 20:38:00 INFO  Persistence:82 - Propiedad datanucleus.validateconstraints desconocida - vamos a ignorarla
+2018-07-02 20:38:00 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 20:38:00 INFO  Persistence:82 - Propiedad datanucleus.validatetables desconocida - vamos a ignorarla
+2018-07-02 20:38:01 INFO  SchemaTool:82 - DataNucleus SchemaTool : Propiedades para persistencia
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  datanucleus.autostartmechanism=None
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  datanucleus.connectiondrivername=com.mysql.jdbc.Driver
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  datanucleus.connectionurl=jdbc:mysql://localhost/proyectoCiudadesDB?verifyServerCertificate=false&useSSL=true
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  datanucleus.connectionusername=spq
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  datanucleus.mapping=mysql
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  datanucleus.metadata.validate=false
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  datanucleus.rdbms.checkexisttablesorviews=true
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  datanucleus.readonlydatastore=false
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  datanucleus.schema.autocreatecolumns=true
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  datanucleus.schema.autocreateconstraints=true
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  datanucleus.schema.autocreatetables=true
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  datanucleus.validateconstraints=false
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  datanucleus.validatetables=false
+2018-07-02 20:38:01 INFO  SchemaTool:82 - DataNucleus SchemaTool : Ficheros
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\Client.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\controller\CiudadesController.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaCrearPerfil$1.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaCrearPerfil$2.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaCrearPerfil.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPerfilUsuario$1.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPerfilUsuario$2.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPerfilUsuario$3.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPerfilUsuario$4.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPerfilUsuario.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPuntuarCiudad$1.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPuntuarCiudad$2.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPuntuarCiudad.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanLogin$1.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanLogin$2.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanLogin$3.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanLogin.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\Collector$1.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\Collector.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\DAO\IManagerDAO.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\DAO\ManagerDAO.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Assembler.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadDTO.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuarioDTO.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Puntuacion.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\PuntuacionDTO.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\UsuarioDTO.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\remote\IRemoteFacade.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\Server$1RMIRegistryRunnable.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\Server$1RMIServerRunnable.class
+2018-07-02 20:38:01 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\Server.class
+2018-07-02 20:38:06 INFO  SchemaTool:82 - DataNucleus SchemaTool ha terminado con exito
+2018-07-02 20:38:55 INFO  SchemaTool:82 - DataNucleus SchemaTool : Creación del esquema para clases
+2018-07-02 20:38:55 INFO  SchemaTool:82 - DataNucleus SchemaTool : Classpath
+2018-07-02 20:38:55 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\datanucleus\datanucleus-maven-plugin\5.0.2\datanucleus-maven-plugin-5.0.2.jar
+2018-07-02 20:38:55 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\codehaus\plexus\plexus-utils\3.0.8\plexus-utils-3.0.8.jar
+2018-07-02 20:38:55 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\apache\maven\maven-artifact\3.0.4\maven-artifact-3.0.4.jar
+2018-07-02 20:38:55 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\apache\maven\maven-plugin-api\3.0.4\maven-plugin-api-3.0.4.jar
+2018-07-02 20:38:55 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\apache\maven\maven-model\3.0.4\maven-model-3.0.4.jar
+2018-07-02 20:38:55 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\sonatype\sisu\sisu-inject-plexus\2.3.0\sisu-inject-plexus-2.3.0.jar
+2018-07-02 20:38:55 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\codehaus\plexus\plexus-component-annotations\1.5.5\plexus-component-annotations-1.5.5.jar
+2018-07-02 20:38:55 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\sonatype\sisu\sisu-inject-bean\2.3.0\sisu-inject-bean-2.3.0.jar
+2018-07-02 20:38:55 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\sonatype\sisu\sisu-guice\3.1.0\sisu-guice-3.1.0-no_aop.jar
+2018-07-02 20:38:55 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\sonatype\sisu\sisu-guava\0.9.9\sisu-guava-0.9.9.jar
+2018-07-02 20:38:55 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\codehaus\plexus\plexus-container-default\1.5.5\plexus-container-default-1.5.5.jar
+2018-07-02 20:38:55 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\codehaus\plexus\plexus-classworlds\2.2.2\plexus-classworlds-2.2.2.jar
+2018-07-02 20:38:55 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\apache\xbean\xbean-reflect\3.4\xbean-reflect-3.4.jar
+2018-07-02 20:38:55 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\log4j\log4j\1.2.12\log4j-1.2.12.jar
+2018-07-02 20:38:55 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\commons-logging\commons-logging-api\1.1\commons-logging-api-1.1.jar
+2018-07-02 20:38:55 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\com\google\collections\google-collections\1.0\google-collections-1.0.jar
+2018-07-02 20:38:55 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\junit\junit\3.8.2\junit-3.8.2.jar
+2018-07-02 20:38:55 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes
+2018-07-02 20:38:55 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\datanucleus\datanucleus-core\5.1.10\datanucleus-core-5.1.10.jar
+2018-07-02 20:38:55 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\datanucleus\datanucleus-api-jdo\5.1.8\datanucleus-api-jdo-5.1.8.jar
+2018-07-02 20:38:55 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\datanucleus\datanucleus-rdbms\5.1.11\datanucleus-rdbms-5.1.11.jar
+2018-07-02 20:38:55 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\org\datanucleus\javax.jdo\3.2.0-m8\javax.jdo-3.2.0-m8.jar
+2018-07-02 20:38:55 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\javax\transaction\transaction-api\1.1\transaction-api-1.1.jar
+2018-07-02 20:38:55 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\mysql\mysql-connector-java\5.1.45\mysql-connector-java-5.1.45.jar
+2018-07-02 20:38:55 INFO  SchemaTool:82 - >>  C:\Users\Jesús\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar
+2018-07-02 20:38:55 INFO  Persistence:82 - Propiedad datanucleus.validateconstraints desconocida - vamos a ignorarla
+2018-07-02 20:38:55 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 20:38:55 INFO  Persistence:82 - Propiedad datanucleus.validatetables desconocida - vamos a ignorarla
+2018-07-02 20:38:57 INFO  SchemaTool:82 - DataNucleus SchemaTool : Propiedades para persistencia
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  datanucleus.autostartmechanism=None
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  datanucleus.connectiondrivername=com.mysql.jdbc.Driver
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  datanucleus.connectionurl=jdbc:mysql://localhost/proyectoCiudadesDB?verifyServerCertificate=false&useSSL=true
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  datanucleus.connectionusername=spq
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  datanucleus.mapping=mysql
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  datanucleus.metadata.validate=false
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  datanucleus.rdbms.checkexisttablesorviews=true
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  datanucleus.readonlydatastore=false
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  datanucleus.schema.autocreatecolumns=true
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  datanucleus.schema.autocreateconstraints=true
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  datanucleus.schema.autocreatetables=true
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  datanucleus.validateconstraints=false
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  datanucleus.validatetables=false
+2018-07-02 20:38:57 INFO  SchemaTool:82 - DataNucleus SchemaTool : Ficheros
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\Client.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\controller\CiudadesController.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaCrearPerfil$1.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaCrearPerfil$2.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaCrearPerfil.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPerfilUsuario$1.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPerfilUsuario$2.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPerfilUsuario$3.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPerfilUsuario$4.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPerfilUsuario.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPuntuarCiudad$1.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPuntuarCiudad$2.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanaPuntuarCiudad.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanLogin$1.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanLogin$2.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanLogin$3.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\client\gui\VentanLogin.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\Collector$1.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\Collector.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\DAO\IManagerDAO.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\DAO\ManagerDAO.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Assembler.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Ciudad.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadDTO.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuario.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\CiudadUsuarioDTO.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Puntuacion.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\PuntuacionDTO.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\Usuario.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\jdo\data\UsuarioDTO.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\remote\IRemoteFacade.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\Server$1RMIRegistryRunnable.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\Server$1RMIServerRunnable.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - >>  C:\SPQ\ProyectoRECU\BSPQ18-S6BUENO\target\classes\es\deusto\spq\ciudades\server\Server.class
+2018-07-02 20:38:57 INFO  SchemaTool:82 - DataNucleus SchemaTool ha terminado con exito
+2018-07-02 20:39:42 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 20:39:42 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 20:39:42 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 20:39:44 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: cristian@opendeusto.es
+2018-07-02 20:39:44 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: jesus@opendeusto.es
+2018-07-02 20:39:44 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: admin@opendeusto.es
+2018-07-02 20:39:45 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: jon@opendeusto.es
+2018-07-02 20:39:45 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: xabi@opendeusto.es
+2018-07-02 20:39:45 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: mar@opendeusto.es
+2018-07-02 20:39:45 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: luis@opendeusto.es
+2018-07-02 20:39:45 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: javi@opendeusto.es
+2018-07-02 20:39:45 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: pablo@opendeusto.es
+2018-07-02 20:39:45 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: laura@opendeusto.es
+2018-07-02 20:39:45 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: martina@opendeusto.es
+2018-07-02 20:39:45 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: unai@opendeusto.es
+2018-07-02 20:39:45 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: oscar@opendeusto.es
+2018-07-02 20:39:45 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: andoni@opendeusto.es
+2018-07-02 20:39:46 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: jonh@opendeusto.es
+2018-07-02 20:39:46 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: paula@opendeusto.es
+2018-07-02 20:39:46 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: belen@opendeusto.es
+2018-07-02 20:39:46 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: patricia@opendeusto.es
+2018-07-02 20:39:46 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: sara@opendeusto.es
+2018-07-02 20:39:46 INFO  ManagerDAO:331 - * Guardando al usuario cuyo email es: lucia@opendeusto.es
+2018-07-02 20:39:46 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Madrid
+2018-07-02 20:39:46 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Paris
+2018-07-02 20:39:46 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Monaco
+2018-07-02 20:39:46 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Barcelona
+2018-07-02 20:39:46 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Bilbao
+2018-07-02 20:39:46 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Lugo
+2018-07-02 20:39:46 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Valencia
+2018-07-02 20:39:46 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Londres
+2018-07-02 20:39:46 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Roma
+2018-07-02 20:39:46 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Lisboa
+2018-07-02 20:39:46 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Venecia
+2018-07-02 20:39:46 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Budapest
+2018-07-02 20:39:46 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Praga
+2018-07-02 20:39:46 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Atenas
+2018-07-02 20:39:46 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Estambul
+2018-07-02 20:39:46 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Viena
+2018-07-02 20:39:47 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Salzburgo
+2018-07-02 20:39:47 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Florencia
+2018-07-02 20:39:47 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Cracovia
+2018-07-02 20:39:47 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Estocolmo
+2018-07-02 20:39:47 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Copenhague
+2018-07-02 20:39:47 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Oporto
+2018-07-02 20:39:47 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es San Petersburgo
+2018-07-02 20:39:47 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Granada
+2018-07-02 20:39:47 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Sevilla
+2018-07-02 20:39:47 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Moscu
+2018-07-02 20:39:47 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Montecarlo
+2018-07-02 20:39:47 INFO  ManagerDAO:44 - Guardando una ciudad cuyo nombre es Amberes
+2018-07-02 20:39:47 INFO  ManagerDAO:581 - Base de datos rellena con exito
+2018-07-02 20:40:57 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 20:40:57 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 20:40:57 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 20:40:58 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 20:40:58 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 20:40:58 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 20:41:13 INFO  VentanLogin:90 - Inicio
+2018-07-02 20:41:51 INFO  VentanLogin:127 - Boton aceptar login
+2018-07-02 20:41:52 INFO  Server:198 - Usuario con email jesus@opendeusto.es se ha logeado correctamente
+2018-07-02 20:41:53 INFO  VentanLogin:142 - Exito identificando al usuario
+2018-07-02 20:41:53 INFO  VentanLogin:147 - DevolverUsuario correcto!
+2018-07-02 20:41:53 INFO  Server:107 - Ciudades puntuadas por usuarios obtenidas
+2018-07-02 20:41:53 INFO  VentanaPerfilUsuario:78 - Perfil del usuario
+2018-07-02 20:41:56 INFO  Server:98 - El cliente pregunta por las ciudades
+2018-07-02 20:42:14 INFO  Persistence:82 - Propiedad datanucleus.validateTables desconocida - vamos a ignorarla
+2018-07-02 20:42:14 INFO  Persistence:82 - Propiedad datanucleus.validateConstraints desconocida - vamos a ignorarla
+2018-07-02 20:42:14 INFO  Persistence:82 - Propiedad datanucleus.metadata.validate desconocida - vamos a ignorarla
+2018-07-02 20:42:16 INFO  Server:49 - Ciudad puntuad: Paris
+2018-07-02 20:42:16 INFO  ManagerDAO:51 - Guardando ciudad puntuada... Paris
+2018-07-02 20:42:16 INFO  Server:82 - Insertada nueva puntuación de ciudad null
+2018-07-02 20:42:16 INFO  VentanaPuntuarCiudad:140 - Su puntuacion se ha registrado con exito
+2018-07-02 20:42:16 INFO  Server:107 - Ciudades puntuadas por usuarios obtenidas
+2018-07-02 20:42:16 INFO  VentanaPerfilUsuario:78 - Perfil del usuario
+2018-07-02 20:42:21 INFO  Server:98 - El cliente pregunta por las ciudades
+2018-07-02 20:42:21 INFO  Server:115 - Puntuaciones de ciudades obteneidas

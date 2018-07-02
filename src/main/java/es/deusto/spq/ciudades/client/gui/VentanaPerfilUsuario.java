@@ -27,6 +27,7 @@ import es.deusto.spq.ciudades.server.jdo.data.Ciudad;
 import es.deusto.spq.ciudades.server.jdo.data.CiudadDTO;
 import es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario;
 import es.deusto.spq.ciudades.server.jdo.data.CiudadUsuarioDTO;
+import es.deusto.spq.ciudades.server.jdo.data.PuntuacionDTO;
 import es.deusto.spq.ciudades.server.jdo.data.Usuario;
 
 public class VentanaPerfilUsuario extends JFrame {
@@ -171,23 +172,32 @@ public class VentanaPerfilUsuario extends JFrame {
 		tableModel.addColumn(resourceBundle.getString("cityName"));
 		tableModel.addColumn(resourceBundle.getString("cityCountry"));
 		tableModel.addColumn(resourceBundle.getString("totalPunctuation"));
+		tableModel.addColumn(resourceBundle.getString("leisurePunctuation"));
+		tableModel.addColumn(resourceBundle.getString("culturePunctuation"));
+		tableModel.addColumn(resourceBundle.getString("gastronomyPunctuation"));
+		tableModel.addColumn(resourceBundle.getString("transportPunctuation"));
 
 		// Primero sacamos todas las ciudades de la base de datos:
 		arrayCiudadesDTO = new ArrayList<CiudadDTO>();
 		arrayCiudadesDTO = controller.getAllCiudades();
 
+		// Obtenemos todas las ciudades puntuadas:
+		List<PuntuacionDTO> arrayPuntuacionesDTO = new ArrayList<PuntuacionDTO>();
+		arrayPuntuacionesDTO = controller.getPuntuaciones();
+
 		// Ahora comparamos cada ciudad registrada con las posibles ciudades votadas por
 		// los usuarios:
 		for (int i = 0; i < arrayCiudadesDTO.size(); i++) {
-			int totalPuntuacion = 0;
+			int totalPuntuacion = 0, totalGastronomia = 0, totalCultura = 0, totalOcio = 0, totalTransporte = 0;
 			int vecesRepetidaCiudad = 0;
-			for (int j = 0; j < ciudadesPuntuadas.size(); j++) {
-				if (arrayCiudadesDTO.get(i).getNombreCiudad()
-						.equals(ciudadesPuntuadas.get(j).getCiudad().getNombreCiudad())) {
-					totalPuntuacion += ciudadesPuntuadas.get(j).getCiudad().getPuntuacionTotal();
+			for (int j = 0; j < arrayPuntuacionesDTO.size(); j++) {
+				if (arrayCiudadesDTO.get(i).getNombreCiudad().equals(arrayPuntuacionesDTO.get(j).getNombreCiudad())) {
+					totalPuntuacion += arrayPuntuacionesDTO.get(j).getPuntuacionTotal();
+					totalGastronomia += arrayPuntuacionesDTO.get(j).getPuntuacionGastronomia();
+					totalCultura += arrayPuntuacionesDTO.get(j).getPuntuacionCultura();
+					totalOcio += arrayPuntuacionesDTO.get(j).getPuntuacionOcio();
+					totalTransporte += arrayPuntuacionesDTO.get(j).getPuntuacionTransporte();
 					vecesRepetidaCiudad++;
-					System.out.println("Nombre ciudad: " + ciudadesPuntuadas.get(j).getCiudad().getNombreCiudad()
-							+ " Puntos: " + ciudadesPuntuadas.get(j).getCiudad().getPuntuacionTotal());
 				}
 			}
 
@@ -195,11 +205,19 @@ public class VentanaPerfilUsuario extends JFrame {
 			if (vecesRepetidaCiudad > 0) {
 				// Hacemos media:
 				int mediaTotal = totalPuntuacion / vecesRepetidaCiudad;
+				int mediaGastronomia = totalGastronomia / vecesRepetidaCiudad;
+				int mediaCultura = totalCultura / vecesRepetidaCiudad;
+				int mediaOcio = totalOcio / vecesRepetidaCiudad;
+				int mediaTransporte = totalTransporte / vecesRepetidaCiudad;
+
 				// Colocamos media total en la ciudad:
 				arrayCiudadesDTO.get(i).setPuntuacionTotal(mediaTotal);
+				arrayCiudadesDTO.get(i).setPuntuacionCultura(mediaCultura);
+				arrayCiudadesDTO.get(i).setPuntuacionGastronomia(mediaGastronomia);
+				arrayCiudadesDTO.get(i).setPuntuacionOcio(mediaOcio);
+				arrayCiudadesDTO.get(i).setPuntuacionTransporte(mediaTransporte);
 				// Guardamos en el array a mostrar:
 				arrayCiudadesDTOPuntuaciones.add(arrayCiudadesDTO.get(i));
-				System.out.println("Ciudad guardad en el array correctamente!");
 			}
 
 		}
@@ -210,14 +228,17 @@ public class VentanaPerfilUsuario extends JFrame {
 				for (CiudadDTO ciudad : arrayCiudadesDTOPuntuaciones) {
 					if (ciudad.getPuntuacionTotal() == i) {
 						arrayCiudadesDTOFinal.add(ciudad);
-						System.out.println("Ordenando ciudad..." + ciudad.getNombreCiudad());
 					}
 				}
 			}
 
 			for (int i = 0; i < arrayCiudadesDTOFinal.size(); i++) {
 				tableModel.addRow(new Object[] { arrayCiudadesDTOFinal.get(i).getNombreCiudad(),
-						arrayCiudadesDTOFinal.get(i).getPais(), arrayCiudadesDTOFinal.get(i).getPuntuacionTotal() });
+						arrayCiudadesDTOFinal.get(i).getPais(), arrayCiudadesDTOFinal.get(i).getPuntuacionTotal(),
+						arrayCiudadesDTOFinal.get(i).getPuntuacionOcio(),
+						arrayCiudadesDTOFinal.get(i).getPuntuacionCultura(),
+						arrayCiudadesDTOFinal.get(i).getPuntuacionGastronomia(),
+						arrayCiudadesDTOFinal.get(i).getPuntuacionTransporte() });
 			}
 
 			// Finalmente:

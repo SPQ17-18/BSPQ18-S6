@@ -9,6 +9,7 @@ import es.deusto.spq.ciudades.client.controller.CiudadesController;
 import es.deusto.spq.ciudades.server.jdo.data.Assembler;
 import es.deusto.spq.ciudades.server.jdo.data.Ciudad;
 import es.deusto.spq.ciudades.server.jdo.data.CiudadDTO;
+import es.deusto.spq.ciudades.server.jdo.data.PuntuacionDTO;
 import es.deusto.spq.ciudades.server.jdo.data.Usuario;
 
 import javax.swing.JLabel;
@@ -55,14 +56,14 @@ public class VentanaPuntuarCiudad extends JFrame {
 		this.controller = controller;
 		this.resourcebundle = resourcebundle;
 		this.user = user;
-		
-		System.out.println(VentanaPuntuarCiudad.this.user.getEmail()+ " VentanaPuntuarCiudad");
 
-		SpinnerNumberModel model1 = new SpinnerNumberModel(5.0, 1.0, 10.0, 1.0);
-		SpinnerNumberModel model2 = new SpinnerNumberModel(5.0, 1.0, 10.0, 1.0);
-		SpinnerNumberModel model3 = new SpinnerNumberModel(5.0, 1.0, 10.0, 1.0);
-		SpinnerNumberModel model4 = new SpinnerNumberModel(5.0, 1.0, 10.0, 1.0);
-		SpinnerNumberModel model5 = new SpinnerNumberModel(5.0, 1.0, 10.0, 1.0);
+		System.out.println(VentanaPuntuarCiudad.this.user.getEmail() + " VentanaPuntuarCiudad");
+
+		SpinnerNumberModel model1 = new SpinnerNumberModel(5, 1, 10, 1);
+		SpinnerNumberModel model2 = new SpinnerNumberModel(5, 1, 10, 1);
+		SpinnerNumberModel model3 = new SpinnerNumberModel(5, 1, 10, 1);
+		SpinnerNumberModel model4 = new SpinnerNumberModel(5, 1, 10, 1);
+		SpinnerNumberModel model5 = new SpinnerNumberModel(5, 1, 10, 1);
 
 		nombreCiudadAPuntuar = new JLabel(ciudad.getNombreCiudad());
 		lblPuntuacionCultura = new JLabel(resourcebundle.getString("culturePunctuation") + " :");
@@ -126,11 +127,18 @@ public class VentanaPuntuarCiudad extends JFrame {
 		btnPuntuar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Assembler assembler = new Assembler();
+				// Guardamos la ciudad que ha votado el usuario:
 				Ciudad _ciudad = assembler.disassembleCiudad(ciudad);
-				System.out.println(_ciudad.getNombreCiudad() + " btnPuntuar correcto!");
-				System.out.println(user.getEmail() + " btnPUntuar");
 				controller.puntuarCiudadUsuario(_ciudad, user);
+
+				// Guardamos las diferentes puntuaciones de la ciudad votada por el usuario:
+				PuntuacionDTO puntuacionDTO = new PuntuacionDTO(_ciudad.getNombreCiudad(),
+						(Integer) spnPuntuacionTotal.getValue(), (Integer) spnOcio.getValue(),
+						(Integer) spnGastronomia.getValue(), (Integer) spnCultura.getValue(),
+						(Integer) spnTransporte.getValue());
+				controller.insertarPuntuacion(puntuacionDTO);
 				logger.info("Su puntuacion se ha registrado con exito");
+				btnVolverPerfilUsuario.doClick();
 			}
 		});
 

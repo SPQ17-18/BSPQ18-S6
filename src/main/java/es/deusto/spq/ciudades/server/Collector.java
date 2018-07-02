@@ -16,6 +16,8 @@ import es.deusto.spq.ciudades.server.jdo.data.Ciudad;
 import es.deusto.spq.ciudades.server.jdo.data.CiudadDTO;
 import es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario;
 import es.deusto.spq.ciudades.server.jdo.data.CiudadUsuarioDTO;
+import es.deusto.spq.ciudades.server.jdo.data.Puntuacion;
+import es.deusto.spq.ciudades.server.jdo.data.PuntuacionDTO;
 import es.deusto.spq.ciudades.server.jdo.data.Usuario;
 import es.deusto.spq.ciudades.server.jdo.data.UsuarioDTO;
 import es.deusto.spq.ciudades.server.remote.IRemoteFacade;
@@ -72,6 +74,18 @@ public class Collector extends UnicastRemoteObject implements IRemoteFacade {
 		}
 	}
 
+	@Override
+	public boolean puntuarCiudad(PuntuacionDTO puntuacionDTO) throws RemoteException {
+		try {
+			Puntuacion puntuacion = assembler.disaassemblePuntuacion(puntuacionDTO);
+			dao.storePuntuacion(puntuacion);
+			logger.info("Insertada nueva puntuación de ciudad " + puntuacion.getNombreCiudad());
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
+	}
+
 	/**
 	 * Metodo para obtener las ciudades
 	 * 
@@ -92,6 +106,14 @@ public class Collector extends UnicastRemoteObject implements IRemoteFacade {
 		ArrayList<CiudadUsuario> ciudades = dao.getCiudadesPuntuadasPorUsuarios();
 		logger.info("Ciudades puntuadas por usuarios obtenidas");
 		return assembler.assembleCiudadUsuario(ciudades);
+	}
+
+	@Override
+	public ArrayList<PuntuacionDTO> getPuntuaciones() throws RemoteException {
+		// TODO Auto-generated method stub
+		ArrayList<Puntuacion> puntuaciones = dao.getPuntuaciones();
+		logger.info("Puntuaciones de ciudades obteneidas");
+		return assembler.assemblePuntuacion(puntuaciones);
 	}
 
 	/**

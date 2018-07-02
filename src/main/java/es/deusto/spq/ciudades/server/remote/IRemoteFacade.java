@@ -8,6 +8,8 @@ import es.deusto.spq.ciudades.server.jdo.data.Ciudad;
 import es.deusto.spq.ciudades.server.jdo.data.CiudadDTO;
 import es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario;
 import es.deusto.spq.ciudades.server.jdo.data.CiudadUsuarioDTO;
+import es.deusto.spq.ciudades.server.jdo.data.Puntuacion;
+import es.deusto.spq.ciudades.server.jdo.data.PuntuacionDTO;
 import es.deusto.spq.ciudades.server.jdo.data.Usuario;
 import es.deusto.spq.ciudades.server.jdo.data.UsuarioDTO;
 
@@ -26,6 +28,8 @@ public interface IRemoteFacade extends Remote{
 	public boolean deleteUsuario (Usuario usuario) throws RemoteException;
 	public boolean puntuarCiudadUsuario(Ciudad ciudad, Usuario usuario) throws RemoteException;
 	public ArrayList<CiudadUsuarioDTO> getCiudadesPuntuadasPorUsuarios()  throws RemoteException;
+	public boolean puntuarCiudad(PuntuacionDTO puntuacionDTO) throws RemoteException;
+	public ArrayList<PuntuacionDTO> getPuntuaciones() throws RemoteException;
 	
 	
 }

@@ -74,6 +74,18 @@ public class Assembler {
 		return ciudadUsuarioDTO;
 	}
 
+	public ArrayList<PuntuacionDTO> assemblePuntuacion(ArrayList<Puntuacion> puntuacion) {
+		ArrayList<PuntuacionDTO> puntuacionDTO = new ArrayList<PuntuacionDTO>();
+		for (int i = 0; i < puntuacion.size(); i++) {
+			PuntuacionDTO cDTO = new PuntuacionDTO(puntuacion.get(i).getNombreCiudad(),
+					puntuacion.get(i).getPuntuacionTotal(), puntuacion.get(i).getPuntuacionOcio(),
+					puntuacion.get(i).getPuntuacionGastronomia(), puntuacion.get(i).getPuntuacionCultura(),
+					puntuacion.get(i).getPuntuacionTransporte());
+			puntuacionDTO.add(cDTO);
+		}
+		return puntuacionDTO;
+	}
+
 	/**
 	 * Metodo para transformar UsuarioDTO a Usuario
 	 * 
@@ -88,6 +100,13 @@ public class Assembler {
 		u.setNombre(usuarioDTO.getNombre());
 		u.setPassword(usuarioDTO.getPassword());
 		return u;
+	}
+
+	public Puntuacion disaassemblePuntuacion(PuntuacionDTO puntuacionDTO) {
+		Puntuacion p = new Puntuacion();
+		p.setNombreCiudad(puntuacionDTO.getNombreCiudad());
+		p.setPuntuacionTotal(puntuacionDTO.getPuntuacionTotal());
+		return p;
 	}
 
 	/**

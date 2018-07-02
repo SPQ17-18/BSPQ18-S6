@@ -9,6 +9,7 @@ import es.deusto.spq.ciudades.server.jdo.data.Ciudad;
 import es.deusto.spq.ciudades.server.jdo.data.CiudadDTO;
 import es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario;
 import es.deusto.spq.ciudades.server.jdo.data.CiudadUsuarioDTO;
+import es.deusto.spq.ciudades.server.jdo.data.PuntuacionDTO;
 import es.deusto.spq.ciudades.server.jdo.data.Usuario;
 import es.deusto.spq.ciudades.server.jdo.data.UsuarioDTO;
 import es.deusto.spq.ciudades.server.remote.IRemoteFacade;
@@ -40,6 +41,16 @@ public class CiudadesController {
 		return ciudad;
 	}
 
+	public boolean insertarPuntuacion(PuntuacionDTO puntuacionDTO) {
+		boolean puntuada = false;
+		try {
+			puntuada = iRF.puntuarCiudad(puntuacionDTO);
+		} catch (Exception e) {
+			logger.error("Error insertando una nueva ciudad.");
+		}
+		return puntuada;
+	}
+
 	/**
 	 * Obtener todas las ciudades de la base de datos
 	 * 
@@ -63,6 +74,16 @@ public class CiudadesController {
 			logger.error("Error al obtener las getCiudadesPuntuadasPorUsuarios del servidor.");
 		}
 		return ciudades;
+	}
+
+	public List<PuntuacionDTO> getPuntuaciones() {
+		List<PuntuacionDTO> puntuaciones = null;
+		try {
+			puntuaciones = iRF.getPuntuaciones();
+		} catch (RemoteException e) {
+			logger.error("Error al obtener las getPuntuaciones del servidor.");
+		}
+		return puntuaciones;
 	}
 
 	/**
