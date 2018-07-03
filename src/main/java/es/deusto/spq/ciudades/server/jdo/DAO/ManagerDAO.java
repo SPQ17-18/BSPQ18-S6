@@ -2,6 +2,7 @@ package es.deusto.spq.ciudades.server.jdo.DAO;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.SynchronousQueue;
 
@@ -18,7 +19,6 @@ import es.deusto.spq.ciudades.server.jdo.data.Ciudad;
 import es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario;
 import es.deusto.spq.ciudades.server.jdo.data.Puntuacion;
 import es.deusto.spq.ciudades.server.jdo.data.Usuario;
-
 
 /**
  * 
@@ -174,27 +174,6 @@ public class ManagerDAO implements IManagerDAO {
 		return ciudades;
 	}
 
-	/*	*//**
-			 * Metodo para actualizar una ciudad de la base de datos
-			 * 
-			 * @param ciudad
-			 *            Ciudad a actualizar
-			 * @throws Exception
-			 *             Lanza una excepcion cuando ocurre un error
-			 *//*
-				 * 
-				 * @Override public void updateCiudad(Ciudad c) { PersistenceManager pm =
-				 * pmf.getPersistenceManager(); Transaction tx = pm.currentTransaction();
-				 * 
-				 * try { tx.begin(); pm.makePersistent(c); tx.commit(); } catch (Exception ex) {
-				 * System.out.println("Error actualizando una ciudad: " + ex.getMessage()); }
-				 * finally { if (tx != null && tx.isActive()) { tx.rollback(); }
-				 * 
-				 * pm.close(); }
-				 * 
-				 * }
-				 */
-
 	/**
 	 * Metodo para borrar una ciudad
 	 * 
@@ -244,19 +223,23 @@ public class ManagerDAO implements IManagerDAO {
 	 */
 	public int getCiudadPoints(String nombreCiudad) {
 		PersistenceManager pm = pmf.getPersistenceManager();
-
-		pm.getFetchPlan().setMaxFetchDepth(4);
 		Transaction tx = pm.currentTransaction();
 		int points = 0;
 
 		try {
 			tx.begin();
-			Query<?> q = pm
-					.newQuery("SELECT FROM " + Ciudad.class.getName() + " WHERE idCiudad == '" + nombreCiudad + "'");
+			@SuppressWarnings("unchecked")
+			Query<Ciudad> q = pm.newQuery("SELECT FROM " + Ciudad.class.getName());
+
 			@SuppressWarnings("unchecked")
 			List<Ciudad> result = (List<Ciudad>) q.execute();
 
-			points = result.get(0).getPuntuacionTotal();
+			for (Ciudad c : result) {
+				if (c.getNombreCiudad().equals(nombreCiudad)) {
+					points = c.getPuntuacionTotal();
+				}
+			}
+
 			tx.commit();
 		} catch (Exception ex) {
 			logger.error("Error al obtener los puntos de una ciudad con el id: " + nombreCiudad + ex.getMessage());
@@ -379,21 +362,16 @@ public class ManagerDAO implements IManagerDAO {
 	public void deleteUsuario(Usuario usuario) throws Exception {
 
 		PersistenceManager pm = pmf.getPersistenceManager();
-
 		Transaction tx = pm.currentTransaction();
 
 		try {
 			tx.begin();
-
 			Query<Usuario> query = pm.newQuery(Usuario.class, "email =='" + usuario.getEmail() + "'");
-
 			Collection<?> result = (Collection<?>) query.execute();
-
-			Usuario u = (Usuario) result.iterator().next();
+			Usuario f = (Usuario) result.iterator().next();
 
 			query.close(result);
-
-			pm.deletePersistent(u);
+			pm.deletePersistent(f);
 
 			tx.commit();
 		} catch (Exception ex) {
@@ -407,175 +385,6 @@ public class ManagerDAO implements IManagerDAO {
 				pm.close();
 			}
 		}
-
-	}
-
-	/**
-	 * Metodo para gestionar un usuario en la base de datos
-	 * 
-	 * @param usuario
-	 *            Usuario que vamos a gestionar
-	 * @throws Exception
-	 *             Lanza una excepcion en caso de que ocurra un error
-	 */
-	public void manageUsuario(Usuario usuario) throws Exception {
-
-		PersistenceManager pm = pmf.getPersistenceManager();
-
-		Transaction tx = pm.currentTransaction();
-
-		try {
-			tx.begin();
-			Query<?> query = pm.newQuery(
-					"SELECT FROM " + Usuario.class.getName() + " WHERE  email== '" + usuario.getEmail() + "'");
-			query.setUnique(true);
-			Usuario result = (Usuario) query.execute();
-
-			result.setApellido(usuario.getApellido());
-			result.setEmail(usuario.getEmail());
-			result.setNombre(usuario.getNombre());
-			result.setPassword(usuario.getPassword());
-			// result.setCiudades(result.getCiudadesPuntuadas());
-
-			tx.commit();
-
-		} catch (Exception ex) {
-			logger.error("Error al actualizar un usuario: " + ex.getMessage());
-			throw new Exception();
-		} finally {
-			if (tx != null && tx.isActive()) {
-				tx.rollback();
-			}
-			pm.close();
-		}
-
-	}
-
-	public static void main(String[] args) {
-		IManagerDAO dao = new ManagerDAO();
-
-		if (args.length != 3) {
-			logger.error("Atencion: faltan argumentos");
-			System.exit(0);
-		}
-
-		if (System.getSecurityManager() == null) {
-			System.setSecurityManager(new SecurityManager());
-		}
-
-		Usuario u1 = new Usuario("cristian@opendeusto.es", "Cristian", "Perez", "1234");
-		Usuario u2 = new Usuario("jesus@opendeusto.es", "Jesus", "de la Pisa", "qwerty");
-		Usuario u4 = new Usuario("jon@opendeusto.es", "Jon", "Alonso", "2222");
-		Usuario u5 = new Usuario("xabi@opendeusto.es", "Xabier", "Santos", "22aa");
-		Usuario u6 = new Usuario("mar@opendeusto.es", "Mar", "Abando", "44bb");
-		Usuario u7 = new Usuario("luis@opendeusto.es", "Luis", "Arribas", "cc33");
-		Usuario u8 = new Usuario("javi@opendeusto.es", "Javier", "Lorenzo", "wwcc");
-		Usuario u9 = new Usuario("pablo@opendeusto.es", "Pablo", "Diez", "2233");
-		Usuario u10 = new Usuario("laura@opendeusto.es", "Laura", "Moreno", "lm93");
-		Usuario u11 = new Usuario("martina@opendeusto.es", "Martina", "Echaniz", "me23");
-		Usuario u12 = new Usuario("unai@opendeusto.es", "Unai", "Vitxo", "uve2");
-		Usuario u13 = new Usuario("oscar@opendeusto.es", "Oscar", "Rodriguez", "or22");
-		Usuario u14 = new Usuario("andoni@opendeusto.es", "Andoni", "Vicentiz", "av11");
-		Usuario u15 = new Usuario("jonh@opendeusto.es", "Jon", "Hernandez", "jhrb");
-		Usuario u16 = new Usuario("paula@opendeusto.es", "Paula", "Aspiunza", "pa35");
-		Usuario u17 = new Usuario("belen@opendeusto.es", "Belen", "Abando", "ba23");
-		Usuario u18 = new Usuario("patricia@opendeusto.es", "Patricia", "Ballano", "pbb1");
-		Usuario u19 = new Usuario("sara@opendeusto.es", "Sara", "Arroyo", "samt");
-		Usuario u20 = new Usuario("lucia@opendeusto.es", "Lucia", "Garay", "lg96");
-
-		Usuario u3 = new Usuario("admin@opendeusto.es", "admin", "fasdfasd", "admin");
-
-		Ciudad c1 = new Ciudad("Madrid", "Espania", 0, 0, 0, 0, 0, 0);
-		Ciudad c2 = new Ciudad("Paris", "Francia", 0, 0, 0, 0, 0, 0);
-		Ciudad c3 = new Ciudad("Monaco", "Monaco", 0, 0, 0, 0, 0, 0);
-		Ciudad c4 = new Ciudad("Barcelona", "Espania", 0, 0, 0, 0, 0, 0);
-		Ciudad c5 = new Ciudad("Bilbao", "Espania", 0, 0, 0, 0, 0, 0);
-		Ciudad c6 = new Ciudad("Lugo", "Espania", 0, 0, 0, 0, 0, 0);
-		Ciudad c7 = new Ciudad("Valencia", "Espania", 0, 0, 0, 0, 0, 0);
-		Ciudad c8 = new Ciudad("Londres", "Reino Unido", 0, 0, 0, 0, 0, 0);
-		Ciudad c9 = new Ciudad("Roma", "Italia", 0, 0, 0, 0, 0, 0);
-		Ciudad c10 = new Ciudad("Lisboa", "Portugal", 0, 0, 0, 0, 0, 0);
-		Ciudad c11 = new Ciudad("Venecia", "Italia", 0, 0, 0, 0, 0, 0);
-		Ciudad c12 = new Ciudad("Budapest", "Hungria", 0, 0, 0, 0, 0, 0);
-		Ciudad c13 = new Ciudad("Praga", "Republica Checa", 0, 0, 0, 0, 0, 0);
-		Ciudad c14 = new Ciudad("Atenas", "Grecia", 0, 0, 0, 0, 0, 0);
-		Ciudad c15 = new Ciudad("Estambul", "Turquia", 0, 0, 0, 0, 0, 0);
-		Ciudad c16 = new Ciudad("Viena", "Austria", 0, 0, 0, 0, 0, 0);
-		Ciudad c17 = new Ciudad("Salzburgo", "Austria", 0, 0, 0, 0, 0, 0);
-		Ciudad c18 = new Ciudad("Florencia", "Italia", 0, 0, 0, 0, 0, 0);
-		Ciudad c19 = new Ciudad("Cracovia", "Polonia", 0, 0, 0, 0, 0, 0);
-		Ciudad c20 = new Ciudad("Estocolmo", "Suecia", 0, 0, 0, 0, 0, 0);
-		Ciudad c21 = new Ciudad("Copenhague", "Dinamarca", 0, 0, 0, 0, 0, 0);
-		Ciudad c22 = new Ciudad("Oporto", "Portugal", 0, 0, 0, 0, 0, 0);
-		Ciudad c23 = new Ciudad("San Petersburgo", "Rusia", 0, 0, 0, 0, 0, 0);
-		Ciudad c24 = new Ciudad("Granada", "Espania", 0, 0, 0, 0, 0, 0);
-		Ciudad c25 = new Ciudad("Sevilla", "Espania", 0, 0, 0, 0, 0, 0);
-		Ciudad c26 = new Ciudad("Moscu", "Rusia", 0, 0, 0, 0, 0, 0);
-		Ciudad c27 = new Ciudad("Montecarlo", "Monaco", 0, 0, 0, 0, 0, 0);
-		Ciudad c28 = new Ciudad("Amberes", "Belgica", 0, 0, 0, 0, 0, 0);
-
-		ArrayList<Ciudad> cu1 = new ArrayList<Ciudad>();
-		cu1.add(c1); // El usuario 1 ha puntuado la ciudad 1
-
-		ArrayList<Ciudad> cu2 = new ArrayList<Ciudad>();
-		cu2.add(c1);
-		cu2.add(c2);
-
-		try {
-			dao.storeUsuario(u1);
-			dao.storeUsuario(u2);
-			dao.storeUsuario(u3);
-			dao.storeUsuario(u4);
-			dao.storeUsuario(u5);
-			dao.storeUsuario(u6);
-			dao.storeUsuario(u7);
-			dao.storeUsuario(u8);
-			dao.storeUsuario(u9);
-			dao.storeUsuario(u10);
-			dao.storeUsuario(u11);
-			dao.storeUsuario(u12);
-			dao.storeUsuario(u13);
-			dao.storeUsuario(u14);
-			dao.storeUsuario(u15);
-			dao.storeUsuario(u16);
-			dao.storeUsuario(u17);
-			dao.storeUsuario(u18);
-			dao.storeUsuario(u19);
-			dao.storeUsuario(u20);
-
-			dao.storeCiudad(c1);
-			dao.storeCiudad(c2);
-			dao.storeCiudad(c3);
-			dao.storeCiudad(c4);
-			dao.storeCiudad(c5);
-			dao.storeCiudad(c6);
-			dao.storeCiudad(c7);
-			dao.storeCiudad(c8);
-			dao.storeCiudad(c9);
-			dao.storeCiudad(c10);
-			dao.storeCiudad(c11);
-			dao.storeCiudad(c12);
-			dao.storeCiudad(c13);
-			dao.storeCiudad(c14);
-			dao.storeCiudad(c15);
-			dao.storeCiudad(c16);
-			dao.storeCiudad(c17);
-			dao.storeCiudad(c18);
-			dao.storeCiudad(c19);
-			dao.storeCiudad(c20);
-			dao.storeCiudad(c21);
-			dao.storeCiudad(c22);
-			dao.storeCiudad(c23);
-			dao.storeCiudad(c24);
-			dao.storeCiudad(c25);
-			dao.storeCiudad(c26);
-			dao.storeCiudad(c27);
-			dao.storeCiudad(c28);
-
-		} catch (Exception e) {
-
-		}
-		logger.info("Base de datos rellena con exito");
 
 	}
 
@@ -645,12 +454,6 @@ public class ManagerDAO implements IManagerDAO {
 		}
 
 		return ciudadesPuntuadas;
-	}
-
-	@Override
-	public void updateCiudad(Ciudad ciudad) throws Exception {
-		// TODO Auto-generated method stub
-
 	}
 
 }

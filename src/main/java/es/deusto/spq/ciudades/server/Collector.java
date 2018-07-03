@@ -24,11 +24,11 @@ import es.deusto.spq.ciudades.server.remote.IRemoteFacade;
 
 /**
  * 
- * Funciones del servidor... Estan estan declaradas en la fachada remota
- * y se definen en esta clase. 
+ * Funciones del servidor... Estan estan declaradas en la fachada remota y se
+ * definen en esta clase.
  * 
- * Ademas, esta clase hace uso del ManagerDAO para trabajar con la base de datos y 
- * el assembler para convertir objetos DTO.
+ * Ademas, esta clase hace uso del ManagerDAO para trabajar con la base de datos
+ * y el assembler para convertir objetos DTO.
  *
  */
 public class Collector extends UnicastRemoteObject implements IRemoteFacade {
@@ -123,27 +123,6 @@ public class Collector extends UnicastRemoteObject implements IRemoteFacade {
 		ArrayList<Puntuacion> puntuaciones = dao.getPuntuaciones();
 		logger.info("Puntuaciones de ciudades obteneidas");
 		return assembler.assemblePuntuacion(puntuaciones);
-	}
-
-	/**
-	 * Metodo para actualizar una ciudad
-	 * 
-	 * @param ciudadDTO
-	 *            Data para actualizar una ciudad
-	 * @throws RemoteException
-	 *             Lanza una excepcion en caso de que ocurra un error
-	 * @result Devuelve true cuando la ciudad se ha insertado correctamente
-	 */
-	public boolean updateCiudad(CiudadDTO ciudadDTO) throws RemoteException {
-		try {
-			Ciudad ciudad = assembler.disassembleCiudad(ciudadDTO);
-			dao.updateCiudad(ciudad);
-			logger.info("Actualizada la ciudad cuyo nombre es " + ciudad.getNombreCiudad());
-			return true;
-		} catch (Exception e) {
-			logger.error("Error actualizando la ciudad");
-			return false;
-		}
 	}
 
 	/**
@@ -251,27 +230,6 @@ public class Collector extends UnicastRemoteObject implements IRemoteFacade {
 		logger.info("El cliente ha preguntado por todos los usuarios");
 		// return assembler.assembleUsuario(usuarios);
 		return usuarios;
-	}
-
-	/**
-	 * Metodo para actualizar un usuario
-	 * 
-	 * @param usuarioDTO
-	 *            Data para actualizar un usuario
-	 * @throws RemoteException
-	 *             Lanza una excepcion en caso de que ocurra un error
-	 * @result Devuelve true cuando el usuario se ha actualizado correctamente.
-	 */
-	public boolean updateUsuario(UsuarioDTO usuarioDTO) throws RemoteException {
-		try {
-			Usuario usuario = assembler.disassembleUsuario(usuarioDTO);
-			dao.manageUsuario(usuario);
-			logger.info("Actualizado el usuario cuyo email es  " + usuarioDTO.getEmail());
-			return true;
-		} catch (Exception e) {
-			logger.error("Error al actualizar un usuario");
-			return false;
-		}
 	}
 
 	/**

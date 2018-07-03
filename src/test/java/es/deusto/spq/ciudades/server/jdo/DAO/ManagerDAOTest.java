@@ -24,7 +24,7 @@ import es.deusto.spq.ciudades.server.jdo.data.Usuario;
  * 
  *
  */
-@Ignore
+//@Ignore
 public class ManagerDAOTest {
 
 	private PersistenceManagerFactory pmf = null;

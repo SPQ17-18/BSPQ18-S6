@@ -131,6 +131,8 @@ public class CiudadesControllerTest {
 	/**
 	 * Comprobado cliente, funciona bien.
 	 */
+	private static Client cliente;
+
 	@Test
 	@PerfTest(invocations = 1, threads = 1)
 	public void test1() {
@@ -141,17 +143,31 @@ public class CiudadesControllerTest {
 				System.setSecurityManager(new SecurityManager());
 			}
 
-			Client cliente = new Client();
-			cliente.conectarConFachada(arg);
+			cliente = new Client();
+			cliente.conectarConFachada(this.arg);
 
-			logger.info("BeforeTest - Setting the client ready : ");
-			controller = new CiudadesController(collector);
+			if (System.getSecurityManager() == null) {
+				System.setSecurityManager(new SecurityManager());
+			}
+
+			try {
+				if (cliente.getCollector() != null) {
+					setController(new CiudadesController(cliente.getCollector()));
+				} else {
+					logger.error("COLLECTOR test1, COLLECTOR es nulo!");
+				}
+			} catch (Exception e) {
+				logger.error(" # Client RemoteException: " + e.getMessage());
+			}
 		} catch (Exception re) {
 			logger.error(" # Client RemoteException: " + re.getMessage());
 			System.exit(-1);
 		}
 	}
 
+	/**
+	 * Test para crear datos e insertarlos en la BD: funciona bien:
+	 */
 	@Test
 	public void test2() {
 
@@ -269,95 +285,120 @@ public class CiudadesControllerTest {
 		logger.info("Base de datos rellena con exito");
 	}
 
-	// Test para comprobar la funcion de actualizar ciudad
-
-	// @Test
-	// @PerfTest(duration = 2000)
-	// @Required(max = 200, average = 185)
-	// public void testUpdateCiudad() {
-	// logger.info("Test para actualizar una ciudad- Actualizando una ciudad de la
-	// base de datos - Valido");
-	// CiudadDTO ciudadDTO = new CiudadDTO("Lisboa", "Portugal", 5, 5, 5, 5, 5, 5);
-	// assertEquals(true, controller.updateCiudad(ciudadDTO));
-	// }
-
 	// Comprobamos los puntos de una ciudad
 
 	// Ahora mismo, al actualizar la ciudad de Lisboa, Lisboa deberia tener 5 de
 	// puntuacion total
 
-	// @Test
-	// @PerfTest(duration = 2000)
-	// @Required(max = 50, average = 20)
-	// public void testGetCiudadPoints() {
-	// logger.info(
-	// "Test para obtener los puntos de una ciudad - Obteniendo puntos de una ciudad
-	// de la base de datos - Valido");
-	// int points = controller.getCiudadPoints("Lisboa");
-	// assertEquals(5, points);
-	// }
+	@Test
+	@Required(totalTime = 1000, max = 500, average = 200)
+	public void test3() {
+		logger.info(
+				"Test para obtener los puntos de una ciudad - Obteniendo puntos de una ciudad de la base de datos - Valido");
+		int points = 0;
+		try {
+			points = cliente.getCollector().getCiudadPoints("Lisboa");
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		assertEquals(5, points);
+	}
 
 	// Comprobamos que funcione bien la funcion borrar Ciudad
 	// Hay 28 ciudades, si borramos 1 deberia haber 27
 
-	// @Test
-	// @PerfTest(invocations = 5)
-	// @Required(totalTime = 550, average = 100)
-	// public void testDeleteCiudad() {
-	// logger.info("Test para borrar una ciudad - Borrando una ciudad de la base de
-	// datos - Valido");
-	// String ciudad = "Viena";
-	// controller.deleteCiudad(ciudad);
-	// List<CiudadDTO> ciudades = controller.getAllCiudades();
-	// assertEquals(27, ciudades.size());
-	// }
-
 	// Comprobamos que aniadimos una nueva ciudad
 
 	@Test
-	@PerfTest(invocations = 1, threads = 1, duration = 1000)
-	public void test3() {
+	@PerfTest(invocations = 1)
+	@Required(totalTime = 5000, average = 1000)
+	public void test4() {
 		logger.info(
 				"Test para insertar una nueva ciudad - Insertando una ciudad a la base de datos con los metodos set - Valido");
 
-		CiudadDTO ciudadDTO = new CiudadDTO();
+		List<CiudadDTO> arrayCiudadDTO = new ArrayList<CiudadDTO>();
 
-		ciudadDTO.setNombreCiudad("Malaga");
-		ciudadDTO.setNumVotantes(0);
-		ciudadDTO.setPais("Espania");
-		ciudadDTO.setPuntuacionCultura(0);
-		ciudadDTO.setPuntuacionGastronomia(0);
-		ciudadDTO.setPuntuacionOcio(0);
-		ciudadDTO.setPuntuacionTransporte(0);
-		ciudadDTO.setPuntuacionTotal(0);
+		for (int i = 0; i <= 5; i++) {
+			arrayCiudadDTO.add(new CiudadDTO());
+			arrayCiudadDTO.get(i).setNombreCiudad("NombreCiudad_Nº" + i);
+			arrayCiudadDTO.get(i).setNumVotantes(0);
+			arrayCiudadDTO.get(i).setPais("Pais_Nº" + i);
+			arrayCiudadDTO.get(i).setPuntuacionCultura(0);
+			arrayCiudadDTO.get(i).setPuntuacionGastronomia(0);
+			arrayCiudadDTO.get(i).setPuntuacionOcio(0);
+			arrayCiudadDTO.get(i).setPuntuacionTransporte(0);
+			arrayCiudadDTO.get(i).setPuntuacionTotal(0);
+		}
 
-		assertEquals(true, controller.insertCiudad(ciudadDTO));
+		if (cliente.getCollector() != null) {
+			try {
+				for (int i = 0; i < arrayCiudadDTO.size(); i++) {
+					assertEquals(true, cliente.getCollector().insertCiudad(arrayCiudadDTO.get(i)));
+				}
+			} catch (RemoteException e) {
+				// TODO Auto-generated catch block
+				logger.error(e.getMessage());
+			}
+		} else {
+			logger.error("El controller es nulo!");
+		}
 	}
 
 	// Comprobamos que se registra un usuario
-
 	@Test
-	@PerfTest(invocations = 1, threads = 1, duration = 5000)
-	public void test4() {
+	@Required(totalTime = 5000)
+	public void test5() {
 
-		logger.info("Test para registrar un usuario - Insertando un usuario a la basede datos - Valido ");
-		UsuarioDTO userDTO = new UsuarioDTO("nuevo@opendeusto.es", "Nombre", "Apellido", "nv21");
-		assertEquals(true, controller.registerUsuario(userDTO));
+		logger.info("Test para registrar un usuario - Insertando un usuario a labasede datos - Valido ");
+
+		UsuarioDTO userDTO = new UsuarioDTO();
+		userDTO.setApellido("Cualquiera");
+		userDTO.setNombre("Pepito");
+		userDTO.setEmail("PepitoCualquierda@opendeusto.es");
+		userDTO.setPassword("12345");
+
+		if (cliente.getCollector() != null) {
+			try {
+				assertEquals(true, cliente.getCollector().registerUsuario(userDTO));
+			} catch (RemoteException e) {
+				// TODO Auto-generated catch block
+				logger.error(e.getMessage());
+			}
+		} else {
+			logger.error("El controller es nulo!");
+		}
 	}
 
 	// Comprobamos que se borra un usuario
+	@Test
+	@Required(totalTime = 550, average = 300)
+	public void test6() {
+		logger.info("Test para borrar un usuario - Borrando un usuario de la base dedatos - Valido");
+		// Se eliminara el usuario cuyo nombre es Cristian
+		try {
+			cliente.getCollector().deleteUsuario(u1);
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
-	// @Test
-	// @PerfTest(invocations = 5)
-	// @Required(totalTime = 550, average = 100)
-	// public void testDeleteUsuario() {
-	// logger.info("Test para borrar un usuario - Borrando un usuario de la base
-	// dedatos - Valido");
-	// // Se eliminara el usuario cuyo nombre es Cristian
-	// controller.deleteUsuario(u1);
-	// List<Usuario> usuarios = controller.getAllUsuarios();
-	// assertEquals(19, usuarios.size());
-	//
-	// }
+		List<Usuario> usuarios = null;
+		try {
+			usuarios = cliente.getCollector().getUsuarios();
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		assertEquals(21, usuarios.size());
 
+	}
+
+	public CiudadesController getController() {
+		return controller;
+	}
+
+	public void setController(CiudadesController controller) {
+		this.controller = controller;
+	}
 }

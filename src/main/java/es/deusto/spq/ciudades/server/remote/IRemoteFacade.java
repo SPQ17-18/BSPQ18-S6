@@ -24,14 +24,12 @@ public interface IRemoteFacade extends Remote{
 
 	public boolean insertCiudad (CiudadDTO ciudadDTO) throws RemoteException;
 	public ArrayList<CiudadDTO> getCiudades() throws RemoteException;
-	public boolean updateCiudad(CiudadDTO ciudadDTO) throws RemoteException;
 	public boolean deleteCiudad (String nombreCiudad) throws RemoteException;
 	public int getCiudadPoints (String nombreCiudad) throws RemoteException;
 	public boolean loginUsuario(String email, String password) throws RemoteException;
 	public Usuario devolverUsuario(String email) throws RemoteException;
 	public boolean registerUsuario (UsuarioDTO usuario) throws RemoteException;
 	public ArrayList<Usuario> getUsuarios() throws RemoteException;
-	public boolean updateUsuario (UsuarioDTO usuarioDTO) throws RemoteException;
 	public boolean deleteUsuario (Usuario usuario) throws RemoteException;
 	public boolean puntuarCiudadUsuario(Ciudad ciudad, Usuario usuario) throws RemoteException;
 	public ArrayList<CiudadUsuarioDTO> getCiudadesPuntuadasPorUsuarios()  throws RemoteException;

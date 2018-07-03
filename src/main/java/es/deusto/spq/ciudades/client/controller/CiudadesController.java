@@ -92,23 +92,6 @@ public class CiudadesController {
 	}
 
 	/**
-	 * Actualiza una ciudad
-	 * 
-	 * @param ciudadDTO
-	 *            Data container.
-	 * @return Devuelve true si se ha actualizado correctamente, false si no.
-	 */
-	public boolean updateCiudad(CiudadDTO ciudadDTO) {
-		boolean updated = false;
-		try {
-			updated = iRF.updateCiudad(ciudadDTO);
-		} catch (RemoteException e) {
-			logger.error("Error actualizando una ciudad.");
-		}
-		return updated;
-	}
-
-	/**
 	 * Borra una ciudad.
 	 * 
 	 * @param nombreCiudad
@@ -207,23 +190,6 @@ public class CiudadesController {
 			logger.error("Error al obtener los usuarios del servidor.");
 		}
 		return usuarios;
-	}
-
-	/**
-	 * Actualizar un usuario
-	 * 
-	 * @param usuarioDTO
-	 *            Data Container.
-	 * @return Devuelve true si se ha actualizado el usuario, false si no .
-	 */
-	public boolean updateUsuario(UsuarioDTO usuarioDTO) {
-		boolean updated = false;
-		try {
-			updated = iRF.updateUsuario(usuarioDTO);
-		} catch (RemoteException e) {
-			logger.error("Error al actualizar un usuario.");
-		}
-		return updated;
 	}
 
 	/**
