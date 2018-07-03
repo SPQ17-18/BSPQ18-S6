@@ -2,6 +2,12 @@ package es.deusto.spq.ciudades.server.jdo.data;
 
 import java.io.Serializable;
 
+/**
+ * 
+ * Clase DTO , esta es la clase la cual transferimos la puntuacion del cliente al servidor,
+ * es decir nos vale para construir las puntuaciones.
+ *
+ */
 public class PuntuacionDTO implements Serializable {
 
 	/**

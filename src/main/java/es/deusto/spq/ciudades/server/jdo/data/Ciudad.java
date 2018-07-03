@@ -4,6 +4,11 @@ import java.io.Serializable;
 
 import javax.jdo.annotations.PersistenceCapable;
 
+/**
+ * 
+ * Ciudad que pueden ser puntuadas por un usuario
+ *
+ */
 @PersistenceCapable
 public class Ciudad implements Serializable {
 

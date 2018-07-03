@@ -4,6 +4,13 @@ import java.io.Serializable;
 
 import javax.jdo.annotations.PersistenceCapable;
 
+/**
+ * 
+ * Clase ciudadusuario, de la cual obtenemos las puntuaciones de las ciudades, 
+ * por los diferentes usuarios que han votado.
+ *
+ */
+
 @PersistenceCapable
 public class CiudadUsuario implements Serializable {
 

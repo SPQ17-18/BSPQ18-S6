@@ -6,6 +6,11 @@ import java.rmi.RemoteException;
 
 import es.deusto.spq.ciudades.server.remote.IRemoteFacade;
 
+/**
+ * 
+ * El servidor el cual tiene un main y nos permite abrirlo...
+ *
+ */
 public class Server {
 
 	private static Thread rmiRegistryThread = null;

@@ -2,6 +2,12 @@ package es.deusto.spq.ciudades.server.jdo.data;
 
 import java.io.Serializable;
 
+/**
+ * 
+ * Clase CiudadDTO que puede ser puntuada por un usuario
+ *
+ */
+
 public class CiudadDTO implements Serializable {
 
 	private static final long serialVersionUID = 1L;

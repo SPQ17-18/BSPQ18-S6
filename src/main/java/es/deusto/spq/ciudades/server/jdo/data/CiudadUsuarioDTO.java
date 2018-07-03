@@ -2,6 +2,13 @@ package es.deusto.spq.ciudades.server.jdo.data;
 
 import java.io.Serializable;
 
+/**
+ * 
+ * Clase ciudadUSuarioDTO, en donde a puntuar un usuario una ciudad,
+ * se hace uso de esta clase para construir esa puntuacion en la base 
+ * de datos.
+ *
+ */
 public class CiudadUsuarioDTO implements Serializable{
 
 	/**

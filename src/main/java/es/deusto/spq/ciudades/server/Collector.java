@@ -22,6 +22,15 @@ import es.deusto.spq.ciudades.server.jdo.data.Usuario;
 import es.deusto.spq.ciudades.server.jdo.data.UsuarioDTO;
 import es.deusto.spq.ciudades.server.remote.IRemoteFacade;
 
+/**
+ * 
+ * Funciones del servidor... Estan estan declaradas en la fachada remota
+ * y se definen en esta clase. 
+ * 
+ * Ademas, esta clase hace uso del ManagerDAO para trabajar con la base de datos y 
+ * el assembler para convertir objetos DTO.
+ *
+ */
 public class Collector extends UnicastRemoteObject implements IRemoteFacade {
 
 	private static final long serialVersionUID = 1L;

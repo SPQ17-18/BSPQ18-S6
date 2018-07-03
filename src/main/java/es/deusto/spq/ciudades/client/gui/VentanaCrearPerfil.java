@@ -18,6 +18,13 @@ import java.awt.Dimension;
 import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
 
+/**
+ * 
+ * Ventana en la cual el cliente puede registrarse, 
+ * el unico requisito es rellenar todos los campos para 
+ * que el cliente puede registrarse.
+ *
+ */
 public class VentanaCrearPerfil extends JFrame {
 	private JTextField textNombre;
 	private JTextField textApellido;

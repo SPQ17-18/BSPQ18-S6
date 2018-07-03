@@ -22,6 +22,12 @@ import es.deusto.spq.ciudades.server.jdo.data.Usuario;
 import es.deusto.spq.ciudades.server.jdo.data.UsuarioDTO;
 import es.deusto.spq.ciudades.server.remote.IRemoteFacade;
 
+/**
+ * 
+ * Ventana en la cual un cliente puede inciar sesion, permite la opcion
+ * de registrarse ademas de traducir la aplicacion o a castellano o a ingles.
+ *
+ */
 public class VentanLogin extends JFrame {
 
 	/**

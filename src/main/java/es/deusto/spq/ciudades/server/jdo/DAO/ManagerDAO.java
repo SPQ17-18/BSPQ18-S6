@@ -19,6 +19,12 @@ import es.deusto.spq.ciudades.server.jdo.data.CiudadUsuario;
 import es.deusto.spq.ciudades.server.jdo.data.Puntuacion;
 import es.deusto.spq.ciudades.server.jdo.data.Usuario;
 
+
+/**
+ * 
+ * Funciones las cuales trabajan con la base de datos...
+ *
+ */
 public class ManagerDAO implements IManagerDAO {
 
 	private static final Logger logger = Logger.getLogger(ManagerDAO.class);

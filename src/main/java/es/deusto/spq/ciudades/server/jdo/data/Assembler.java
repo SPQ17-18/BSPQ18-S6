@@ -5,7 +5,9 @@ import java.util.ArrayList;
 import es.deusto.spq.ciudades.server.jdo.DAO.ManagerDAO;
 
 /**
- * Clase destinada para transformar objetos DTO
+ * Clase destinada para transformar objetos DTO.
+ * 
+ * Los disassemble son para construir, y los assemble son para obtener.
  *
  */
 public class Assembler {

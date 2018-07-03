@@ -4,6 +4,11 @@ import java.io.Serializable;
 
 import javax.jdo.annotations.PersistenceCapable;
 
+/**
+ * 
+ * Clase usuario, el usuario es el que se encarga de puntuar a las ciudades.
+ *
+ */
 @PersistenceCapable
 public class Usuario implements Serializable {
 

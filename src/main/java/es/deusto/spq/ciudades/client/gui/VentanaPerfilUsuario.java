@@ -30,11 +30,25 @@ import es.deusto.spq.ciudades.server.jdo.data.CiudadUsuarioDTO;
 import es.deusto.spq.ciudades.server.jdo.data.PuntuacionDTO;
 import es.deusto.spq.ciudades.server.jdo.data.Usuario;
 
+
+/**
+ * 
+ * Ventana en la cual el usuario puede ver la lista de las ciudades, 
+ * ademas de un ranking de las ciudades puntuadas ordenadas por 
+ * puntuacion total de mayor a menor.
+ * 
+ * Permite la posibilidad de puntuar una ciudad seleccionandola y clickando 
+ * luego en el boton puntuar ciudad. 
+ * 
+ * Se puede seleccionar una ciudad tanto desde el boton ver ciudades como 
+ * desde el boton ver ranking.
+ * 
+ * Ademas permite deslogearse para iniciar sesion con otra cuenta por ejemplo..
+ *
+ */
 public class VentanaPerfilUsuario extends JFrame {
 
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 
 	static Logger logger = Logger.getLogger(VentanaPerfilUsuario.class.getName());

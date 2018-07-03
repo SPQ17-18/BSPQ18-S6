@@ -7,6 +7,12 @@ import org.apache.log4j.Logger;
 import es.deusto.spq.ciudades.client.gui.VentanLogin;
 import es.deusto.spq.ciudades.server.remote.IRemoteFacade;
 
+/**
+ * 
+ * En esta clase cliente lanzamos la ejecucion del cliente 
+ * 
+ *
+ */
 public class Client {
 
 	final static Logger logger = Logger.getLogger(Client.class);

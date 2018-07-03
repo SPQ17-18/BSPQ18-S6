@@ -2,6 +2,12 @@ package es.deusto.spq.ciudades.server.jdo.data;
 
 import java.io.Serializable;
 
+/**
+ * Clase usuarioDTO, sirve para transferir del cliente al servidor y a su vez
+ * construir e usuario en la base de datos.
+ * 
+ *
+ */
 public class UsuarioDTO implements Serializable {
 
 	/**

@@ -13,6 +13,13 @@ import es.deusto.spq.ciudades.server.jdo.data.PuntuacionDTO;
 import es.deusto.spq.ciudades.server.jdo.data.Usuario;
 import es.deusto.spq.ciudades.server.jdo.data.UsuarioDTO;
 
+/**
+ * 
+ * Interfaz de la fachada la cual relaciona el cliente y el servidor.
+ * 
+ * Esta interfaz se comunica con el controller del cliente y a su vez con el propio servidor.
+ *
+ */
 public interface IRemoteFacade extends Remote{
 
 	public boolean insertCiudad (CiudadDTO ciudadDTO) throws RemoteException;

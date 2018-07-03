@@ -22,7 +22,6 @@ import es.deusto.spq.ciudades.server.jdo.data.Usuario;
  * PRIMERO SE EJECUTARÁ ESTA CLASE DE TEST PARA EL BORRADO DE ALGUNOS POSIBLES
  * DATOS QUE QUEDEN EN LA BASE DE DATOS!
  * 
- * @author Jesús
  *
  */
 @Ignore

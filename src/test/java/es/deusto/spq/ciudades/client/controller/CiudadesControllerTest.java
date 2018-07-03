@@ -36,7 +36,6 @@ import junit.framework.JUnit4TestAdapter;
  * MÉTODOS DEL CLIENTE Y SERVIDOR JUNTO CON LAS CONSULTAS HECHAS A LA BASE DE
  * DATOS
  * 
- * @author Jesús
  *
  */
 // @Ignore

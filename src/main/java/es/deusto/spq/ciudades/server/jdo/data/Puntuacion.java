@@ -4,6 +4,13 @@ import java.io.Serializable;
 
 import javax.jdo.annotations.PersistenceCapable;
 
+/**
+ * 
+ * Clase para conocer la puntuacion de las ciudades, sin importar el usuario que las vota.
+ * Esta clase es necesaria para hacer la media de las puntuaciones y asi sacar la puntuacion 
+ * total
+ *
+ */
 @PersistenceCapable
 public class Puntuacion implements Serializable {
 

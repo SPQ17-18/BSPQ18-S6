@@ -14,6 +14,11 @@ import es.deusto.spq.ciudades.server.jdo.data.Usuario;
 import es.deusto.spq.ciudades.server.jdo.data.UsuarioDTO;
 import es.deusto.spq.ciudades.server.remote.IRemoteFacade;
 
+/**
+ * 
+ * Controller en donde se definen las funciones del lado cliente
+ *
+ */
 public class CiudadesController {
 
 	final static Logger logger = Logger.getLogger(CiudadesController.class);

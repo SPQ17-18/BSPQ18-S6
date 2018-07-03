@@ -8,6 +8,11 @@ import es.deusto.spq.ciudades.server.jdo.data.Puntuacion;
 import es.deusto.spq.ciudades.server.jdo.data.Usuario;
 import es.deusto.spq.ciudades.server.jdo.data.UsuarioDTO;
 
+/**
+ * 
+ * Interfaz del managerDAO, aqui es donde se declaran las funciones propias de la base de datos 
+ *
+ */
 public interface IManagerDAO {
 
 	public void storeCiudad(Ciudad ciudad)throws Exception;
